@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bryce Calhoun</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> 
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> 
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1>
+            Bryce Calhoun
+        </h1>
+        <img src="\android-chrome-192x192.png"
+        alt="Favicon logo"
+        width="100"
+        height="100">
+        
+    </header>
+    <nav class="global">
+        <a href="index.html">Home</a>
+            
+        <a href="contact.html">Contact</a>
+            
+        <a href="gallery.html">Gallery</a>
+            
+        <a href="order.html">Order</a> 
+
+        <a href="staff.html">Staff</a>
+
+    </nav>
+    <main>
+        <section>
+            <h2>Order</h2>
+            <article>
+                <p>
+                    Use this page to place an order
+                </p>
+                <form action="order" method="POST">
+                    <fieldset>
+                        <legend>Lets get your info</legend>
+                        <label>
+                            First Name:
+                            <input type="text" placeholder="Your Name" name="nameBox2" required autofocus>
+                        </label>
+                        <label>
+                            Email:
+                            <input type="email" placeholder="Example@me.com" name="emailBox" required>
+                        </label>
+                        <label>
+                            Address:
+                            <input type="text" placeholder="123 Streetname Dr." name="addressBox" required>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Product Selection</legend>
+                        <table>
+                            <caption>
+                                Please choose one of the folowing:
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>
+                                        <input type="radio" value="AGYM" name="prodOrder">
+                                        AGYM
+                                    </td>
+                                    <td>Spinning Cat Scratcher Ball</td>
+                                    <td>$52.99</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" value="Jasonwell" name="prodOrder">
+                                        Jasonwell
+                                    </td>
+                                    <td>Foldable Dog Pool</td>
+                                    <td>$27.25</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" value="Expawlorer" name="prodOrder">
+                                        Expawlorer
+                                    </td>
+                                    <td>Dog Fence Window</td>
+                                    <td>$30.50</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" value="Lollimeow" name="prodOrder">
+                                        Lollimeow
+                                    </td>
+                                    <td>Capsule Pet Travel Backpack</td>
+                                    <td>$59.00</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" value="Drool'd" name="prodOrder">
+                                        Drool'd
+                                    </td>
+                                    <td>Cat Hamster Wheel</td>
+                                    <td>$349.75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <label>
+                            Enter quantity:
+                            <input type="number" name="howMany">
+                        </label>
+                        <label>Delivery instructions:
+                            <textarea placeholder="special delivery instructions" name="delivery"></textarea>
+                        </label>
+                        <button>Submit</button>
+                        
+                    </fieldset>
+
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2023 Bryce Calhoun
+        </p>
+    </footer>
+    
+</body>
+</html>
