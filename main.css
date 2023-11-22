@@ -71,7 +71,7 @@
     color: var(--dark-color);
   }
   a:hover {
-    color: var(--medium-color);
+    
   }
   
   
@@ -96,6 +96,7 @@
     
   }
   nav a:hover {
+    color: var(--medium-color);
     
   }
   .local{
