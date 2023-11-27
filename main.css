@@ -14,9 +14,8 @@
 }
 body{
     font-family: 'Libre Caslon Text', serif;
-    margin: 5%;
+    margin: 10%;
     margin-top: 2%;
-    margin:5%;
 
 }
 
@@ -39,6 +38,7 @@ nav{
     border-bottom: 3px solid var(--main-theme);
     align-items: center;
     padding-left: 350px;
+    margin-bottom: 40px;
     
 }
 a{
@@ -77,8 +77,27 @@ img{
 
 }
 #aboutMeTxt{
-    padding: 0px;
+    padding-left:200px;
+    padding-right:200px;
 }
+h2{
+    font-size: 12px;
+    font-family: 'Zen Maru Gothic', serif;
+    text-decoration: underline;
+}
+#langNames{
+    display: flex;
+    text-align: center;
+}
+.languages{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+#langLogos{
+    align-content: stretch;
+}
+
 
 
 
