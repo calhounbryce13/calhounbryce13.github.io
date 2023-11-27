@@ -61,18 +61,22 @@ footer{
     
 }
 
-section{
-    padding-top: 50px ;
-    padding-left: 500px;
-}
 
 img{
     height: 55px;
     padding-top: 20px;
     
 }
-article{
-    padding: 0px;
+.centered{
+    text-align: center;
 }
+
+#aboutMeTxt{
+    padding-left: 200px;
+    padding-right: 200px;
+
+}
+
+
 
 
