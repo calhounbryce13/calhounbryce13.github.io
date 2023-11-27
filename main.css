@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
@@ -7,34 +8,28 @@
     font-family: 'Zen Maru Gothic', serif;
     font-family: 'Cormorant Infant', serif;
     --main-theme: black;
-    --back-color: gray;
-
-    
+    --back-color: rgb(183, 182, 182);
+    --accent-one: rgb(170, 61, 61)(249, 45, 45);
 
 }
 body{
     font-family: 'Libre Caslon Text', serif;
     margin: 5%;
     margin-top: 2%;
-    background-color: var(--back-color);
     margin:5%;
-    
-    
 
 }
-main{
 
-    
-}
 header{
     height: 100px;
-    background-color: var(--main-theme);
     color: rgb(255, 255, 255);
     text-align: center;
     width: 100%;
     font-family: 'Cormorant Infant', serif;
     font-size: 70px;
     padding-bottom: 30px;
+    padding-top: 30px;
+    background-color:var(--main-theme) ;
     
 
 }
@@ -60,20 +55,19 @@ a:hover{
     color: white;
     
 }
-a.schoolName{
-    padding: none;
 
-}
 footer{
-    background-color: var(--main-theme);
-    color: white;
+    color: var(--main-theme);
+    
 }
+
 section{
     padding-top: 50px ;
     padding-left: 500px;
 }
+
 img{
-    height: 70px;
+    height: 55px;
     padding-top: 20px;
     
 }
