@@ -64,9 +64,16 @@ footer{
 img{
     height: 55px;
     padding-top: 20px;
-    margin: 10px;
-    
+    margin: 41px;
+   
 }
+#header-image{
+    margin:0px;
+}
+#langLogos{
+    display: flex;
+}
+
 .centered{
     text-align: center;
 }
@@ -100,9 +107,8 @@ h2{
 .aboutMe{
 padding-top:40px;
 }
-#langCss{
-    height: 65px;
-}
+
+
 
 
 
