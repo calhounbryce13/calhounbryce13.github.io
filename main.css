@@ -53,17 +53,23 @@ body{
     font-family: 'Libre Caslon Text', serif;
     margin: 10%;
     margin-top: 2%;
-    background-color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: url(backgroung-img1.00.jpg);
+    background-position: top;
+    
+    background-size: cover;
 
 }
 header{
-    height: 100px;
+    margin: auto;
+    height: 170px;
     color: rgb(255, 255, 255);
     text-align: center;
     width: 100%;
     font-family: 'Cormorant Infant', serif;
     font-size: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 150px;
     padding-top: 30px;
     background-color:var(--main-theme);
     
@@ -81,13 +87,17 @@ video{
 nav{
     display: flex;
     text-decoration: none;
-    border-bottom: 3px solid var(--main-theme);
+    border-bottom: solid 3px var(--main-theme);
     align-items: center;
     margin-bottom: 40px;
+    padding-top: 10px;
+    width: 100%;
+    
     
 }
 a{
-    margin: 2%;
+    margin: auto;
+    margin-bottom: 20px;
     height: 40px;
     padding-top: 15px;
     padding-left: 5px;
@@ -104,7 +114,7 @@ footer{
 
 
 img{
-    height: 55px;
+    height: 100px;
     padding-top: 20px;
     margin: 41px;
    
@@ -129,6 +139,9 @@ img{
     padding-left:200px;
     padding-right:200px;
 }
+h1{
+    font-family: 'Libre Caslon Text', serif;
+}
 h2{
     font-size: 12px;
     font-family: 'Zen Maru Gothic', serif;
@@ -137,15 +150,21 @@ h2{
 #langNames{
     display: flex;
     text-align: center;
+    width: 100%;
+    margin: auto;
+
     
 }
 .languages{
     padding-right: 50px;
     padding-left: 50px;
+    
 }
 
 #langLogos{
-    align-content: stretch;
+   
+    width: 100%;
+    margin: auto;
 }
 .aboutMe{
 padding-top:40px;
