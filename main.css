@@ -7,7 +7,7 @@
     font-family: 'Libre Caslon Text', serif;
     font-family: 'Zen Maru Gothic', serif;
     font-family: 'Cormorant Infant', serif;
-    --main-theme: black;
+    --main-theme: rgb(0, 0, 0);
     --back-color: rgb(183, 182, 182);
     --accent-one: rgb(170, 61, 61)(249, 45, 45);
 
@@ -55,12 +55,11 @@ body{
     margin-top: 2%;
     align-items: center;
     justify-content: center;
-    background-image: url(backgroung-img1.00.jpg);
     background-position: top;
-    
     background-size: cover;
 
 }
+
 header{
     margin: auto;
     height: 170px;
@@ -75,6 +74,7 @@ header{
     
 
 }
+
 video{
     object-fit: cover;
     position: absolute;
@@ -82,7 +82,7 @@ video{
     height: 150%;
     right: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
 }
 
 nav{
@@ -96,6 +96,13 @@ nav{
     
     
 }
+
+main{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+   
+}
+
 a{
     margin: auto;
     margin-bottom: 20px;
@@ -107,26 +114,21 @@ a{
     text-decoration: none;
 }
 
-
 footer{
     color: var(--main-theme);
     
 }
 
-
 img{
     height: 100px;
     padding-top: 20px;
-    margin: 41px;
-
-   
-   
+    margin: 41px; 
 }
- 
 
 #header-image{
     margin:0px;
 }
+
 #langLogos{
     display: flex;
 }
@@ -140,26 +142,32 @@ img{
     padding-right: 200px;
 
 }
+
 #aboutMeTxt{
     padding-left:200px;
     padding-right:200px;
 }
+
 h1{
     font-family: 'Libre Caslon Text', serif;
 }
+
 h2{
     font-size: 12px;
     font-family: 'Zen Maru Gothic', serif;
     text-decoration: underline;
 }
+
+.aboutMe{
+    padding-top:40px;
+}
+
 .languages{
     padding-right: 50px;
     padding-left: 50px;
     
 }
-.aboutMe{
-padding-top:40px;
-}
+
 #languages_{
     display: flex;
     align-items: center;
@@ -169,4 +177,23 @@ padding-top:40px;
 #langCss{
     height: 200%;
 }
+
+.hide-video {
+    opacity: 0;
+    transition: opacity 5.3s ease; /* Adjust the duration and timing function as needed */
+}
+
+
+#background-video{
+    filter: invert(1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind other content */
+}
+
+
 
