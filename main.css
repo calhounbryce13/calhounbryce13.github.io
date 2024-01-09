@@ -84,6 +84,7 @@ video{
     top: 0;
     z-index: -1;
 }
+
 nav{
     display: flex;
     text-decoration: none;
@@ -117,8 +118,12 @@ img{
     height: 100px;
     padding-top: 20px;
     margin: 41px;
+
+   
    
 }
+ 
+
 #header-image{
     margin:0px;
 }
@@ -147,32 +152,21 @@ h2{
     font-family: 'Zen Maru Gothic', serif;
     text-decoration: underline;
 }
-#langNames{
-    display: flex;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-
-    
-}
 .languages{
     padding-right: 50px;
     padding-left: 50px;
     
 }
-
-#langLogos{
-   
-    width: 100%;
-    margin: auto;
-}
 .aboutMe{
 padding-top:40px;
 }
+#languages_{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-
-
-
+#langCss{
+    height: 200%;
+}
 
