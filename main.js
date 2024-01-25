@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let BackgroundVideo = document.getElementById("background-video");
 
 
-    BackgroundVideo.addEventListener('loadeddata', function() {
+    BackgroundVideo.addEventListener('loadeddata', () => {
         BackgroundVideo.playbackRate = videoSpeed;
     });
 
 
-    Introvideo.addEventListener("ended", function(){
+    Introvideo.addEventListener("ended", function() {
         this.classList.add("hide-video");
 
-        setTimeout(function(){
+        setTimeout(() => {
 
             // removing the video from the DOM
             Introvideo.parentNode.removeChild(Introvideo);
