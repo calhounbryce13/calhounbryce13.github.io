@@ -62,19 +62,20 @@ body{
 }
 
 
-
+/*
+TO CHECK FOR CENTER
 body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 50%;
-    width: 2px; /* Adjust the width of the line */
+    width: 2px; /* Adjust the width of the line *//*
     height: 100%;
-    background-color: red; /* Adjust the color of the line */
+    background-color: red; /* Adjust the color of the line *//*
     transform: translateX(-50%);
     z-index: 1000;
 }
-
+*/
 
 header{
     margin: auto;
