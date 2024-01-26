@@ -28,6 +28,7 @@
     <video autoplay muted loop id="background-video">
         <source src="background_video - Made with Clipchamp.mp4" type="video/mp4">
     </video>
+    
 
     <nav>
         <a href="#aboutMe" class="fancy-link">About Me</a>
@@ -64,35 +65,35 @@
                 <h2>Languages</h2>
 
                 <div id="languages_">
-                    <div id="python">
+                    <div id="python" class="languageContainer">
                         <p class="languages">Python</p>
                         <img src="python.png" class="logos">
                     </div>
-                    <div id="c++">
+                    <div id="cpp" class="languageContainer">
                         <p class="languages">C++</p>
                         <img src="c++.png" class="logos">
                     </div>
-                    <div id="C">
+                    <div id="C" class="languageContainer">
                         <p class="languages">C</p>
                         <img src="c.png" class="logos">
                     </div>
-                    <div id="SQL">
+                    <div id="SQL" class="languageContainer">
                         <p class="languages">SQL</p>
                         <img src="sql_logo.png" class="logos">
                     </div>
-                    <div id="Java">
+                    <div id="Java" class="languageContainer">
                         <p class="languages">Java</p>
                         <img src="java.png" class="logos">
                     </div>
-                    <div id="Html">
+                    <div id="Html" class="languageContainer">
                         <p class="languages">HTML</p>
                         <img src="html.png" class="logos">
                     </div>
-                    <div id="JavaScript">
+                    <div id="JavaScript" class="languageContainer">
                         <p class="languages">JavaScript</p>
                         <img src="javascript.png" class="logos">
                     </div>
-                    <div id="CSS">
+                    <div id="CSS" class="languageContainer">
                         <p class="languages">CSS</p>
                         <img src="css.png" class="logos" id="langCss">
                     </div>
@@ -139,19 +140,32 @@
             <article id="research" class="centered">
                 <h2>Research</h2>
 
-                <figure>
-                    <img src="Slide1.PNG" class="researchImage">
-                    <figcaption>
 
-                    </figcaption>
-
-                </figure>
+                <div class="ResearchLevel1">
+                    <p>Evaluating the Potential of Computer-Vision in Healthcare</p>
+                    <figure>
+                        <img src="Slide1.PNG" class="researchImage">
+                    </figure>
+                    <p class="ResearchTxt">
+                        Computer vision is a new and exciting field within the context of
+                        artificial intelligence that comes with lots of opportunities for 
+                        valuable applications. It's only natural to wonder if computer vision
+                        could help us understand our own health better. This was the exact purpose
+                        for this longitudinal study. The <strong>data preprocessing</strong> included publicly available 
+                        Twitter data that took well over a year's time to finilize. Some key takeaways 
+                        from this project are that while unsurprisingly, the human eye remains the leading authority
+                        in the detection of visual health outcomes and health-contributing environmental features,
+                        there is a massive potential in the refinement of computer vision models for the 
+                        identification of complex emotional health outcomes. This is especially the case in the context 
+                        of children in schools. For a more detailed summary <a href="Slide1.PNG" class="lowkeyLink">here</a> 
+                        is a link to the full presentation slide.
+                    </p>
+                </div>
                 
-
-                <p>Research Description</p>
             </article>
             <article id="projects" class="centered">
                 <h2>Projects</h2>
+
 
                 <div class="ProjectsLevel1">
                     <div>
@@ -207,6 +221,7 @@
                         </p>
                     </div>
                 </div>
+
 
             </article>
 

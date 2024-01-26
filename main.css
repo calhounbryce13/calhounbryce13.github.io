@@ -62,20 +62,23 @@ body{
 }
 
 /*
+TO CHECK FOR CENTER
 body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 50%;
-    width: 2px; /* Adjust the width of the line */
-    /*height: 100%;
+    width: 2px; /* Adjust the width of the line *//*
+    height: 100%;
     background-color: red; /* Adjust the color of the line *//*
     transform: translateX(-50%);
     z-index: 1000;
 }
 */
+
 header{
     margin: auto;
+    
     height: 170px;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -138,6 +141,16 @@ img{
     margin: 41px; 
 }
 
+h1{
+    font-family: 'Libre Caslon Text', serif;
+}
+
+h2{
+    font-size: 12px;
+    font-family: 'Zen Maru Gothic', serif;
+    text-decoration: underline;
+}
+
 #header-image{
     margin:0px;
 }
@@ -162,16 +175,6 @@ img{
     padding-right:200px;
 }
 
-h1{
-    font-family: 'Libre Caslon Text', serif;
-}
-
-h2{
-    font-size: 12px;
-    font-family: 'Zen Maru Gothic', serif;
-    text-decoration: underline;
-}
-
 .aboutMe{
     padding-top:40px;
 }
@@ -187,8 +190,12 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+      
+}
+
+.languageContainer{
+    margin: 0%;
+    max-width: 125px;
 }
 
 #langCss{
@@ -199,7 +206,6 @@ h2{
     opacity: 0;
     transition: opacity 5.3s ease; /* Adjust the duration and timing function as needed */
 }
-
 
 #background-video{
     filter: invert(1);
@@ -229,6 +235,7 @@ dt{
     height: 200px;
     border: 4px solid var(--main-theme);
     box-sizing: border-box;
+    margin-bottom: 0px;
 
 }
 
@@ -237,57 +244,55 @@ dt{
     height: 75px;
     z-index: 1;
     transition: background 0.3s ease;
-    
-    
+   
 }
 
 #termsNode:hover{
     background-image: url('Node-image.png');
     background-size: contain;
-
     background-repeat: no-repeat;
     background-position-x: center;
     color: transparent;
+    transition: 0.5s ease-in;
+
 }
+
 #termsNode:after{
     transform: translate(-50%, -50%);
-
 }
 
 #termsExprss{
     cursor: pointer;
     height: 75px;
     z-index: 1;
-    transition: background 0.3s ease;
-    
-    
+    transition: all 0.5s ease;  
 }
 
 #termsExprss:hover{
-    background-image: url('express-image.png');
+    background-image: url('express-api-75.png');
     background-size: contain;
-
     background-repeat: no-repeat;
     background-position-x: center;
     color: transparent;
+    transition: 0.5s ease-in;
+    
 }
-
 
 #termsRct{
     cursor: pointer;
     height: 75px;
     z-index: 1;
     transition: background 0.3s ease;
-    
-    
+   
 }
 
 #termsRct:hover{
-    background-image: url('REACT-image.png');
+    background-image: url('react-logo-100.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
     color: transparent;
+    transition: 0.5s ease-in;
 }
 
 .ProjectsLevel1{
@@ -299,6 +304,17 @@ dt{
 
 .projectTxt{
     max-width: 400px;
+    margin-top: 50px;
 }
 
+.ResearchTxt{
+    padding-left: 175px;
+    box-sizing: content-box;
+    text-align: center;
+    max-width: 600px;
+}
+
+.lowkeyLink{
+    text-decoration: underline;
+}
 
