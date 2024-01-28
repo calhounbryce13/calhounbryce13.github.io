@@ -93,6 +93,12 @@ header{
 
 }
 
+@media screen and (max-width: 970px){
+    header{
+        color: red;
+    }
+}
+
 
 
 
