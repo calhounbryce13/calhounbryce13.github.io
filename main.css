@@ -13,12 +13,6 @@
 
 }
 
-@media (max-width: 600px){
-    header{
-        color: red;
-    }
-}
-
 *,
 *::before,
 *::after {
@@ -83,21 +77,31 @@ body::before {
 }
 */
 
-header{
-    margin: auto;
+@media (max-width: 600px){
+    header{
+        color: red;
+    }
+}
+
+@media (max-width: 1000px){
+    header{
+        margin: auto;
+        
+        height: 170px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 100%;
+        font-family: 'Cormorant Infant', serif;
+        font-size: 70px;
+        padding-bottom: 150px;
+        padding-top: 30px;
+        background-color:var(--main-theme);
+        
     
-    height: 170px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    width: 100%;
-    font-family: 'Cormorant Infant', serif;
-    font-size: 70px;
-    padding-bottom: 150px;
-    padding-top: 30px;
-    background-color:var(--main-theme);
-    
+    }
 
 }
+
 
 video{
     object-fit: cover;
