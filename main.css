@@ -99,6 +99,9 @@ header{
         margin-bottom: 350px;
         
     }
+    a{
+        background-color: var(--main-theme);
+    }
     
 }
 
