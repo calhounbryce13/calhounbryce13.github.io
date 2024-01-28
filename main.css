@@ -93,23 +93,6 @@ header{
 
 }
 
-@media screen and (max-width: 970px){
-    header{
-        font-size: 35px;
-        margin-bottom: 100px;
-        
-    }
-    a{
-        background-color: var(--main-theme);
-        color: white;
-        text-color: white;
-    }
-    
-}
-
-
-
-
 video{
     object-fit: cover;
     position: absolute;
@@ -334,5 +317,19 @@ dt{
 
 .lowkeyLink{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 970px){
+    header{
+        font-size: 35px;
+        margin-bottom: 100px;
+        
+    }
+    a{
+        background-color: var(--main-theme);
+        color: white;
+        text-color: white;
+    }
+    
 }
 
