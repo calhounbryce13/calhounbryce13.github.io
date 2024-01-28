@@ -101,6 +101,7 @@ header{
     }
     a{
         background-color: var(--main-theme);
+        color: white;
     }
     
 }
