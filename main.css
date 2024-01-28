@@ -96,12 +96,13 @@ header{
 @media screen and (max-width: 970px){
     header{
         font-size: 35px;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
         
     }
     a{
         background-color: var(--main-theme);
         color: white;
+        text-color: white;
     }
     
 }
