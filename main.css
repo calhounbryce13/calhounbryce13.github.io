@@ -95,7 +95,8 @@ header{
 
 @media screen and (max-width: 970px){
     header{
-        color: red;
+        font-size: 35px;
+        
     }
 }
 
