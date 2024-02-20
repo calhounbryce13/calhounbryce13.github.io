@@ -8,8 +8,8 @@
     font-family: 'Zen Maru Gothic', serif;
     font-family: 'Cormorant Infant', serif;
     --main-theme: rgb(0, 0, 0);
-    --back-color: rgb(183, 182, 182);
-    --accent-one: rgb(170, 61, 61)(249, 45, 45);
+    /*--back-color: rgb(183, 182, 182);
+    --accent-one: rgb(170, 61, 61)(249, 45, 45);*/
 
 }
 
@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-.fancy-link {
+.fancy-link {/*HERE*/
   text-decoration: none;
   color: var(--main-theme);
   position: relative;
@@ -81,7 +81,7 @@ header{
     margin: auto;
     
     height: 170px;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     width: 100%;
     font-family: 'Cormorant Infant', serif;
@@ -100,25 +100,25 @@ video{
     height: 150%;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 nav{
     display: flex;
     text-decoration: none;
-    border-bottom: solid 3px var(--main-theme);
     align-items: center;
     margin-bottom: 40px;
     padding-top: 10px;
-    width: 100%;
-    
-    
+    width: 100%; 
+}
+#localNavigation{
+    border-bottom: solid 3px var(--main-theme);
+
 }
 
 main{
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.9);
-   
 }
 
 a{
@@ -128,13 +128,16 @@ a{
     padding-top: 15px;
     padding-left: 5px;
     padding-right: 5px;
-    color: inherit;
     text-decoration: none;
+    z-index: 1;
 }
 
 footer{
     color: var(--main-theme);
     
+}
+#copyright{
+    color: inherit;
 }
 
 img{
@@ -192,8 +195,7 @@ h2{
 #languages_{
     display: flex;
     align-items: center;
-    justify-content: center;
-      
+    justify-content: center;    
 }
 
 .languageContainer{
@@ -246,8 +248,7 @@ dt{
     cursor: pointer;
     height: 75px;
     z-index: 1;
-    transition: background 0.3s ease;
-   
+    transition: background 0.3s ease; 
 }
 
 #termsNode:hover{
@@ -286,7 +287,6 @@ dt{
     height: 75px;
     z-index: 1;
     transition: background 0.3s ease;
-   
 }
 
 #termsRct:hover{
@@ -324,6 +324,19 @@ dt{
 #headingContain{
     display: flex;
     padding-left: 230px;
+}
+
+#themeChange{
+    height: 50px;
+    position: relative;
+    left: 105%;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Libre Caslon Text', serif;
+    border: none;
+    z-index: 0;
+}
+#themeChange:hover{
+    background-color: rgba(255, 255, 255);
 
 }
 
@@ -331,7 +344,8 @@ dt{
     header{
         font-size: 35px;
         margin-bottom: 100px;
-        
+        color: black;
+        background-color: black;
     }
     a{
         margin: auto;
@@ -343,6 +357,10 @@ dt{
         color: white;
         text-decoration: none;
         background-color: var(--main-theme);
+    }
+    body{
+        color: black;
+        background-color: black;
     }
     
 }
