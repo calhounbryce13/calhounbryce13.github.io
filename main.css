@@ -8,8 +8,6 @@
     font-family: 'Zen Maru Gothic', serif;
     font-family: 'Cormorant Infant', serif;
     --main-theme: rgb(0, 0, 0);
-    /*--back-color: rgb(183, 182, 182);
-    --accent-one: rgb(170, 61, 61)(249, 45, 45);*/
 
 }
 
@@ -19,7 +17,7 @@
   box-sizing: border-box;
 }
 
-.fancy-link {/*HERE*/
+.fancy-link {
   text-decoration: none;
   color: var(--main-theme);
   position: relative;
@@ -76,7 +74,6 @@ body::before {
 }
 */
 
-
 header{
     margin: auto;
     
@@ -130,6 +127,18 @@ a{
     padding-right: 5px;
     text-decoration: none;
     z-index: 1;
+}
+#staticAnchor{
+    position: fixed;
+    left: 92%;
+    top: 15%;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Libre Caslon Text', serif;
+    border: none;
+    height: 50px;
+    width: 100px;
+    color: var(--main-theme);
 }
 
 footer{
@@ -342,26 +351,24 @@ dt{
 
 @media screen and (max-width: 970px){
     header{
-        font-size: 35px;
-        margin-bottom: 100px;
-        color: black;
-        background-color: black;
+        display: none;
     }
-    a{
-        margin: auto;
-        margin-bottom: 20px;
-        height: 40px;
-        padding-top: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
-        color: white;
-        text-decoration: none;
-        background-color: var(--main-theme);
+    nav{
+        display: none;
     }
-    body{
-        color: black;
-        background-color: black;
+    main{
+        
+        display: none;
     }
+    #themeChange{
+        display: none;
+    }
+    footer{
+        position: relative;
+        top: 200px;
+        left: 70px;
+    }
+    
     
 }
 
