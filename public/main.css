@@ -130,20 +130,21 @@ a{
 }
 #staticAnchor{
     position: fixed;
-    left: 92%;
+    left: 94%;
     top: 15%;
     z-index: 0;
     background-color: rgba(255, 255, 255, 0.9);
     font-family: 'Libre Caslon Text', serif;
-    border: none;
+    font-size: 70%; 
     height: 50px;
     width: 100px;
     color: var(--main-theme);
+    max-width: 60px;
+    border: none;
 }
 
 footer{
     color: var(--main-theme);
-    
 }
 #copyright{
     color: inherit;
@@ -339,9 +340,9 @@ dt{
     height: 50px;
     position: relative;
     left: 105%;
+    border: none;
     background-color: rgba(255, 255, 255, 0.9);
     font-family: 'Libre Caslon Text', serif;
-    border: none;
     z-index: 0;
 }
 #themeChange:hover{
