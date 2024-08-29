@@ -451,7 +451,7 @@ body::before {
     transform: translateX(-50%);
     z-index: 1000;
 }
-*/
+
 
 header{
     margin: auto;
@@ -464,10 +464,7 @@ header{
     font-size: 70px;
     padding-bottom: 150px;
     padding-top: 30px;
-    /*background-color:var(--main-theme);*/
-    background-color: blue;
-    
-
+    background-color:var(--main-theme);
 }
 
 video{
@@ -601,6 +598,7 @@ h2{
     transition: opacity 5.3s ease; /* Adjust the duration and timing function as needed */
 }
 
+/*
 #background-video{
     filter: invert(1);
     position: fixed;
@@ -611,7 +609,7 @@ h2{
     object-fit: fill;
     z-index: -1; /* Place the video behind other content */
 }
-
+/*
 dd{
     padding: 3%;
     align-items: center;
@@ -754,5 +752,6 @@ dt{
     }
     
 }
+*/
 
 >>>>>>> Stashed changes
