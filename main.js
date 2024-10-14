@@ -3,20 +3,22 @@
 const videoSpeed = 0.5;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const openingClip = document.getElementsByClassName("myVideo")[0];
+    //const openingClip = document.getElementsByClassName("myVideo")[0];
     const BackgroundVideo = document.getElementById("background-video");
-    const themeButton = document.getElementById("themeChange");
+    //const themeButton = document.getElementById("themeChange");
     //const contactLink = document.getElementById("staticAnchor");
 
     //* EVENT HANDLER FOR THEME BUTTON
+    /*
     themeButton.addEventListener("click", () => {
         
-        const headerBlock = document.getElementById("myHeader");
-        const copyright = document.getElementById("copyright");
-        const nav = document.getElementById("localNavigation");
+        //const headerBlock = document.getElementById("myHeader");
+        //const copyright = document.getElementById("copyright");
+        //const nav = document.getElementById("localNavigation");
         
 
         //* checking if the filter is already set to no invert
+        
         if(BackgroundVideo.style.filter == "invert(1)" ){
             BackgroundVideo.style.filter = "invert(0)";
             headerBlock.style.backgroundColor = "rgba(255, 255, 255, 0.9)"; 
@@ -51,7 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 anchor.style.color = "var(--main-theme)";
             }
         }
+        
     });
+    */
 
     //* EVENT HANDLER FOR BACKGROUND VIDEO
     BackgroundVideo.addEventListener('loadeddata', () => {
@@ -59,12 +63,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //* EVENT HANDLER FOR OPENING CLIP
+    /*
     openingClip.addEventListener("ended", function() {
         this.classList.add("hide-video");
         setTimeout(() => {
             openingClip.parentNode.removeChild(openingClip);
         }, 3000);
     });
+    */
     
 });
 
