@@ -1,0 +1,627 @@
+/*
+AUTHOR: Bryce Calhoun
+DESCRIPTION: Stylesheet for desktop view of the webpage
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --main-color: rgba(0,0,0,1);
+    --main-alt: rgba(255, 255, 255, 1);
+    font-family: 'MuseoModerno';
+    --height-of-skills-container: 3000px;
+    --height-of-bio-container: 800px;
+    --height-of-research-container: 2600px;
+    --height-of-projects-container: 2600px;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    font-family: 'MuseoModerno';
+}
+
+#background-video{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    filter: invert(1);
+}
+
+.blackBar{
+    background-color: var(--main-color);
+    height: 800px;
+    width: 100vw;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    border-radius: 20px;
+}
+
+.dots{
+    border-radius: 50%;
+
+    background-color: var(--main-color);
+    display: inline-block;
+    text-align: center;
+    color: var(--main-alt);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+.dotsContainer{
+    margin-bottom: 200px;
+}
+
+.dotsContainer.top{
+    height: 900px;
+}
+
+.dotsContainer.bottom{
+    height: 400px;
+}
+
+.libraryContainer{
+    width: 70%;
+    
+}
+
+.dots.skills{
+    
+    background-color: var(--main-alt);
+    height: 150px;
+    width: 150px;
+    color: var(--main-color);
+    animation: skills_movement 5s ease-in-out infinite;
+}
+
+.dots.libraries{
+    
+    background-color: var(--main-alt);
+    height: 250px;
+    width: 250px;
+    color: var(--main-color);
+    animation: skills_movement 5s ease-in-out infinite;
+
+}
+
+.dots.projects{
+    background-color: var(--main-alt);
+    height: 200px;
+    width: 200px;
+    color: var(--main-color);
+}
+
+
+.fade-in-element{
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.fade-in-element.visible{
+    opacity: 1;
+}
+
+#schoolIcon{
+    background-image: url('media/icons/bio-icons/icons8-university-100.png');
+    position: relative;
+    bottom: 300px;
+    left: 60px;
+    z-index: 3;
+    
+}
+
+#beachIcon{
+    background-image: url('media/icons/bio-icons/icons8-beach-100.png');
+    position: relative;
+    bottom: 350px;
+    left: 150px;
+    z-index: 2;
+}
+
+#compsciIcon{
+    background-image: url('media/icons/bio-icons/icons8-computer-science-100.png');
+    position: relative;
+    bottom: 225px;
+    right: 300px;
+    z-index: 1;
+
+
+}
+
+#artIcon{
+    background-image: url('media/icons/bio-icons/icons8-art-100.png');
+    position: relative;
+    bottom: 150px;
+    right: 350px;
+    z-index: 0;
+}
+
+#algoIcon{
+    background-image: url('media/icons/project-icons/icons8-algorithm-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+    position: relative;
+    left: 500px;
+    bottom: 300px;
+    z-index: 1;
+
+}
+
+#brainIcon{
+    background-image: url('media/icons/project-icons/icons8-brain-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+    position: relative;
+    left: 600px;
+    bottom: 400px;
+    z-index: 0;
+    
+}
+
+#gameIcon{
+    background-image: url('media/icons/project-icons/icons8-game-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 750px;
+    bottom: 260px;
+    z-index: 2;
+    
+}
+
+#one{
+    position: absolute;
+    left: 10%;
+    top: 0%;
+    height: 250px;
+    width: 250px;
+    animation: float_one 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-research-50.png');
+    
+    
+}
+
+#two{
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    height: 250px;
+    width: 250px;
+    background-color: var(--main-color);
+    animation: float_two 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-projects-50.png');
+}
+
+#three{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    height: 400px;
+    width: 400px;
+    animation: float_three 7s ease-in-out infinite;
+    display: flex;            /* Enable flexbox on the container */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center; 
+
+}
+
+#four{
+    position: absolute;
+    left: 75%;
+    top: 60%;
+    height: 250px;
+    width: 250px;
+    animation: float_four 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-skills-50.png');
+    
+}
+
+#five{
+    position: absolute;
+    left: 70%;
+    top: 10%;
+    height: 100px;
+    width: 100px;
+    animation: float_five 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-theme-50.png');
+}
+
+#six{
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
+    height: 100px;
+    width: 100px;
+    background-image: url('media/icons/contact-icons/icons8-github-100.png');
+}
+
+#seven{
+    position: absolute;
+    left: 400px;
+    bottom: 0px;
+    height: 100px;
+    width: 100px;
+    background-image: url('media/icons/contact-icons/icons8-instagram-100.png');
+    background-size: 90px, 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+#eight{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 210px;
+    width: 210px;
+    background-image: url('media/icons/contact-icons/icons8-linkedin-150.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+}
+
+#myName{
+    font-size: 50px;
+}
+
+.mainTxt{
+    position: relative;
+    width: 450px;
+    color: var(--main-color);
+    height: 400px;
+    z-index: 3;
+    display: block;
+}
+
+.mainTxt.right{
+    left: 600px;
+    top: 100px;
+}
+
+.mainTxt.left{
+    left: 100px;
+    top: 100px;
+}
+
+.headers{
+    position: relative;
+    font-size: 20px;
+    color: var(--main-alt);
+    z-index: 0;
+}
+
+.subheaders{
+    position: relative;
+    font-size: 15px;
+    color: var(--main-alt);
+    z-index: 0;
+}
+
+.headers.left{
+    left: 100px;
+    top: 100px;
+}
+
+.subheaders.left{
+    left: 100px;
+    top: 100px;
+}
+
+.headers.right{
+    left: 600px;
+    top: 100px;
+}
+
+.headers.farRight{
+    left: 950px;
+    top: 700px;
+
+}
+
+.plainLink{
+    text-decoration: None;
+}
+
+@keyframes skills_movement{
+
+    0%{
+        transform: translate(0,0);
+
+    }
+    50%{
+        transform: translate(var(--move-x, 0), var(--move-y, 0));
+
+    }
+    100%{
+        transform: translate(0,0);
+
+    }
+}
+
+#pythonSkill{
+    background-image: url('media/icons/language-icons/icons8-python-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 159px;
+    top: 265px;
+    --move-x: 100px;
+    --move-y: 12px;
+    animation-duration: 12s;
+
+}
+
+#htmlSkill{background-image: url('media/icons/language-icons/icons8-html-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 173px;
+    top: 644px;
+    --move-x: 14px;
+    --move-y: -5px;
+    animation-duration: 5s;
+    
+}
+
+#cssSkill{background-image: url('media/icons/language-icons/icons8-css-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 189px;
+    top: 90px;
+    --move-x: 19px;
+    --move-y: 12px;
+    animation-duration: 7s;
+    
+}
+
+#jsSkill{
+    background-image: url('media/icons/language-icons/icons8-javascript-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+    position: relative;
+    left: 403px;
+    top: 205px;
+    --move-x: -9px;
+    --move-y: 13px;
+    animation-duration: 5s;
+    
+}
+
+#javaSkill{
+    background-image: url('media/icons/language-icons/icons8-java-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 0px;
+    top: 466px;
+    --move-x: 9px;
+    --move-y: 0px;
+    animation-duration: 7s;
+    
+}
+
+#cSkill{
+    background-image: url('media/icons/language-icons/icons8-c-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 210px;
+    top: 75px;
+    --move-x: -10px;
+    --move-y: 6px;
+    animation-duration: 9s;
+    
+}
+
+#cplusplusSkill{
+    background-image: url('media/icons/language-icons/icons8-c-plus-plus-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+    position: relative;
+    left: 0px;
+    top: 571px;
+    --move-x: 9px;
+    --move-y: 12px;
+    animation-duration: 7s;
+    
+}
+
+#Skills{
+    height: var(--height-of-skills-container);
+}
+
+#researchPoster{
+    height: 400px;
+    width: 530px;
+    position: relative;
+    left: 600px;
+    bottom: 300px;
+    border-radius: 20px;
+    
+}
+
+.libraryContainer{
+    color: var(--main-alt);
+    display: flexbox;
+    justify-content: space-between;
+
+}
+
+.libraryContainer.react{
+    display: flex;
+    position: relative;
+    top: 800px;
+    left: 300px;
+}
+
+.libraryContainer.tensorflow{
+    display: flex;
+    position: relative;
+    top: 900px;
+    left: 200px;
+}
+
+.libraryContainer.matlabplotlib{
+    display: flex;
+    position: relative;
+    top: 1100px;
+    left: 200px;
+}
+
+.libraryContainer.openCV{
+    display: flex;
+    position: relative;
+    top: 1000px;
+    left: 300px;
+}
+
+.libraryContainer.numpy{
+    display: flex;
+    position: relative;
+    top: 1200px;
+    left: 300px;
+}
+
+#REACT{
+    background-image: url('media/icons/library-icons/icons8-react-150.png');
+}
+
+#tensorflow{
+    background-image: url('media/icons/library-icons/icons8-tensorflow-150.png');
+}
+
+#matlabplotlib{
+
+    background-image: url('media/icons/library-icons/icons8-graph-100.png');
+    background-size: 150px 150px;
+}
+
+#openCV{
+    background-image: url('media/icons/library-icons/icons8-computer-vision-100.png');
+    background-size: 150px 150px;
+}
+
+
+#numpy{
+    background-image: url('media/icons/library-icons/icons8-grid-100.png');
+    background-size: 150px 150px;
+
+}
+
+.libraryText{
+    width: 500px;
+    color: var(--main-color);
+}
+
+
+@keyframes float_one{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes float_two{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(-10px, 10px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(-10px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_three{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(5px, -5px);
+    }
+    50%{
+        transform: translate(-5px, -10);
+    }
+    75%{
+        transform: translate(-5, -5);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_four{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(10px, -10px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(10px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_five{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(-10px, 0px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(-10px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}

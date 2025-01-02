@@ -1,0 +1,409 @@
+/*
+AUTHOR: Bryce Calhoun
+DESCRIPTION: Stylesheet for mobile view of the webpage
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --main-color: rgba(0,0,0,1);
+    --main-alt: rgba(255, 255, 255, 1);
+    font-family: 'MuseoModerno';
+
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#background-video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    transform: rotate(0deg);
+    object-fit: cover;
+    filter: invert(1);
+    
+}
+
+.blackBar{
+    position: relative;
+    background-color: var(--main-color);
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 20px;
+}
+
+.dots{
+    border-radius: 50%;
+    background-color: var(--main-color);
+    
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    color: var(--main-alt);
+}
+
+.dotsContainer{
+    margin-bottom: 50%;
+}
+
+.dotsContainer.top{
+    position: relative;
+    height: 150vh;
+}
+
+.dots.skills{
+    border-radius: 50%;
+    background-color: var(--main-alt);
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.dots.projects{
+    border-radius: 50%;
+    background-color: var(--main-alt);
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+
+/* CHANGE THE OPACITY BACK TO 0 BEFORE FINISH ! */
+.fade-in-element{
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.fade-in-element.visible{
+    opacity: 1;
+}
+
+
+#one{
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    height: 200px;
+    width: 200px;
+    animation: float_one 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-research-50.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+#two{
+    position: absolute;
+    top: 55%;
+    left: -6%;
+    height: 200px;
+    width: 200px;
+    background-color: var(--main-color);
+    animation: float_two 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-projects-50.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+#three{
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    height: 250px;
+    width: 250px;
+    animation: float_three 7s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    
+}
+
+#four{
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    height: 200px;
+    width: 200px;
+    animation: float_four 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-skills-50.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+#five{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    height: 100px;
+    width: 100px;
+    animation: float_five 7s ease-in-out infinite;
+    background-image: url('media/icons/main-page-icons/icons8-theme-50.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+}
+
+#six{
+    position: relative;
+    left: 200px;
+    height: 175px;
+    width: 175px;
+    background-image: url('media/icons/icons8-github-100.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+    display: none;
+
+}
+
+#seven{
+    position: relative;
+    left: 400px;
+    height: 100px;
+    width: 100px;
+    background-image: url('media/icons/icons8-instagram-50.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+
+    display: none;
+}
+
+#eight{
+    position: relative;
+    left: 600px;
+    height: 210px;
+    width: 210px;
+    background-image: url('media/icons/icons8-linkedin-150.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
+
+    display: none;
+
+}
+
+#myName{
+    font-size: 35px;
+}
+
+
+.mainTxt{
+    position: relative;
+    width: 450px;
+    color: var(--main-alt);
+    height: 400px;
+    z-index: 3;
+    display: block;
+
+}
+
+.mainTxt.right{
+    left: 600px;
+    top: 100px;
+}
+
+.mainTxt.left{
+    left: 100px;
+    top: 100px;
+}
+
+.headers{
+    position: relative;
+    font-size: 20px;
+    color: var(--main-alt);
+    z-index: 3;
+}
+
+.headers.left{
+    left: 100px;
+    top: 100px;
+
+}
+
+.headers.right{
+    left: 600px;
+    top: 100px;
+
+}
+
+.headers.farRight{
+    left: 950px;
+    top: 700px;
+
+}
+
+.plainLink{
+    text-decoration: None;
+}
+
+#pythonSkill{
+    position: relative;
+    left: 159px;
+    top: 265px;
+
+}
+#htmlSkill{
+    position: relative;
+    left: 273px;
+    top: 544px;
+    
+}
+#cssSkill{
+    position: relative;
+    left: 149px;
+    top: 211px;
+    
+}
+#jsSkill{
+    position: relative;
+    left: 403px;
+    top: 205px;
+    
+}
+#javaSkill{
+    position: relative;
+    left: 378px;
+    top: 466px;
+    
+}
+#cSkill{
+    position: relative;
+    left: 410px;
+    top: 75px;
+    
+}
+#cplusplusSkill{
+    position: relative;
+    left: 413px;
+    top: 371px;
+    
+}
+
+#biography{
+    display: none;
+}
+
+#Skills{
+    display: none;
+}
+
+#Research{
+    display: none;
+}
+
+#Projects{
+    display: none;
+}
+
+@keyframes float_one{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+@keyframes float_two{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(-10px, 10px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(-10px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_three{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(5px, -5px);
+    }
+    50%{
+        transform: translate(-5px, -10);
+    }
+    75%{
+        transform: translate(-5, -5);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_four{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(10px, -10px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(10px, -10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes float_five{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(-10px, 0px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+    75%{
+        transform: translate(-10px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+
+
+

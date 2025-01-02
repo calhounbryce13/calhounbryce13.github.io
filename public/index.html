@@ -1,0 +1,304 @@
+<!--
+AUTHOR: Bryce Calhoun
+DESCRIPTION: HTML file for my webpage
+-->
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Bryce Calhoun</title>
+            <link id="stylesheet" rel="stylesheet" href="desktop.css">
+            <script src="script.js"></script>
+
+            <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+            <link rel="manifest" href="site.webmanifest">
+
+        </head>
+        <body>
+            <video autoplay muted loop id="background-video">
+                <source src="media/Background-Clip.mp4" type="video/mp4">
+            </video>
+            
+            <div class="dotsContainer top">
+
+                <a href="#Research">
+                    <div id="one" class="dots fade-in-element one">
+                    
+            
+                    </div>
+
+                </a>
+                
+    
+                <a href="#Projects">
+                    <div id="two" class="dots fade-in-element two">
+
+                    </div>
+                </a>
+
+                <a class="plainLink" href="#myStuff">
+                    <div id="three" class="dots fade-in-element three">
+                        <p id="myName">
+                            Bryce Calhoun
+                        </p>
+                    </div>
+
+                </a>
+                    
+                <a href="#Skills">
+                    <div id="four" class="dots fade-in-element four">
+                    
+                    </div>
+                </a>
+                
+
+                <div id="five" class="dots fade-in-element five">
+                    
+                </div>
+    
+            </div>
+
+
+            <div id="biography" class="blackBar">
+                <p class="headers right">
+                    Bio
+                </p>
+                <p class="mainTxt right">
+                    I was born in San Diego, California, and subsequently 
+                    relocated to<strong> Los Angeles </strong> at the age of 9. I remained 
+                    in Los Angeles until my graduation from 
+                    Ulysses S. Grant High School. Following this, I transitioned 
+                    to Oregon to embark on my academic journey. Currently enrolled as 
+                    an undergraduate student at <strong>Oregon State University</strong>, my major course 
+                    of study is computer science, specializing in artificial intelligence. 
+                    My academic interests center around areas such as<strong> AI developement, 
+                    machine learning</strong>, and <strong> meta learning </strong> as well 
+                    as a few other areas. I anticipate obtaining a bachelor's degree in computer science.
+                </p>
+
+                <div id="beachIcon" class="dots projects">
+
+                </div>
+
+                <div id="schoolIcon" class="dots projects">
+
+                </div>
+
+                <div id="compsciIcon" class="dots projects">
+
+                </div>
+
+                <div id="artIcon" class="dots projects">
+
+                </div>
+            </div>
+            
+            
+            <div id="Research" class="blackBar">
+                <p class="headers left"> 
+                    Research 
+                </p>
+                <p class="mainTxt left">
+                    Computer vision is a new and exciting field within the context of
+                    artificial intelligence that comes with lots of opportunities for 
+                    valuable applications. It's only natural to wonder if computer vision
+                    could help us understand our own health better. This was the exact purpose
+                    for this longitudinal study. The <strong>data preprocessing</strong> included publicly available 
+                    Twitter data that took well over a year's time to finilize. Some key takeaways 
+                    from this project are that while unsurprisingly, the human eye remains the leading authority
+                    in the detection of visual health outcomes and health-contributing environmental features,
+                    there is a massive potential in the refinement of computer vision models for the 
+                    identification of complex emotional health outcomes. This is especially the case in the context 
+                    of children in schools. For a more detailed summary <a href="media/Slide1.PNG" class="lowkeyLink" target="_blank">here</a> 
+                    is a link to the full presentation slide.
+                </p>
+
+                <div>
+                    <img src="media/Slide1.PNG" id="researchPoster">
+                </div>
+            </div>           
+
+            <div id="Skills" class="blackBar">
+                <p class="headers left">
+                    Skills : languages
+                </p>
+                <div>
+                    <div  id="pythonSkill" class="dots skills">
+                        
+
+                    </div>
+                    <div id="htmlSkill" class="dots skills">
+                        
+
+                    </div>
+                    <div id="cssSkill" class="dots skills">
+                        
+
+                    </div>
+                    <div id="jsSkill" class="dots skills">
+                        
+                    </div>
+                    <div id="javaSkill" class="dots skills">
+                        
+
+                    </div>
+                    <div id="cSkill" class="dots skills">
+                        
+
+                    </div>
+                    <div id="cplusplusSkill" class="dots skills">
+                        
+
+                    </div>
+                </div>
+                <p class="headers farRight">
+                    Skills : libraries
+                </p>
+
+                <div>
+
+                    <div class="libraryContainer react">
+
+                        <p class="libraryText"> 
+                            <strong>React</strong> is a popular JS library for 
+                            building user interfaces (UI), particularly for 
+                            single-page applications (SPAs). 
+                            React follows a declarative approach, where developers 
+                            describe how the UI should look based on the state, 
+                            and React takes care of updating the view when the 
+                            state changes. React's component-based architecture 
+                            also promotes maintainability and scalability for 
+                            complex applications.
+                        </p>
+
+                        <div id="REACT" class="dots libraries">
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="libraryContainer tensorflow">
+                        
+                        <div id="tensorflow" class="dots libraries">
+                        </div>
+
+                        
+                        <p class="libraryText"> <strong>Tensorflow</strong>  is a great resource for pre-built ML models
+                        and AI algorithms. The combination of Tensorflow and Keras allows developers to built custom neural networks 
+                        in python code and train them on either publicly available datasets or your own built data sets.
+                        </p>
+
+                    </div>
+
+
+                    <div class="libraryContainer openCV">
+
+                        <p class="libraryText">
+                            <strong>OpenCV</strong>  is another widely used and highly regarded library 
+                            in the field of AI, specifically for computer vision applications. 
+                            It offers a comprehensive set of tools that enable developers to 
+                            process and manipulate image data, which is essential for building 
+                            and training computer vision models.
+                        </p>
+                        
+                        <div id="openCV" class="dots libraries">
+                        </div>
+
+                    </div>
+
+                    <div class="libraryContainer matlabplotlib">
+                        
+                        <div id="matlabplotlib" class="dots libraries">
+                        </div>
+
+                        <p class="libraryText"> 
+                            <strong>Matlabplotlib</strong> in the context of 
+                            machine learning, the ability to visualize data is critical for understanding 
+                            patterns and insights. This library is incredibly useful for displaying various 
+                            types of graphs and charts, such as line plots, bar charts, histograms, and scatter 
+                            plots, based on complex datasets. By utilizing these visualization methods, its easier 
+                            to interpret the results of machine learning models, identify trends, and communicate 
+                            findings effectively. Whether you're exploring data, tuning models, or presenting results 
+                            to <strong>stakeholders</strong>.
+                        </p>
+                        
+                    </div>
+
+                    <div class="libraryContainer numpy">
+
+                        <p class="libraryText"> 
+                            <strong>NumPy</strong> is a powerful Python library used for numerical computing, 
+                            particularly for handling large, multi-dimensional arrays and matrices. It 
+                            provides a wide range of mathematical functions to operate on these arrays 
+                            efficiently. The library supports element-wise operations, linear algebra, 
+                            random number generation, and more.
+                        </p>
+
+                        <div id="numpy" class="dots libraries">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="Projects" class="blackBar">
+                <p class="headers left">
+                    Projects
+                </p>
+                <p class="subheaders left"> AI Minimax algorithm for Tic-Tac-Toe game logic</p>
+
+                <p class="mainTxt left">
+                    Starting with the basics of artificial intelligence algorithms, <strong> adverserial serach </strong> 
+                    is a key component of implementing the human decision-making process. adverserial search deals 
+                    with navigating to one of various optimal<strong> goal states </strong> ( a win for the agent ) and moving the agent closer and closer with each turn. Moves that 
+                    place the agent closer to the goal state will be rewarded and moves that deter the agent from reaching 
+                    the goal state are not. The agent will then attempt to either maximize or minimize a score based on the moves
+                    that it makes.
+                </p>
+
+                <div id="gameIcon" class="dots projects">
+                </div>
+
+                <div id="brainIcon" class="dots projects">
+                </div>
+
+                <div id="algoIcon" class="dots projects">
+                </div>
+            </div>
+
+
+            <div id="myStuff" class="dotsContainer bottom">
+
+                <a href="https://github.com/calhounbryce13" target="_blank">
+                    <div id="six" class="dots">
+
+                    </div>
+
+                </a>
+
+                <a href="https://www.instagram.com/bryce.calhoun/" target="_blank">
+                    <div id="seven" class="dots">
+
+                    </div>
+
+                </a>
+                
+
+                <a href="https://www.linkedin.com/in/bryce-calhoun-4126b6219/" target="_blank">
+                    <div id="eight" class="dots">
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <footer>
+                &copy; 2024 Bryce Calhoun
+            </footer>
+        </body>
+
+    </html>
