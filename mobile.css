@@ -14,13 +14,19 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 
 html{
     scroll-behavior: smooth;
-    height: 100%;
+    height: 100vh;
+    width: 80vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 
 body{
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: 100vh;
+    overflow-x: hidden;
+    border: 2px dotted blue;
 }
 
 #background-video{
@@ -28,16 +34,17 @@ body{
     top: 0%;
     left: 0%;
     z-index: -1;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     transform: rotate(0deg);
     object-fit: cover;
     filter: invert(1);
-    
 }
 
 .blackBar{
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--main-color);
     width: 100%;
     margin-top: 10%;
@@ -48,28 +55,33 @@ body{
 .dots{
     border-radius: 50%;
     background-color: var(--main-color);
-    
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vw;
     text-align: center;
     color: var(--main-alt);
 }
 
 .dotsContainer{
     margin-bottom: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dotsContainer.top{
-    position: relative;
     height: 150vh;
+    width: 80vw;
+    border: 2px solid red;
+
 }
 
 .dots.skills{
+    position: absolute;
     border-radius: 50%;
     background-color: var(--main-alt);
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vw;
     text-align: center;
     color: var(--main-color);
 }
@@ -77,11 +89,12 @@ body{
 .dots.projects{
     border-radius: 50%;
     background-color: var(--main-alt);
-    display: inline-block;
-    height: 200px;
-    width: 200px;
+    display: none;
+    height: 20vh;
+    width: 20vw;
     text-align: center;
     color: var(--main-color);
+    
 }
 
 
@@ -100,8 +113,8 @@ body{
     position: absolute;
     top: 40%;
     right: 1%;
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 20vh;
     animation: float_one 7s ease-in-out infinite;
     background-image: url('media/icons/main-page-icons/icons8-research-50.png');
     background-repeat: no-repeat;
@@ -113,8 +126,8 @@ body{
     position: absolute;
     top: 55%;
     left: -6%;
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 20vh;
     background-color: var(--main-color);
     animation: float_two 7s ease-in-out infinite;
     background-image: url('media/icons/main-page-icons/icons8-projects-50.png');
@@ -127,8 +140,8 @@ body{
     position: absolute;
     top: 15%;
     left: 2%;
-    height: 250px;
-    width: 250px;
+    height: 25vh;
+    width: 25vh;
     animation: float_three 7s ease-in-out infinite;
     display: flex;
     justify-content: center;
@@ -141,8 +154,8 @@ body{
     position: absolute;
     top: 70%;
     right: 0%;
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 20vh;
     animation: float_four 7s ease-in-out infinite;
     background-image: url('media/icons/main-page-icons/icons8-skills-50.png');
     background-repeat: no-repeat;
@@ -154,8 +167,8 @@ body{
     position: absolute;
     top: 5%;
     right: 10%;
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vh;
     animation: float_five 7s ease-in-out infinite;
     background-image: url('media/icons/main-page-icons/icons8-theme-50.png');
     background-repeat: no-repeat;
@@ -166,8 +179,8 @@ body{
 #six{
     position: relative;
     left: 200px;
-    height: 175px;
-    width: 175px;
+    height: 17.5vh;
+    width: 17.5vw;
     background-image: url('media/icons/icons8-github-100.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -180,8 +193,8 @@ body{
 #seven{
     position: relative;
     left: 400px;
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vw;
     background-image: url('media/icons/icons8-instagram-50.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -194,8 +207,8 @@ body{
 #eight{
     position: relative;
     left: 600px;
-    height: 210px;
-    width: 210px;
+    height: 21vh;
+    width: 21vw;
     background-image: url('media/icons/icons8-linkedin-150.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -212,7 +225,7 @@ body{
 
 .mainTxt{
     position: relative;
-    width: 450px;
+    width: 45vw;
     color: var(--main-alt);
     height: 400px;
     z-index: 3;
@@ -260,50 +273,45 @@ body{
 }
 
 #pythonSkill{
-    position: relative;
     left: 159px;
     top: 265px;
 
 }
 #htmlSkill{
-    position: relative;
     left: 273px;
     top: 544px;
     
 }
 #cssSkill{
-    position: relative;
     left: 149px;
     top: 211px;
     
 }
 #jsSkill{
-    position: relative;
     left: 403px;
     top: 205px;
     
 }
 #javaSkill{
-    position: relative;
     left: 378px;
     top: 466px;
     
 }
 #cSkill{
-    position: relative;
     left: 410px;
     top: 75px;
     
 }
 #cplusplusSkill{
-    position: relative;
     left: 413px;
     top: 371px;
     
 }
 
 #biography{
-    display: none;
+    height: 100vh;
+    width: 80vw;
+    
 }
 
 #Skills{
@@ -316,6 +324,11 @@ body{
 
 #Projects{
     display: none;
+}
+
+footer{
+    position: absolute;
+    left: 0%;
 }
 
 @keyframes float_one{

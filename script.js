@@ -6,6 +6,8 @@ const HUD_BORDER_THICKNESS = 2;
 
 document.addEventListener('DOMContentLoaded', () =>{
 
+    console.log("height of he viewport", window.innerHeight);
+
     resize_the_screen();
 
     orbital_animation();
