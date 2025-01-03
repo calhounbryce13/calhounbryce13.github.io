@@ -44,6 +44,7 @@ html, body{
     margin-top: 10%;
     margin-bottom: 10%;
     border-radius: 20px;
+    text-align: center;
 }
 
 .dots{
@@ -94,7 +95,7 @@ html, body{
 
 /* CHANGE THE OPACITY BACK TO 0 BEFORE FINISH ! */
 .fade-in-element{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1.5s ease-out;
 }
 
@@ -218,8 +219,11 @@ html, body{
 
 
 .mainTxt{
-    position: relative;
-    width: 45vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
     color: var(--main-alt);
     height: 400px;
     z-index: 3;
@@ -227,39 +231,16 @@ html, body{
 
 }
 
-.mainTxt.right{
-    left: 600px;
-    top: 100px;
-}
-
-.mainTxt.left{
-    left: 100px;
-    top: 100px;
-}
 
 .headers{
-    position: relative;
-    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 150%;
+    width: 80vw;
     color: var(--main-alt);
     z-index: 3;
-}
-
-.headers.left{
-    left: 100px;
-    top: 100px;
-
-}
-
-.headers.right{
-    left: 600px;
-    top: 100px;
-
-}
-
-.headers.farRight{
-    left: 950px;
-    top: 700px;
-
 }
 
 .plainLink{
@@ -304,7 +285,7 @@ html, body{
 
 #biography{
     height: 100vh;
-    width: 80vw;
+    width: 90vw;
     
 }
 
