@@ -51,7 +51,7 @@ html, body{
     height: 69vw;
     width: 90vw;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
@@ -164,7 +164,7 @@ html, body{
     width: 20vh;
     background-color: var(--main-color);
     animation: float_two 7s ease-in-out infinite;
-    background-image: url('media/icons/main-page-icons/icons8-projects-50.png');
+    background-image: url('media/icons/main-page-icons/icons8-code-50.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: fill;
@@ -174,8 +174,8 @@ html, body{
     position: absolute;
     top: 15%;
     left: 2%;
-    height: 25vh;
-    width: 25vh;
+    height: 35vh;
+    width: 35vh;
     animation: float_three 7s ease-in-out infinite;
     display: flex;
     justify-content: center;
@@ -253,20 +253,27 @@ html, body{
 }
 
 #myName{
-    font-size: 35px;
+    font-size: 55px;
 }
 
 
 .mainTxt{
     position: absolute;
-    top: 30%;
     left: 50%;
     transform: translateX(-50%);
     width: 70vw;
     color: var(--main-alt);
-    
     z-index: 0;
     display: block;
+
+}
+
+#bioTxt{
+    top: 30%;
+}
+
+#researchTxt{
+    top: 40%;
 }
 
 
