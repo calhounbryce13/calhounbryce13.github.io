@@ -35,6 +35,13 @@ html, body{
     filter: invert(1);
 }
 
+#specialOne{
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    
+}
+
 .blackBar{
     position: relative;
     left: 50%;

@@ -1,3 +1,8 @@
+/*
+AUTHOR: Bryce Calhoun
+DESCRIPTION: Script file for my webpage
+*/
+
 'use strict';
 
 
@@ -85,6 +90,7 @@ const invert_dots = function(boolean){
 
     const dots = Array.from(document.getElementsByClassName('dots'));
     const numDotsToSkip = 20;
+    const indexBeforeSkip = 5;
 
     if(boolean == 0){
         
@@ -94,7 +100,7 @@ const invert_dots = function(boolean){
         while(counter < dots.length){
             dots[counter].style.filter = 'invert(1)';
 
-            if(counter == 4){
+            if(counter == indexBeforeSkip){
                 counter = counter + numDotsToSkip;
             }
             else{
@@ -107,7 +113,7 @@ const invert_dots = function(boolean){
         while(counter < dots.length){
             dots[counter].style.filter = 'invert(0)';
 
-            if(counter == 4){
+            if(counter == indexBeforeSkip){
                 counter = counter + numDotsToSkip;
             }
             else{
@@ -146,14 +152,36 @@ const orbital_animation = function(){
     const h = centerPosition.left + centerPosition.width / 2;
     const k = centerPosition.top + centerPosition.height / 2;
 
-    for(let x = 0; x < instagramAndgithub.length - 1; x++){
+    const r = 200;
+    const speed = 0.005;
+    animate_contact_orbit(instagramAndgithub, h, k, r, speed);
+    animate_the_title_orbit();
+}
+
+const animate_contact_orbit = function(arrayOfElements, h, k, r, speed){
+    for(let x = 0; x < arrayOfElements.length - 1; x++){
         if(x === 0){
-            animation(instagramAndgithub[x], h, k, 200, 0.005, 0);
+            animation(arrayOfElements[x], h, k, r, speed, 0);
         }
         else{
-            animation(instagramAndgithub[x], h, k, 200, 0.005, Math.PI);
+            animation(arrayOfElements[x], h, k, r, speed, Math.PI);
         }
     }
+
+}
+
+const animate_the_title_orbit = function(){
+    const speacialDot = document.getElementById('specialOne');
+    const myNameDot = document.getElementById('three');
+    const nameDotPosition = myNameDot.getBoundingClientRect();
+    const h = nameDotPosition.left + nameDotPosition.width / 2;
+    const k = nameDotPosition.top + nameDotPosition.height / 2;
+    const r = window.innerWidth * 0.2;
+    const speed = 0.006;
+    const theta = Math.PI;
+
+    animation(speacialDot, h, k, r, speed, theta);
+
 }
 
 const animation = function(element, h, k, r, speed, theta){

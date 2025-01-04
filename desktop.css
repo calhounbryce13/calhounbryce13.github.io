@@ -184,6 +184,13 @@ body{
     
 }
 
+#specialOne{
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    
+}
+
 #one{
     position: absolute;
     left: 10%;
