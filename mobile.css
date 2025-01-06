@@ -47,7 +47,7 @@ html, body{
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--main-color);
-    width: 100%;
+    width: 90vw;
     margin-top: 10%;
     margin-bottom: 10%;
     border-radius: 20px;
@@ -58,7 +58,7 @@ html, body{
     height: 69vw;
     width: 90vw;
     position: absolute;
-    top: 15%;
+    top: 23%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
@@ -276,11 +276,11 @@ html, body{
 }
 
 #bioTxt{
-    top: 30%;
+    top: 20%;
 }
 
 #researchTxt{
-    top: 40%;
+    top: 50%;
 }
 
 
@@ -337,8 +337,6 @@ html, body{
 
 #biography{
     height: 130vh;
-    width: 90vw;
-    
 }
 
 #Skills{
@@ -346,8 +344,7 @@ html, body{
 }
 
 #Research{
-    height: 150vh;
-    width: 90vw;
+    height: 160vh;
 }
 
 #Projects{

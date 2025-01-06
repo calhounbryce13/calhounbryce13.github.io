@@ -11,8 +11,6 @@ const HUD_BORDER_THICKNESS = 2;
 
 document.addEventListener('DOMContentLoaded', () =>{
 
-    console.log("height of he viewport", window.innerHeight);
-
     resize_the_screen();
 
     orbital_animation();
@@ -27,15 +25,22 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 });
 
+const lock_the_screen_in_portrait = function(){
+
+    if(screen.orientation){
+        screen.orientation.lock('portrait');
+    }
+    
+}
+
 
 const resize_the_screen = function(){
-
-    console.log("resized to:",document.documentElement.clientWidth);
 
     let link = document.getElementById('stylesheet');
 
     if(document.documentElement.clientWidth < 900){
         link.setAttribute("href","mobile.css");
+        lock_the_screen_in_portrait();
     }
     else{
         link.setAttribute("href","desktop.css");

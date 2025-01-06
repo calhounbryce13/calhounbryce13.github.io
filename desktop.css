@@ -22,27 +22,37 @@ html{
 }
 
 body{
-    width: 100%;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
     font-family: 'MuseoModerno';
 }
 
 #background-video{
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     top: 0%;
     left: 0%;
     position: fixed;
     filter: invert(1);
+    object-fit: cover;
 }
 
 .blackBar{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--main-color);
     height: 800px;
-    width: 100vw;
+    width: 90vw;
     margin-top: 100px;
     margin-bottom: 200px;
     border-radius: 20px;
+}
+
+#biography{
+    width: 90vw;
 }
 
 .dots{
@@ -309,8 +319,10 @@ body{
 
 .headers{
     position: relative;
+    width: 25vw;
     font-size: 20px;
     color: var(--main-alt);
+    margin-bottom: 10vh;
     z-index: 0;
 }
 
