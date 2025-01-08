@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     resize_the_screen();
 
-    orbital_animation();
-
     window.addEventListener('resize', resize_the_screen);
 
     window.addEventListener('load', fade_in_elements);
+
+    orbital_animation();
 
     theme_functionality();
 
@@ -73,6 +73,11 @@ const change_colors = function(){
     const backgroundVideo = document.getElementById('background-video');
     const style = getComputedStyle(backgroundVideo);
     const researchPoster = document.getElementById('researchPoster');
+    
+    color_inversion(backgroundVideo, style, researchPoster);  
+}
+
+const color_inversion = function(backgroundVideo, style, researchPoster){
 
     if(style.filter == 'invert(1)'){
         // white-to-black
@@ -88,7 +93,7 @@ const change_colors = function(){
         invert_dots(1);
         invert_bars(1);
     }
-    
+
 }
 
 const invert_dots = function(boolean){
@@ -179,11 +184,13 @@ const animate_the_title_orbit = function(){
     const speacialDot = document.getElementById('specialOne');
     const myNameDot = document.getElementById('three');
     const nameDotPosition = myNameDot.getBoundingClientRect();
-    const h = nameDotPosition.left + nameDotPosition.width / 2;
-    const k = nameDotPosition.top + nameDotPosition.height / 2;
+    const h = Math.round(nameDotPosition.left + nameDotPosition.width / 2);
+    const k = Math.round(nameDotPosition.top + nameDotPosition.height / 2);
     const r = window.innerWidth * 0.2;
     const speed = 0.006;
     const theta = Math.PI;
+
+    console.log("h:", h, "k:", k);
 
     animation(speacialDot, h, k, r, speed, theta);
 

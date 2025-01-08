@@ -92,10 +92,13 @@ html, body{
     border-radius: 50%;
     background-color: var(--main-alt);
     display: inline-block;
-    height: 10vh;
-    width: 10vw;
+    height: 15vh;
+    width: 15vh;
     text-align: center;
     color: var(--main-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: fill;
 }
 
 .dots.projects{
@@ -283,6 +286,20 @@ html, body{
     top: 50%;
 }
 
+#langSkillsHeader{
+
+}
+
+#libSkillsHeader{
+    top: 65%;
+
+
+}
+
+.libraryContainer{
+    display: none;
+}
+
 
 .headers{
     position: absolute;
@@ -300,39 +317,87 @@ html, body{
 }
 
 #pythonSkill{
-    left: 159px;
-    top: 265px;
+    background-image: url('media/icons/language-icons/icons8-python-100.png');
+    left: 5%;
+    top: 16%;
+    --move-x: -6%;
+    --move-y: -3%;
+    animation: skills_movement 7s infinite;
 
 }
 #htmlSkill{
-    left: 273px;
-    top: 544px;
+    background-image: url('media/icons/language-icons/icons8-html-100.png');
+    left: 10%;
+    top: 30%;
+    --move-x: 2%;
+    --move-y: -20%;
+    animation: skills_movement 7.9s infinite;
     
 }
 #cssSkill{
-    left: 149px;
-    top: 211px;
+    background-image: url('media/icons/language-icons/icons8-css-100.png');
+
+    left: 10%;
+    top: 52%;
+    --move-x: -5%;
+    --move-y: 3%;
+    animation: skills_movement 9.5s infinite;
     
 }
 #jsSkill{
-    left: 403px;
-    top: 205px;
+    background-image: url('media/icons/language-icons/icons8-javascript-100.png');
+
+    left: 45%;
+    top: 10%;
+    --move-x: 3%;
+    --move-y: 8%;
+    animation: skills_movement 9s infinite;
     
 }
 #javaSkill{
-    left: 378px;
-    top: 466px;
+    background-image: url('media/icons/language-icons/icons8-java-100.png');
+
+    left: 60%;
+    top: 47%;
+    --move-x: 5%;
+    --move-y: 9%;
+    animation: skills_movement 9.5s infinite;
     
 }
 #cSkill{
-    left: 410px;
-    top: 75px;
+    background-image: url('media/icons/language-icons/icons8-c-100.png');
+    left: 53%;
+    top: 22%;
+    --move-x: -2%;
+    --move-y: -19%;
+    animation: skills_movement 11s infinite;
     
 }
 #cplusplusSkill{
-    left: 413px;
-    top: 371px;
+    background-image: url('media/icons/language-icons/icons8-c-plus-plus-100.png');
+
+    left: 20%;
+    top: 40%;
+    --move-x: -7%;
+    --move-y: 2%;
+    animation: skills_movement 8s infinite;
     
+}
+
+@keyframes skills_movement{
+
+    0%{
+        transform: translate(0,0);
+
+    }
+    50%{
+        transform: translate(var(--move-x, 0), var(--move-y, 0));
+
+    }
+    100%{
+        transform: translate(0,0);
+
+    }
 }
 
 #biography{
@@ -340,7 +405,8 @@ html, body{
 }
 
 #Skills{
-    display: none;
+    height: 200vh;
+    
 }
 
 #Research{
