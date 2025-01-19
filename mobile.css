@@ -39,7 +39,7 @@ html, body{
     position: absolute;
     height: 10vw;
     width: 10vw;
-    
+    display: none;
 }
 
 .blackBar{
@@ -85,20 +85,6 @@ html, body{
     width: 100vw;
     /*border: 2px solid red;*/
 
-}
-
-.dots.skills{
-    position: absolute;
-    border-radius: 50%;
-    background-color: var(--main-alt);
-    display: inline-block;
-    height: 15vh;
-    width: 15vh;
-    text-align: center;
-    color: var(--main-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: fill;
 }
 
 .dots.projects{
@@ -286,14 +272,9 @@ html, body{
     top: 50%;
 }
 
-#langSkillsHeader{
-
-}
-
 #libSkillsHeader{
     top: 65%;
-
-
+    display: none;
 }
 
 .libraryContainer{
@@ -316,73 +297,65 @@ html, body{
     text-decoration: None;
 }
 
+.circleContainer{
+    position: relative;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+    height: 80vw;
+    width: 80vw;
+}
+
+.dots.skills{
+    position: absolute;
+    left: 40%;
+    top: 140px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--main-alt);
+    display: inline-block;
+    height: 20vw;
+    width: 20vw;
+    text-align: center;
+    color: var(--main-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10vw, 10vw;
+}
+
+.dots.skills:nth-child(1) { transform: rotate(0deg) translate(25vw) rotate(-0deg); }
+.dots.skills:nth-child(2) { transform: rotate(51.43deg) translate(25vw) rotate(-51.43deg); }
+.dots.skills:nth-child(3) { transform: rotate(102.86deg) translate(25vw) rotate(-102.86deg); }
+.dots.skills:nth-child(4) { transform: rotate(154.29deg) translate(25vw) rotate(-154.29deg); }
+.dots.skills:nth-child(5) { transform: rotate(205.72deg) translate(25vw) rotate(-205.72deg); }
+.dots.skills:nth-child(6) { transform: rotate(257.15deg) translate(25vw) rotate(-257.15deg); }
+.dots.skills:nth-child(7) { transform: rotate(308.58deg) translate(25vw) rotate(-308.58deg); }
+
+
+
+
 #pythonSkill{
     background-image: url('media/icons/language-icons/icons8-python-100.png');
-    left: 5%;
-    top: 16%;
-    --move-x: -6%;
-    --move-y: -3%;
-    animation: skills_movement 7s infinite;
-
 }
 #htmlSkill{
     background-image: url('media/icons/language-icons/icons8-html-100.png');
-    left: 10%;
-    top: 30%;
-    --move-x: 2%;
-    --move-y: -20%;
-    animation: skills_movement 7.9s infinite;
-    
 }
 #cssSkill{
     background-image: url('media/icons/language-icons/icons8-css-100.png');
-
-    left: 10%;
-    top: 52%;
-    --move-x: -5%;
-    --move-y: 3%;
-    animation: skills_movement 9.5s infinite;
-    
 }
 #jsSkill{
     background-image: url('media/icons/language-icons/icons8-javascript-100.png');
-
-    left: 45%;
-    top: 10%;
-    --move-x: 3%;
-    --move-y: 8%;
-    animation: skills_movement 9s infinite;
-    
 }
 #javaSkill{
     background-image: url('media/icons/language-icons/icons8-java-100.png');
-
-    left: 60%;
-    top: 47%;
-    --move-x: 5%;
-    --move-y: 9%;
-    animation: skills_movement 9.5s infinite;
-    
 }
 #cSkill{
     background-image: url('media/icons/language-icons/icons8-c-100.png');
-    left: 53%;
-    top: 22%;
-    --move-x: -2%;
-    --move-y: -19%;
-    animation: skills_movement 11s infinite;
-    
 }
 #cplusplusSkill{
     background-image: url('media/icons/language-icons/icons8-c-plus-plus-100.png');
-
-    left: 20%;
-    top: 40%;
-    --move-x: -7%;
-    --move-y: 2%;
-    animation: skills_movement 8s infinite;
-    
 }
+
 
 @keyframes skills_movement{
 
@@ -405,7 +378,7 @@ html, body{
 }
 
 #Skills{
-    height: 200vh;
+    height: 60vh;
     
 }
 
@@ -418,8 +391,9 @@ html, body{
 }
 
 footer{
-    position: absolute;
+    position: relative;
     left: 0%;
+    margin-top: 150px;
 }
 
 @keyframes float_one{
