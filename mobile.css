@@ -130,7 +130,7 @@ html, body{
 
 /* CHANGE THE OPACITY BACK TO 0 BEFORE FINISH ! */
 .fade-in-element{
-    opacity: 1;
+    opacity: 0;
     transition: opacity 1.5s ease-out;
 }
 
@@ -299,7 +299,7 @@ html, body{
 
 .circleContainer{
     position: relative;
-    left: 50%;
+    left: 47%;
     top: 150px;
     transform: translateX(-50%);
     height: 80vw;

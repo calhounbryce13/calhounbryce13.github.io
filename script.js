@@ -234,20 +234,23 @@ const add_visibilty_to_fading_elements = function(i, fadingElementsArray){
 
 const make_fade_elements_array = function(){
 
-    const fadingElementsArray = [];
 
-    const one = document.querySelector('.fade-in-element.one');
-    fadingElementsArray.push(one);
-    const four = document.querySelector('.fade-in-element.four');
-    fadingElementsArray.push(four);
-    const two = document.querySelector('.fade-in-element.two');
-    fadingElementsArray.push(two);
-    const five = document.querySelector('.fade-in-element.five');
-    fadingElementsArray.push(five);
-    const three = document.querySelector('.fade-in-element.three');
-    fadingElementsArray.push(three);
+    const fadingElementsArray = [
+        document.querySelector('.fade-in-element.one'),
+        document.querySelector('.fade-in-element.four'),
+        document.querySelector('.fade-in-element.two'),
+        document.querySelector('.fade-in-element.five'),
+        document.querySelector('.fade-in-element.three')
+    ];
 
+    if(document.getElementById('stylesheet').getAttribute('href') == 'mobile.css'){
+        return [fadingElementsArray[4],fadingElementsArray[3],fadingElementsArray[2],
+        fadingElementsArray[0],fadingElementsArray[1]];
+
+    }
     return fadingElementsArray;
+
+
 
 }
 
