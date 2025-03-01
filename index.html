@@ -18,287 +18,216 @@ DESCRIPTION: HTML file for my webpage
         </head>
         <body>
 
+
             <video autoplay muted loop id="background-video">
                 <source src="media/Background-Clip.mp4" type="video/mp4">
             </video>
+
+            <header>
+                <div id="myName">
+                    <p>
+                        Bryce Calhoun
+                    </p>
+                </div>
+            </header>
             
-            <div class="dotsContainer top">
 
-                <div id="specialOne" class="dots">
+            <div id="parent">
 
-                </div>
+                <div id="biography" class="blackBar">
+                    <div class="sectionHeader">
+                        <p>About Me</p>
 
-                <a href="#Research">
-                    <div id="one" class="dots fade-in-element one">
                     </div>
+                    <div class="content">
+                        <p class="contentText">I'm from Los Angeles, CA </p>
 
-                </a>
+                        <div class="image smallerImage">
+                            <img src="media/buildings-5460565_1920.jpg" class="smallerImage">
+
+                        </div>
+
+                    </div>
+                    <div class="content">
+
+                        <div class="image smallerImage">
+                            <img src="media/osu-logo.png" class="smallerImage">
+
+
+                        </div>
+                        <p class="contentText">Currently studying Computer 
+                            Science at Oregon State University </p>
+
+
+                    </div>
+                    <div class="content noImage">
+                        <p class="contentText"> I plan on pursing a career in Machine 
+                            Learning Engineering ! </p>
+
+
+                    </div>
+                </div>
                 
-                <a href="#Projects">
-                    <div id="two" class="dots fade-in-element two">
+                <div id="Research" class="blackBar">
 
+                    <div class="sectionHeader">
+                        <p>Research</p>
                     </div>
-                </a>
+                    <div class="content">
+                        <p class="contentText">Conducted research for Oregon State University's 
+                            ASPIRE Center on various computer-vision models. The goal of the study was to 
+                            determine if computer vision models could benefit the wellbeing of children.</p>
 
-                <a class="plainLink" href="#myStuff">
-                    <div id="three" class="dots fade-in-element three">
-                        <p id="myName">
-                            Bryce Calhoun
-                        </p>
-                    </div>
-
-                </a>
-                    
-                <a href="#Skills">
-                    <div id="four" class="dots fade-in-element four">
-                    
-                    </div>
-                </a>
-                
-
-                <div id="five" class="dots fade-in-element five">
-                    
-                </div>
-    
-            </div>
-
-
-            <div id="biography" class="blackBar">
-                <p class="headers right">
-                    From SoCal to Oregon State: Exploring the 
-                    world of computer science.
-                </p>
-                <p id="bioTxt" class="mainTxt right">
-                    My name is Bryce Calhoun, I was born in sunny San Diego, CA, and moved 
-                    to <strong>Los Angeles</strong> when I was nine, where I grew up and 
-                    graduated from Ulysses S. Grant High School. Afterward, 
-                    I made the exciting move to Oregon to kickstart my 
-                    academic journey! I'm currently an undergraduate at <strong>Oregon 
-                    State University</strong>, majoring in Computer Science with a focus 
-                    on Artificial Intelligence. I'm incredibly passionate about 
-                    areas like <strong>Machine Learning</strong>, <strong>Celestial 
-                    Mechanics</strong> and <strong>Network Architecture</strong>, 
-                    and I'm extremely eager to dive deeper into these fields. I can't wait 
-                    to continue my studies and work toward earning my bachelor's 
-                    degree in Computer Science.
-                </p>
-
-                <div id="beachIcon" class="dots projects">
-                </div>
-
-                <div id="schoolIcon" class="dots projects">
-                </div>
-
-                <div id="compsciIcon" class="dots projects">
-                </div>
-
-                <div id="artIcon" class="dots projects">
-                </div>
-            </div>
-            
-            
-            <div id="Research" class="blackBar">
-                <p class="headers left"> 
-                    Research: Unlocking Health Insights with Computer-Vision 
-                </p>
-                <p id="researchTxt" class="mainTxt left">
-                    Computer vision is a new and exciting field within the context of
-                    artificial intelligence that comes with lots of opportunities for 
-                    valuable applications. It's only natural to wonder if computer vision
-                    could help us understand our own health better. This was the exact purpose
-                    for this longitudinal study. The <strong>data preprocessing</strong> included publicly available 
-                    Twitter data that took well over a year's time to finilize. Some key takeaways 
-                    from this project are that while unsurprisingly, the human eye remains the leading authority
-                    in the detection of visual health outcomes and health-contributing environmental features,
-                    there is a massive potential in the refinement of computer vision models for the 
-                    identification of complex emotional health outcomes. This is especially the case in the context 
-                    of children in schools. For a more detailed summary <a href="media/Slide1.PNG" class="lowkeyLink" target="_blank">here</a> 
-                    is a link to the full presentation slide.
-                </p>
-
-                <div>
-                    <img src="media/Slide1.PNG" id="researchPoster">
-                </div>
-            </div>           
-
-            <div id="Skills" class="blackBar">
-                <p id="langSkillsHeader" class="headers left">
-                    Skills : languages
-                </p>
-                <div class="circleContainer">
-                    <div  id="pythonSkill" class="dots skills">
-                        
-
-                    </div>
-                    <div id="htmlSkill" class="dots skills">
-                        
-
-                    </div>
-                    <div id="cssSkill" class="dots skills">
-                        
-
-                    </div>
-                    <div id="jsSkill" class="dots skills">
-                        
-                    </div>
-                    <div id="javaSkill" class="dots skills">
-                        
-
-                    </div>
-                    <div id="cSkill" class="dots skills">
-                        
-
-                    </div>
-                    <div id="cplusplusSkill" class="dots skills">
-                        
-
-                    </div>
-                </div>
-                <p id="libSkillsHeader" class="headers farRight">
-                    Skills : libraries
-                </p>
-
-                <div>
-
-                    <div class="libraryContainer react">
-
-                        <p class="libraryText"> 
-                            <strong>React</strong> is a popular JS library for 
-                            building user interfaces (UI), particularly for 
-                            single-page applications (SPAs). 
-                            React follows a declarative approach, where developers 
-                            describe how the UI should look based on the state, 
-                            and React takes care of updating the view when the 
-                            state changes. React's component-based architecture 
-                            also promotes maintainability and scalability for 
-                            complex applications.
-                        </p>
-
-                        <div id="REACT" class="dots libraries">
+                        <div class="image">
+                            <img src="media/Slide1.PNG">
                         </div>
 
                     </div>
-                    
+                </div>           
 
-                    <div class="libraryContainer tensorflow">
-                        
-                        <div id="tensorflow" class="dots libraries">
-                        </div>
-
-                        
-                        <p class="libraryText"> <strong>Tensorflow</strong>  is a great resource for pre-built ML models
-                        and AI algorithms. The combination of Tensorflow and Keras allows developers to built custom neural networks 
-                        in python code and train them on either publicly available datasets or your own built data sets.
-                        </p>
+                <div id="Skills" class="blackBar">
+                    <div class="sectionHeader">
+                        <p>My Skills</p>
 
                     </div>
+                    <div class="content">
+                        <p class="contentText heavy">Front-End Web Developement</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>HTML, CSS, JavaScript</p></li>
+                                <li><p>REACT</p></li>
+                            </ul>
 
-
-                    <div class="libraryContainer openCV">
-
-                        <p class="libraryText">
-                            <strong>OpenCV</strong>  is another widely used and highly regarded library 
-                            in the field of AI, specifically for computer vision applications. 
-                            It offers a comprehensive set of tools that enable developers to 
-                            process and manipulate image data, which is essential for building 
-                            and training computer vision models.
-                        </p>
-                        
-                        <div id="openCV" class="dots libraries">
                         </div>
 
                     </div>
+                    <div class="content">
+                        <p class="contentText heavy">Back-End Web Developementr</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>JavaScript</p></li>
+                                <li><p>MongoDB, Node.js, Express.js</p></li>
+                            </ul>
 
-                    <div class="libraryContainer matlabplotlib">
-                        
-                        <div id="matlabplotlib" class="dots libraries">
                         </div>
 
-                        <p class="libraryText"> 
-                            <strong>Matlabplotlib</strong> in the context of 
-                            machine learning, the ability to visualize data is critical for understanding 
-                            patterns and insights. This library is incredibly useful for displaying various 
-                            types of graphs and charts, such as line plots, bar charts, histograms, and scatter 
-                            plots, based on complex datasets. By utilizing these visualization methods, its easier 
-                            to interpret the results of machine learning models, identify trends, and communicate 
-                            findings effectively. Whether you're exploring data, tuning models, or presenting results 
-                            to <strong>stakeholders</strong>.
-                        </p>
-                        
                     </div>
+                    <div class="content">
+                        <p class="contentText heavy">Native Applications</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>Python</p></li>
+                                <li><p>Kivy</p></li>
+                            </ul>
 
-                    <div class="libraryContainer numpy">
+                        </div>
 
-                        <p class="libraryText"> 
-                            <strong>NumPy</strong> is a powerful Python library used for numerical computing, 
-                            particularly for handling large, multi-dimensional arrays and matrices. It 
-                            provides a wide range of mathematical functions to operate on these arrays 
-                            efficiently. The library supports element-wise operations, linear algebra, 
-                            random number generation, and more.
-                        </p>
+                    </div>
+                    <div class="content">
+                        <p class="contentText heavy">Network Architecture</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>Python</p></li>
+                                <li><p>Flask</p></li>
+                            </ul>
 
-                        <div id="numpy" class="dots libraries">
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <p class="contentText heavy">Data Structures</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>C, Java, Python, C++</p></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <p class="contentText heavy">Artificial Intelligence & Deep-Learning Structures</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>Python, C++</p></li>
+                                <li><p>Tensorflow, OpenCV, NumPy, PIL</p></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <p class="contentText heavy">Control Systems/Wireless Communication</p>
+                        <div class="unorderedList">
+                            <ul>
+                                <li><p>C++, Java, Python</p></li>
+                                <li><p>Flask, HTTP, JSON</p></li>
+                            </ul>
+
                         </div>
 
                     </div>
                 </div>
-            </div>
 
-            <div id="Projects" class="blackBar">
-                <p class="headers left">
-                    Projects
-                </p>
-                <p class="subheaders left"> AI Minimax algorithm for Tic-Tac-Toe game logic</p>
-
-                <p class="mainTxt left">
-                    Starting with the basics of artificial intelligence algorithms, <strong> adverserial serach </strong> 
-                    is a key component of implementing the human decision-making process. adverserial search deals 
-                    with navigating to one of various optimal<strong> goal states </strong> ( a win for the agent ) and moving the agent closer and closer with each turn. Moves that 
-                    place the agent closer to the goal state will be rewarded and moves that deter the agent from reaching 
-                    the goal state are not. The agent will then attempt to either maximize or minimize a score based on the moves
-                    that it makes.
-                </p>
-
-                <div id="gameIcon" class="dots projects">
-                </div>
-
-                <div id="brainIcon" class="dots projects">
-                </div>
-
-                <div id="algoIcon" class="dots projects">
-                </div>
-            </div>
-
-
-            <div id="myStuff" class="dotsContainer bottom">
-
-                <a href="https://github.com/calhounbryce13" target="_blank">
-                    <div id="six" class="dots">
+                <div id="Projects" class="blackBar">
+                    <div class="sectionHeader">
+                        <p>Projects</p>
 
                     </div>
+                    <div class="content">
+                        <p class="contentText">'Internet of Things' Device Control System </p>
 
-                </a>
+                        <div class="image">
+                            <img src="media/IOT-system-diagram.png">
 
-                <a href="https://www.instagram.com/bryce.calhoun/" target="_blank">
-                    <div id="seven" class="dots">
-
-                    </div>
-
-                </a>
-                
-
-                <a href="https://www.linkedin.com/in/bryce-calhoun-4126b6219/" target="_blank">
-                    <div id="eight" class="dots">
+                        </div>
 
                     </div>
+                    <div class="content">
 
-                </a>
+                        <div class="image">
+                            <img src="media/full-minimax-move-tree.png">
+
+                        </div>
+                        <p class="contentText">Artifical Intelligence Minimax agent </p>
+
+
+                    </div>
+                </div>
+
 
             </div>
 
-            <footer>
-                &copy; 2024 Bryce Calhoun
-            </footer>
+            <div id="myLinks">
+                <div id="Linkedin" class="icons">
+                    <a href="https://www.linkedin.com/in/bryce-calhoun-4126b6219" target="_blank">
+                        <img src="media/icons/contact-icons/icons8-linkedin-150.png" id="LinkedinIcon">
+                    </a>
+                </div>
+                <div class="icons smaller" id="insta">
+                    <a href="https://www.instagram.com/bryce.calhoun/" target="_blank">
+                        <img src="media/icons/contact-icons/icons8-instagram-100.png" class="smallerIcons">
+                    </a>
+                </div>
+                <div class="icons smaller" id="git">
+                    <a href="https://github.com/calhounbryce13" target="_blank">
+                        <img src="media/icons/contact-icons/icons8-github-100.png" class="smallerIcons">
+                    </a>
+                    </div>
+
+            </div>
+
+            <div id="stickyContainer">
+                <p>Contact me</p>
+
+            </div>
+
+            <div id="footerContainer">
+                <footer>
+                    &copy;2025 Bryce Calhoun
+                </footer>
+
+            </div>
+
         </body>
 
     </html>

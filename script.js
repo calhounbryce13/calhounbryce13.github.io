@@ -1,29 +1,20 @@
 /*
 AUTHOR: Bryce Calhoun
 DESCRIPTION: Script file for my webpage
+            most of the functions were from the OLD version of the web page
 */
 
 'use strict';
 
 
-const HUD_BORDER_THICKNESS = 2;
-
 
 document.addEventListener('DOMContentLoaded', () =>{
-
     resize_the_screen();
-
     window.addEventListener('resize', resize_the_screen);
-
-    window.addEventListener('load', fade_in_elements);
-
-    orbital_animation();
-
-    theme_functionality();
-
-    typewriter_effect();
-
 });
+
+
+///////////////////////////////////////////////////////////////////////////////
 
 const lock_the_screen_in_portrait = function(){
 
