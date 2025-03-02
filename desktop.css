@@ -64,6 +64,12 @@ header{
     justify-content: center;
     align-items: center;
 }
+p{
+    border: 2px solid var(--border-color);
+}
+a{
+    text-decoration: none;
+}
 
 
 #myName{
@@ -92,34 +98,42 @@ header{
 }
 
 .blackBar{
+    /*
     width: 17vw;
     height: 40vh;
+    */
+    height: 50vh;
+    width: 25.5vw;
     border-radius: 20px;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    margin-left: 2vw;
-    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-right: 0vw;
     border: 2px solid var(--border-color);
     transition: 1s ease;
     overflow-y: hidden;
     overflow-y: auto;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 
 
 .blackBar:hover{
-    width: 25vw;
-    height: 50vh;
+    width: 49.7vw;
+    height: 70vh;
     border-radius: 20px;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    margin-left: 2vw;
-    margin-right: 1vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
     border: 2px solid var(--border-color);
+    flex-grow: 1;
+    flex-shrink: 1;
 
 }
 
@@ -144,14 +158,13 @@ header{
     padding: 2%;
     background-color: var(--signal-orange);
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
 }
 
 .content{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
     width: 90%;
     border: 2px solid var(--border-color);
     margin-left: 2%;
@@ -159,6 +172,7 @@ header{
     padding: 2%;
     font-size: 0.5vw;
     flex-shrink: 1;
+    
 
     transition: 1s ease;
 }
@@ -184,11 +198,17 @@ header{
 }
 
 .content.noImage{
-    justify-content: center;
+    
     align-items: center;
     word-wrap: break-word;
     white-space: normal;
     text-align: center;
+}
+.content.start{
+    justify-content: flex-start;
+}
+.content.end{
+    justify-content: flex-end;
 }
 
 .image{
@@ -209,6 +229,7 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    border: 2px solid var(--border-color);
 }
 
 .icons.smaller{
@@ -240,6 +261,14 @@ img{
     width: 8vw;
     color: white;
 }
+
+
+.contentText.left{
+    text-align: left;
+}
+.contentText.right{
+    text-align: right;
+}
 .contentText.heavy{
     font-weight: var(--weight-one);
 }
@@ -264,17 +293,19 @@ li{
 #Linkedin{
     height: 25vh;
     width: 25vh;
-    border: 2px solid var(--border-color);
+    
     background-color: black;
     border-radius: 50%;
 }
 #LinkedinIcon{
     height: 20vh;
     width: 20vh;
+    border: 2px solid var(--border-color);
 }
 .smallerIcons{
     height: 12vh;
     width: 12vh;
+    border: 2px solid var(--border-color);
 }
 
 #stickyContainer{

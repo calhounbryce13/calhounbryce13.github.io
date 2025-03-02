@@ -12,7 +12,7 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
     --charcoal-grey: rgba(54,69,79,1);
     font-family: 'MuseoModerno';
     --weight-one: 600;
-    --weight-two: 400;
+    --weight-two: 600;
     --weight-three: 100;
     --border-color: rgba(255, 0, 0, 0);
 
@@ -55,6 +55,14 @@ header{
     align-items: center;
 }
 
+p{
+    border: 2px solid var(--border-color);
+}
+a{
+    text-decoration: none;
+    
+}
+
 #myName{
     font-weight: var(--weight-one);
     font-size: 25vw;
@@ -84,6 +92,7 @@ header{
     margin-top: 5%;
     overflow-y: hidden;
     overflow-y: auto;
+    padding-bottom: 1vh;
 }
 
 
@@ -109,17 +118,31 @@ header{
     border: 2px solid var(--border-color);
     padding: 2%;
     flex-shrink: 1;
+    flex-grow: 1;
     overflow-y: hidden;
+    
+}
+
+
+.content.bio{
+    min-height: 9vh;
 }
 
 
 .contentText{
+    
     margin-left: 2.9vw;
     margin-right: 0.9vw;
     font-size: 3vw;
     height: 35vh;
     width: 70vw;
     color: white;
+}
+.contentText.left{
+    text-align: left;
+}
+.contentText.right{
+    text-align: right;
 }
 
 
@@ -162,6 +185,7 @@ img{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    border: 2px solid var(--border-color);
 }
 
 .icons.smaller{
@@ -185,6 +209,7 @@ img{
 .smallerIcons{
     height: 12vw;
     width: 12vw;
+    border: 2px solid var(--border-color);
 
 }
 
@@ -210,6 +235,7 @@ img{
 #LinkedinIcon{
     height: 8vh;
     width: 8vh;
+    border: 2px solid var(--border-color);
 
 }
 
