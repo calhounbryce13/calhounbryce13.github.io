@@ -237,7 +237,7 @@ a{
     height: 15vh;
     width: 15vh;
     background-color: black;
-    animation: orbital_animation 10s infinite linear;
+    animation: orbital_animation 25s infinite linear;
 }
 #insta{
     --init: 200px;
