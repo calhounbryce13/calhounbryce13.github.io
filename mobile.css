@@ -7,9 +7,16 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 
 :root{
     --main-color: rgba(0,0,0,1);
-    --main-alt: rgba(255, 255, 255, 1);
     --signal-orange: rgba(255, 96, 0, 1);
     --charcoal-grey: rgba(54,69,79,1);
+    --main-alt: rgba(255, 255, 255, 1);
+
+    /*
+    --main-color: rgba(36, 34, 45, 1);
+    --signal-orange: rgba(123, 57, 71, 1);
+    --main-alt: rgba(156, 115, 121, 1);
+    */
+
     font-family: 'MuseoModerno';
     --weight-one: 600;
     --weight-two: 600;
