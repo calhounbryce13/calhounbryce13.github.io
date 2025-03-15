@@ -7,9 +7,11 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 
 :root{
     --main-color: rgba(0,0,0,1);
-    --signal-orange: rgba(255, 96, 0, 1);
+    /*--signal-orange: rgba(255, 96, 0, 1);*/
     --charcoal-grey: rgba(54,69,79,1);
     --main-alt: rgba(255, 255, 255, 1);
+
+    --signal-orange: rgba(0, 255, 255, 1);
 
     /*
     --main-color: rgba(36, 34, 45, 1);
@@ -29,6 +31,10 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --dark-blue: rgba(36, 34, 45, 1);
     --moody-red: rgba(123, 57, 71, 1);
     --pale-pink: rgba(156, 115, 121, 1);
+}
+
+.clear{
+    color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar {
@@ -336,9 +342,25 @@ li{
     --init: -200px;
 }
 
-#stickyContainer{
+#stickyForm{
     display: none;
 }
+
+#stickyContainer{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--charcoal-grey);
+    color: var(--signal-orange);
+    width: 80%;
+    height: 6vh;
+    border-radius: 25px;
+    bottom: 2%;
+
+}
+
+
 
 #footerContainer{
     width: 90%;

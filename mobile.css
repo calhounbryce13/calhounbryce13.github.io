@@ -7,9 +7,12 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 
 :root{
     --main-color: rgba(0,0,0,1);
-    --signal-orange: rgba(255, 96, 0, 1);
+    /*--signal-orange: rgba(255, 96, 0, 1);*/
     --charcoal-grey: rgba(54,69,79,1);
     --main-alt: rgba(255, 255, 255, 1);
+
+    --signal-orange: rgba(0, 255, 255, 1);
+
 
     /*
     --main-color: rgba(36, 34, 45, 1);
@@ -23,6 +26,10 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
     --weight-three: 100;
     --border-color: rgba(255, 0, 0, 0);
 
+}
+
+.clear{
+    color: rgba(0, 0, 0, 0);
 }
 
 html, body{
@@ -263,6 +270,23 @@ img{
 
 }
 
+#stickyForm{
+    display: none;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 4%;
+    height: 20vh;
+    width: 80%;
+    background-color: var(--charcoal-grey);
+    color: var(--signal-orange);
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 #stickyContainer{
     position: fixed;
     bottom: 2%;
@@ -290,7 +314,7 @@ footer{
     background-color: black;
     border-radius: 20px;
     width: 60%;
-    color: var(--signal-orange);
+    color: var(--signal-orange);;
     margin-bottom: 20%;
     border: 2px solid var(--border-color);
 }
