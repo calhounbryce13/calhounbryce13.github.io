@@ -64,10 +64,13 @@ DESCRIPTION: HTML file for my webpage
                     <div class="content">
                         <p class="contentText">Conducted research for Oregon State University's 
                             ASPIRE Center on various computer-vision models. The goal of the study was to 
-                            determine if computer vision models could benefit the wellbeing of children.</p>
-                        <div class="image">
-                            <img src="media/Slide1.PNG">
-                        </div>
+                            determine if computer vision models could benefit the wellbeing of children.
+                        </p>
+                        <a href="media/Slide1.PNG" target="_blank">
+                            <div class="image">
+                                <img src="media/Slide1.PNG">
+                            </div>
+                        </a>
                     </div>
                 </div>           
                 <div id="Skills" class="blackBar">
@@ -143,14 +146,18 @@ DESCRIPTION: HTML file for my webpage
                     </div>
                     <div class="content">
                         <p class="contentText">'Internet of Things' Device Control System </p>
-                        <div class="image">
-                            <img src="media/IoT control network project, 3 colors max, 2D image, no text.png">
-                        </div>
+                        <a href="https://github.com/calhounbryce13/projects/tree/main/IOT-management" target="_blank">
+                            <div class="image">
+                                <img src="media/IoT control network project, 3 colors max, 2D image, no text.png">
+                            </div>
+                        </a>
                     </div>
                     <div class="content">
-                        <div class="image">
-                            <img src="media/AI minimax algorithm for tic tac toe game, 2D, 3 colors max, no text.png">
-                        </div>
+                        <a href="https://github.com/calhounbryce13/projects/tree/main/AI/Minimax-AI" target="_blank">
+                            <div class="image">
+                                <img src="media/AI minimax algorithm for tic tac toe game, 2D, 3 colors max, no text.png">
+                            </div>
+                        </a>
                         <p class="contentText">Artifical Intelligence Minimax agent </p>
                     </div>
                 </div>
@@ -172,27 +179,32 @@ DESCRIPTION: HTML file for my webpage
                     </a>
                 </div>
             </div>
-            <div>
-                <form id="stickyForm" action="/recieveMessage">
-                    <fieldset>
-                        <div>
-                            <label>
-                                email:
-                            </label>
-                            <input name="userName" type="text">
-                        </div>
-                        
-                        <div>
-                            <label>
-                                message:
-                            </label>
-                            <input name="userMssg" type="text">
-                        </div>
-                        <div>
-                            <button type="submit">submit</button>
-                        </div>
-                    </fieldset>
-                </form>
+            <div id="contactContainer">
+                <div id="closeContact">
+                    <button id="closeContactButton">...nevermind</button>
+                </div>
+                <div id="formContainer">
+                    <form id="stickyForm" action="/recieveMessage">
+                        <fieldset>
+                            <div class="formElement">
+                                <label>
+                                    name:
+                                </label>
+                                <input name="userName" type="text" class="myInputs">
+                            </div>
+                            
+                            <div class="formElement">
+                                <label>
+                                    message:
+                                </label>
+                                <textarea name="userMssg" class="myInputs"></textarea>
+                            </div>
+                            <div id="submitForm">
+                                <button type="submit" id="submitFormButton">submit</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
             <div id="stickyContainer">
                 <p>Contact me</p>

@@ -6,25 +6,32 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
+    /*
+    color scheme #1*/
     --main-color: rgba(0,0,0,1);
-    /*--signal-orange: rgba(255, 96, 0, 1);*/
     --charcoal-grey: rgba(54,69,79,1);
     --main-alt: rgba(255, 255, 255, 1);
-
     --signal-orange: rgba(0, 255, 255, 1);
-
+    
 
     /*
-    --main-color: rgba(36, 34, 45, 1);
-    --signal-orange: rgba(123, 57, 71, 1);
-    --main-alt: rgba(156, 115, 121, 1);
+    color scheme #2
+    --signal-orange: rgba(255, 96, 0, 1);
+    --main-color: rgba(0,0,0,1);
+    --charcoal-grey: rgba(54,69,79,1);
+    --main-alt: rgba(255, 255, 255, 1);
     */
 
     font-family: 'MuseoModerno';
     --weight-one: 600;
     --weight-two: 600;
     --weight-three: 100;
+
     --border-color: rgba(255, 0, 0, 0);
+
+    --dark-blue: rgba(36, 34, 45, 1);
+    --moody-red: rgba(123, 57, 71, 1);
+    --pale-pink: rgba(156, 115, 121, 1);
 
 }
 
@@ -100,7 +107,7 @@ a{
     flex-direction: column;
     align-items: flex-start;
     border: 2px solid var(--border-color);
-    background-color: black;
+    background-color: var(--main-color);
     height: 40vh;
     width: 80%;
     border-radius: 20px;
@@ -109,7 +116,7 @@ a{
     overflow-y: auto;
     padding-bottom: 1vh;
     opacity: 0;
-    animation: container_introduction 0.7s ease-in forwards;
+    animation: container_introduction 1.3s ease-in-out forwards;
 
 }
 
@@ -270,20 +277,101 @@ img{
 
 }
 
-#stickyForm{
+#contactContainer{
     display: none;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 20px;
     position: fixed;
-    bottom: 4%;
-    height: 20vh;
+    bottom: 2%;
+    height: 40vh;
     width: 80%;
     background-color: var(--charcoal-grey);
     color: var(--signal-orange);
+    border: 2px solid var(--border-color);
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out
+}
+#contactContainer.show{
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+#closeContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    width: 95%;
+    background-color: var(--signal-orange);
+    border-radius: 20px;
+    margin-top: .7vh;
+    border: 2px solid var(--border-color);
+}
+
+#closeContactButton{
+    height: 95%;
+    width: 99%;
+    font-family: inherit;
+    font-size: 5vw;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#formContainer{
+    height: auto;
+    border: 2px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
 }
 
 fieldset{
     display: flex;
     flex-direction: column;
+    height: auto;
+    width: 100%;
+    border: none;
+    padding: 0%;
+}
+
+.myInputs{
+    font-family: inherit;
+    width: 100%;
+    border-radius: 20px;
+}
+
+textarea{
+    height: 8vh;
+}
+
+.formElement{
+    border: 2px solid var(--border-color);
+    margin: 7%;
+}
+
+#submitForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--signal-orange);
+    height: 6vh;
+    width: 30vw;
+    margin-top: 2vh;
+    border: 2px solid var(--border-color);
+
+}
+
+#submitFormButton{
+    height: 95%;
+    width: 70%;
+    font-family: inherit;
+    font-size: 4vw;
+    background-color: rgba(0,0,0,0);
+    border: none;
     
 }
 
@@ -293,12 +381,16 @@ fieldset{
     height: 4vh;
     width: 80%;
     background-color: var(--charcoal-grey);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     border: 2px solid var(--border-color);
     color: var(--signal-orange);
+    transition: height 0.9s ease-in-out
+}
+#stickyContainer.open{
+    height: 40vh !important;
 }
 
 #footerContainer{
@@ -311,7 +403,7 @@ fieldset{
 
 footer{
     padding: 0.5%;
-    background-color: black;
+    background-color: var(--main-color);
     border-radius: 20px;
     width: 60%;
     color: var(--signal-orange);;
@@ -337,7 +429,6 @@ footer{
         opacity: 1;
         transform: translateY(0vh);
     }
-
 }
 
 
