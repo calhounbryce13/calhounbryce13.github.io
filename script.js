@@ -129,7 +129,6 @@ async function process_user_data(event, text){
     }catch(error){
         console.log(error, "ERROR PROCESSING USER DATA");
     }
-    console.log("A");
     contactContainer.classList.toggle("show");
     clear_form();
     const statusMessage = document.createElement("p");
@@ -149,9 +148,6 @@ async function process_user_data(event, text){
     statusMessage.style.overflowWrap = "break-word";
     statusMessage.style.textAlign = "center";
     
-
-
-    console.log("B");
     stickyContainer.appendChild(statusMessage);
     setTimeout(() =>{
         stickyContainer.removeChild(statusMessage);
