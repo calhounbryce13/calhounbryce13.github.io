@@ -285,7 +285,7 @@ img{
     align-items: center;
     border-radius: 20px;
     position: fixed;
-    bottom: 2%;
+    bottom: 4%;
     height: 40vh;
     width: 80%;
     background-color: var(--charcoal-grey);
@@ -377,7 +377,7 @@ textarea{
 
 #stickyContainer{
     position: fixed;
-    bottom: 2%;
+    bottom: 4%;
     height: 4vh;
     width: 80%;
     background-color: var(--charcoal-grey);
