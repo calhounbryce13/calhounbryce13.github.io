@@ -5,6 +5,7 @@ DESCRIPTION: Script file for my webpage
 
 'use strict';
 
+
 document.addEventListener('DOMContentLoaded', () =>{
     const contactButton = document.getElementById("stickyContainer");
     const contactButtonText = contactButton.textContent;
@@ -54,6 +55,11 @@ const resize_the_screen = function(){
 }
 
 const toggle_form = function(event, text){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
     event.preventDefault();
     const stickyContainer = document.getElementById("stickyContainer");
     const contactContainer = document.getElementById("contactContainer");
@@ -92,17 +98,82 @@ const close_form_onsubmit = function(bool){
 }
 
 const clear_form = function(){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
     const inputs = Array.from(document.getElementsByClassName("myInputs"));
     inputs[0].value = "";
     inputs[1].value = "";
 }
 
+const style_text = function(statusMessage){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
+    statusMessage.style.fontSize = "150%";
+    statusMessage.style.color = "var(--signal-orange)";
+    statusMessage.style.border = "none !important";
+    statusMessage.style.zIndex = "2";
+    statusMessage.style.position = "absolute";
+    statusMessage.style.top = "10%";
+    statusMessage.style.margin = "2vw";
+    statusMessage.style.overflowWrap = "break-word";
+    statusMessage.style.textAlign = "center";
+}
+
+const display_message = function(stickyContainer, statusMessage, text){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
+    stickyContainer.appendChild(statusMessage);
+    setTimeout(() =>{
+        stickyContainer.removeChild(statusMessage);
+        stickyContainer.classList.toggle("open");
+        stickyContainer.textContent = text;
+    }, 3000);
+
+}
+
+const create_text = function(bool){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
+    const statusMessage = document.createElement("p");
+    if(bool){
+        statusMessage.textContent = "Your message was successfully recieved!";
+    }
+    else{
+        statusMessage.innerHTML = "Hark! an error has occured <br> Please try again";
+    }
+    return statusMessage;
+}
+
+const clear_form_and_show_message = function(contactContainer, stickyContainer, bool, text){
+        /*
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
+     */
+    contactContainer.classList.toggle("show");
+    clear_form();
+    const statusMessage = create_text(bool);
+    style_text(statusMessage);
+    display_message(stickyContainer, statusMessage, text);
+}
+
 async function process_user_data(event, text){
     /*
-    DESCRIPTION: Function to extract data and send an http request to the
-                backend server at the 'mailer' endpoint.
-    INPUT(s): click event
-    OUTPUT(S): None
+    DESCRIPTION: 
+    INPUT(s): 
+    OUTPUT(S): 
      */
     event.preventDefault();
     const form = event.target;
@@ -129,30 +200,5 @@ async function process_user_data(event, text){
     }catch(error){
         console.log(error, "ERROR PROCESSING USER DATA");
     }
-    contactContainer.classList.toggle("show");
-    clear_form();
-    const statusMessage = document.createElement("p");
-    if(bool){
-        statusMessage.textContent = "Your message was successfully recieved!";
-    }
-    else{
-        statusMessage.innerHTML = "Hark! an error has occured <br> Please try again";
-    }
-    statusMessage.style.fontSize = "150%";
-    statusMessage.style.color = "var(--signal-orange)";
-    statusMessage.style.border = "none !important";
-    statusMessage.style.zIndex = "2";
-    statusMessage.style.position = "absolute";
-    statusMessage.style.top = "10%";
-    statusMessage.style.margin = "2vw";
-    statusMessage.style.overflowWrap = "break-word";
-    statusMessage.style.textAlign = "center";
-    
-    stickyContainer.appendChild(statusMessage);
-    setTimeout(() =>{
-        stickyContainer.removeChild(statusMessage);
-        stickyContainer.classList.toggle("open");
-        stickyContainer.textContent = text;
-    }, 3000);
-
+    clear_form_and_show_message(contactContainer, stickyContainer, bool, text);
 }
