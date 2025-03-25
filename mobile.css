@@ -33,6 +33,8 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
     --moody-red: rgba(123, 57, 71, 1);
     --pale-pink: rgba(156, 115, 121, 1);
 
+    --form-height: 45vh;
+
 }
 
 .clear{
@@ -286,13 +288,15 @@ img{
     border-radius: 20px;
     position: fixed;
     bottom: 4%;
-    height: 40vh;
+    height: var(--form-height);
     width: 80%;
     background-color: var(--charcoal-grey);
     color: var(--signal-orange);
     border: 2px solid var(--border-color);
     z-index: 2;
-    transition: opacity 0.5s ease-in-out
+    transition: opacity 0.5s ease-in-out;
+    overflow-y: scroll;
+    
 }
 #contactContainer.show{
     display: flex !important;
@@ -390,7 +394,7 @@ textarea{
     transition: height 0.9s ease-in-out
 }
 #stickyContainer.open{
-    height: 40vh !important;
+    height: var(--form-height) !important;
 }
 
 #footerContainer{
