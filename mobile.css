@@ -6,21 +6,24 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    /*
+
+        /*
     color scheme #1*/
-    --main-color: rgba(0,0,0,1);
+    --dark-blue: rgba(36, 34, 45, 1);
+    --moody-red: rgba(123, 57, 71, 1);
+    --pale-pink: rgba(156, 115, 121, 1);
+    --signal-orange: rgba(255, 96, 0, 1);
+    --cyan: rgba(0, 255, 255, 1);
+    --crimson-red: rgba(220,20,60,1);
     --charcoal-grey: rgba(54,69,79,1);
-    --main-alt: rgba(255, 255, 255, 1);
-    --signal-orange: rgba(0, 255, 255, 1);
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0,0,0,1);
     
 
-    /*
-    color scheme #2
-    --signal-orange: rgba(255, 96, 0, 1);
-    --main-color: rgba(0,0,0,1);
-    --charcoal-grey: rgba(54,69,79,1);
-    --main-alt: rgba(255, 255, 255, 1);
-    */
+    --main-alt: var(--white);
+    --main-color: var(--black);
+    --accent-color: var(--crimson-red);
+    --accent-alt: var(--charcoal-grey);
 
     font-family: 'MuseoModerno';
     --weight-one: 600;
@@ -29,12 +32,7 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 
     --border-color: rgba(255, 0, 0, 0);
 
-    --dark-blue: rgba(36, 34, 45, 1);
-    --moody-red: rgba(123, 57, 71, 1);
-    --pale-pink: rgba(156, 115, 121, 1);
-
     --form-height: 45vh;
-
 }
 
 .clear{
@@ -141,7 +139,7 @@ a{
     height: 3vh;
     width: 25vw;
     padding: 2%;
-    background-color: var(--signal-orange);
+    background-color: var(--accent-color);
     border-radius: 20px;
     border: 2px solid black;
 }
@@ -202,7 +200,7 @@ li{
 .image{
     height: 15vh;
     width: 37vw;
-    border: 2px solid var(--charcoal-grey);
+    border: 2px solid var(--accent-alt);
     border-radius: 20px;
 }
 
@@ -290,8 +288,8 @@ img{
     bottom: 4%;
     height: var(--form-height);
     width: 80%;
-    background-color: var(--charcoal-grey);
-    color: var(--signal-orange);
+    background-color: var(--accent-alt);
+    color: var(--accent-color);
     border: 2px solid var(--border-color);
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
@@ -309,13 +307,13 @@ img{
     align-items: center;
     height: 4vh;
     width: 95%;
-    background-color: var(--signal-orange);
+    background-color: var(--accent-color);
     border-radius: 20px;
     margin-top: .7vh;
     border: 2px solid var(--border-color);
 }
 #closeContact:active{
-    background-color: var(--charcoal-grey) !important;
+    background-color: var(--accent-alt) !important;
 }
 
 #closeContactButton{
@@ -364,14 +362,14 @@ textarea{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: var(--signal-orange);
+    background-color: var(--accent-color);
     height: 6vh;
     width: 30vw;
     margin-top: 2vh;
     border: 2px solid var(--border-color);
 }
 #submitForm:active{
-    background-color: var(--charcoal-grey) !important;
+    background-color: var(--accent-alt) !important;
 }
 
 #submitFormButton{
@@ -389,17 +387,20 @@ textarea{
     bottom: 4%;
     height: 4vh;
     width: 80%;
-    background-color: var(--charcoal-grey);
+    background-color: var(--accent-alt);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     border: 2px solid var(--border-color);
-    color: var(--signal-orange);
+    color: var(--accent-color);
     transition: height 0.9s ease-in-out
 }
 #stickyContainer.open{
     height: var(--form-height) !important;
+}
+#stickyContainer:active{
+    background-color: var(--accent-color);
 }
 
 #footerContainer{
@@ -415,7 +416,7 @@ footer{
     background-color: var(--main-color);
     border-radius: 20px;
     width: 60%;
-    color: var(--signal-orange);;
+    color: var(--accent-color);;
     margin-bottom: 20%;
     border: 2px solid var(--border-color);
 }
