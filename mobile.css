@@ -314,6 +314,9 @@ img{
     margin-top: .7vh;
     border: 2px solid var(--border-color);
 }
+#closeContact:active{
+    background-color: var(--charcoal-grey) !important;
+}
 
 #closeContactButton{
     height: 95%;
@@ -366,7 +369,9 @@ textarea{
     width: 30vw;
     margin-top: 2vh;
     border: 2px solid var(--border-color);
-
+}
+#submitForm:active{
+    background-color: var(--charcoal-grey) !important;
 }
 
 #submitFormButton{

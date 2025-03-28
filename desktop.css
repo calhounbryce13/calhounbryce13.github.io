@@ -364,6 +364,7 @@ li{
     opacity: 1 !important;
 }
 
+
 #closeContact{
     display: flex;
     justify-content: center;
@@ -374,6 +375,9 @@ li{
     border-radius: 20px;
     margin-top: .7vh;
     border: 2px solid var(--border-color);
+}
+#closeContact:active{
+    background-color: var(--charcoal-grey) !important;
 }
 
 #closeContactButton{
@@ -447,6 +451,9 @@ textarea{
     margin-top: 2vh;
     border: 2px solid var(--border-color);
 }
+#submitForm:active{
+    background-color: var(--charcoal-grey) !important;
+}
 
 #submitFormButton{
     height: 95%;
@@ -457,8 +464,6 @@ textarea{
     border: none;
     
 }
-
-
 
 #footerContainer{
     width: 90%;
