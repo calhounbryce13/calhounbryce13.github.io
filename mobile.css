@@ -22,7 +22,7 @@ DESCRIPTION: Stylesheet for mobile view of the webpage
 
     --main-alt: var(--white);
     --main-color: var(--black);
-    --accent-color: var(--cyan);
+    --accent-color: var(--crimson-red);
     --accent-alt: var(--charcoal-grey);
 
     font-family: 'MuseoModerno';
