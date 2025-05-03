@@ -108,7 +108,7 @@ a{
     align-items: flex-start;
     border: 2px solid var(--border-color);
     background-color: var(--main-color);
-    height: 40vh;
+    height: 45vh;
     width: 80%;
     border-radius: 20px;
     margin-top: 5%;
@@ -117,7 +117,9 @@ a{
     padding-bottom: 1vh;
     opacity: 0;
     animation: container_introduction 1.3s ease-in-out forwards;
-
+}
+.blackBar.projects{
+    height: auto;
 }
 
 #Research{
@@ -154,7 +156,10 @@ a{
     flex-shrink: 1;
     flex-grow: 1;
     overflow-y: hidden;
-    
+}
+
+.content.projects{
+    height: 20vh;
 }
 
 .content.bio{
@@ -162,13 +167,13 @@ a{
 }
 
 .contentText{
-    
     margin-left: 2.9vw;
     margin-right: 0.9vw;
     font-size: 3vw;
     height: 35vh;
     width: 70vw;
     color: white;
+
 }
 
 .contentText.left{
@@ -257,6 +262,8 @@ img{
     border: 2px solid var(--border-color);
     height: 40vh;
     width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 #Linkedin{
