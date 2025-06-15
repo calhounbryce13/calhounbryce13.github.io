@@ -70,7 +70,6 @@ const toggle_form = function(event, text){
     contactContainer.classList.toggle("show");
 }
 
-
 const close_form_onsubmit = function(bool){
     /*
     DESCRIPTION: Function closes the contact form
@@ -112,7 +111,7 @@ const style_text = function(statusMessage){
     OUTPUT(S): 
      */
     statusMessage.style.fontSize = "150%";
-    statusMessage.style.color = "var(--signal-orange)";
+    statusMessage.style.color = "var(--accent-color)";
     statusMessage.style.border = "none !important";
     statusMessage.style.zIndex = "2";
     statusMessage.style.position = "absolute";
