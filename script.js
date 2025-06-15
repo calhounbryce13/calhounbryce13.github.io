@@ -34,22 +34,6 @@ const lock_the_screen_in_portrait = function(){
     }
 }
 
-const resize_the_screen = function(){
-    /*
-    DESCRIPTION: Function checks the viewport width to assign the
-                appropriate stylesheet
-    INPUT(s): None
-    OUTPUT(S): None
-     */
-    let link = document.getElementById('stylesheet');
-    if(document.documentElement.clientWidth < 900){
-        link.setAttribute("href","mobile.css");
-        lock_the_screen_in_portrait();
-    }
-    else{
-        link.setAttribute("href","desktop.css");
-    }
-}
 
 const toggle_form = function(event, text){
         /*
