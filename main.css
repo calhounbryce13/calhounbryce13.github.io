@@ -150,21 +150,24 @@ a{
     animation: container_introduction 1s ease-in-out forwards;
 }
 
-.blackBar:hover{
-    width: 49.7vw;
-    height: 70vh;
-    border-radius: 20px;
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    margin-left: 0vw;
-    margin-right: 0vw;
-    border: 2px solid var(--border-color);
-    flex-grow: 1;
-    flex-shrink: 1;
 
+@media(min-width: 900px){
+    .blackBar:hover{
+        width: 49.7vw;
+        height: 70vh;
+        border-radius: 20px;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        border: 2px solid var(--border-color);
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }
+
 
 #Research{
     animation-delay: 0.5s;
@@ -213,25 +216,29 @@ a{
     transition: 1s ease;
 }
 
-.content:hover{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 20vh;
-    width: 92%;
-    border: 2px solid var(--border-color);
-    margin-left: 2%;
-    margin-top: 2%;
-    padding: 2%;
-    font-size: 1vw;
+@media(min-width:900px){
+    .content:hover{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 20vh;
+        width: 92%;
+        border: 2px solid var(--border-color);
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 2%;
+        font-size: 1vw;
+    }
+    .content:hover .contentText{
+        width: 12vw;
+    }
+    .content:hover .image{
+        height: 16vh;
+        width: 8.8vw;
+    }
 }
-.content:hover .contentText{
-    width: 12vw;
-}
-.content:hover .image{
-    height: 16vh;
-    width: 8.8vw;
-}
+
+
 
 .content.noImage{
     
@@ -275,9 +282,13 @@ img{
     border-radius: 20px;
 }
 
-.content:hover img{
-    transform: scale(1.9);
+
+@media(min-width:900px){
+    .content:hover img{
+        transform: scale(1.9);
+    }
 }
+
 
 .contentText{
     width: 8vw;

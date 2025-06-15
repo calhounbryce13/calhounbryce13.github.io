@@ -34,7 +34,6 @@ const lock_the_screen_in_portrait = function(){
     }
 }
 
-
 const toggle_form = function(event, text){
         /*
     DESCRIPTION: 
