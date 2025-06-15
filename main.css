@@ -31,7 +31,7 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --weight-three: 100;
 
     --border-color: rgba(255,0,0,0);
-
+    --form-height: 45vh;
 
 }
 
@@ -58,12 +58,21 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     background: rgba(0, 0, 0, 0.5); /* Darker thumb on hover */
 }
 
+
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
+
     width: 100vw;
     height: 100%;
     margin: 0px;
@@ -230,12 +239,6 @@ a{
     word-wrap: break-word;
     white-space: normal;
     text-align: center;
-}
-.content.start{
-    justify-content: flex-start;
-}
-.content.end{
-    justify-content: flex-end;
 }
 
 .image{
@@ -502,4 +505,140 @@ footer{
         opacity: 1;
         transform: translateY(0vh);
     }
+}
+
+@media(max-width:900px){
+    html, body{
+        justify-content: flex-start;
+    }
+    header{
+        width: 95%;
+        height: 40vh;
+    }
+    #myName{
+        font-size: 25vw;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    #parent{
+        height: 100%;
+        margin-top: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blackBar{
+        height: 45vh;
+        width: 80%;
+        margin-top: 5%;
+        padding-bottom: 1vh;
+        margin-left: 0%;
+    }
+    .blackBar.projects{
+        height: auto;
+    }
+    .sectionHeader{
+        height: 3vh;
+        width: 25vw;
+        font-weight: 600;
+    }
+    .content{
+        justify-content: space-between;
+    }
+    .content.projects{
+        height: 20vh;
+    }
+    .content.bio{
+        min-height: 9vh;
+    }
+    .contentText{
+        width: 70vw;
+        font-size: 3vw;
+    }
+    .unorderedList{
+        max-height: 20%;
+        justify-content: flex-start;
+        padding: 0%;
+    }
+    li{
+        font-size: 1.9vw;
+    }
+    .image{
+        height: 15vh;
+        width: 37vw;
+    }
+    img{
+        height: 15vh;
+        width: 37vw;
+    }
+    .smallerImage{
+        height: 9vh;
+        width: 22vw;
+    }
+    .icons.smaller{
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 16vw;
+        width: 16vw;
+        animation: orbital_animation 10s infinite linear;
+    }
+    .smallerIcons{
+        height: 12vw;
+        width: 12vw;
+    }
+    #insta{
+        --init: 120px;
+    }
+    
+    #git{
+        --init: -120px;
+    }
+    #myLinks{
+        height: 40vh;
+        width: 80%;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    #Linkedin{
+        height: 10vh;
+        width: 10vh;
+    }
+    #LinkedinIcon{
+        height: 8vh;
+        width: 8vh;
+    }
+    #contactContainer{
+        bottom: 4%;
+        height: var(--form-height);
+        width: 80%;
+        overflow-y: scroll;
+    }
+    #closeContactButton{
+        font-size: 5vw;
+    }
+    #submitForm{
+        height: 6vh;
+        width: 30vw;
+    }
+    #submitFormButton{
+        font-size: 4vw;
+    }
+    #stickyContainer{
+        bottom: 4%;
+        width: 80%;
+    }
+    #stickyContainer.open{
+        height: var(--form-height) !important;
+    }
+    #footerContainer{
+        width: 80%;
+    }
+    footer{
+        width: 60%;
+        margin-bottom: 20%;
+    }
+
+
 }

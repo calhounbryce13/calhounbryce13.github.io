@@ -13,14 +13,11 @@ document.addEventListener('DOMContentLoaded', () =>{
     const form = document.forms["stickyForm"];
 
 
-    resize_the_screen();
-
     contactButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
     nevermindButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
     
     form.addEventListener('submit', (event) => process_user_data(event, contactButtonText));
     
-    window.addEventListener('resize', resize_the_screen);
 });
 
 

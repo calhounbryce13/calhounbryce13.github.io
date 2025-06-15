@@ -1,1 +1,2 @@
-The frontend of my portfolio page built with HTML, CSS, and JavaScript.
+# personal portfolio page frontend
+## made with vanilla web dev technologies html, css, and JavaScript
