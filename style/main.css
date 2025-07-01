@@ -289,10 +289,14 @@ img{
     border: 2px solid var(--border-color);
     display: flex;
     flex-shrink: 1;
+    max-width: 50%;
+
 }
 
 li{
     color: var(--main-alt);
+    max-width: 60%;
+    height: auto;
 }
 
 #myLinks{
@@ -545,12 +549,13 @@ footer{
         font-size: 3vw;
     }
     .unorderedList{
-        max-height: 20%;
+        height: auto;
         justify-content: flex-start;
         padding: 0%;
     }
     li{
         font-size: 1.9vw;
+        max-width: 80%;
     }
     .image{
         height: 15vh;
