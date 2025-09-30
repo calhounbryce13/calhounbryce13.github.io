@@ -170,7 +170,7 @@ a{
     margin-right: 0vw;
     border: 2px solid var(--border-color);
     transition: 1s ease;
-    overflow-y: auto;
+    overflow-y: hidden;
     flex-shrink: 1;
     flex-grow: 1;
     opacity: 0;

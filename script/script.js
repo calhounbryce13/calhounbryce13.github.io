@@ -49,15 +49,11 @@ const toggle_container_height = function(event){
         parentContainer.style.maxHeight = newHeight + 'vh';
         clickedButton.style.transform = 'rotate(90deg)';
         parentContainer.style.overflowY = 'auto';
-
     }else{
         parentContainer.style.maxHeight = collapsedHeight;
         clickedButton.style.transform = 'rotate(180deg)';
         parentContainer.style.overflowY = 'hidden';
-
-
     }
-
 }
 
 const dynamic_container_height_functionality = function(){
