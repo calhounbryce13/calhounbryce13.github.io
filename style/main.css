@@ -40,7 +40,7 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 }
 
 ::-webkit-scrollbar {
-    width: 12px;  /* Width of the scrollbar */
+    width: 0px;  /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -170,7 +170,6 @@ a{
     margin-right: 0vw;
     border: 2px solid var(--border-color);
     transition: 1s ease;
-    overflow-y: hidden;
     overflow-y: auto;
     flex-shrink: 1;
     flex-grow: 1;

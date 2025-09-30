@@ -40,21 +40,21 @@ const toggle_container_height = function(event){
     const collapsedHeight = '5.5vh';
     const clickedButton = event.target;
     const parentContainer = clickedButton.parentNode.parentNode.parentNode;
-    console.log(getComputedStyle(parentContainer).maxHeight);
     if(parentContainer.style.maxHeight == collapsedHeight){
         let numChildren = (parentContainer.children).length;
         if(numChildren > 2){
             numChildren = numChildren - 1;
         }
-        console.log(numChildren);
         const newHeight = (get_height_of_tallest_child(parentContainer) * numChildren) / 10;
         parentContainer.style.maxHeight = newHeight + 'vh';
-        console.log(newHeight);
         clickedButton.style.transform = 'rotate(90deg)';
+        parentContainer.style.overflowY = 'auto';
 
     }else{
         parentContainer.style.maxHeight = collapsedHeight;
         clickedButton.style.transform = 'rotate(180deg)';
+        parentContainer.style.overflowY = 'hidden';
+
 
     }
 
