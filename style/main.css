@@ -71,6 +71,34 @@ html{
     align-items: center;
 }
 
+
+
+.dynamic-container-button{
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    border: none;
+    background-color:#3c4142;
+    background-image: url('/media/icons/chevron-right-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    
+}
+
+.content-card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+    padding: 2%;
+    border: 2px solid var(--border-color);
+    height: auto;
+    width: 90%;
+}
+
 body{
 
     width: 100vw;
@@ -131,7 +159,7 @@ a{
 }
 
 .blackBar{
-    height: 50vh;
+    max-height: 5.5vh;
     width: 25.5vw;
     border-radius: 20px;
     background-color: var(--main-color);
@@ -521,7 +549,6 @@ footer{
         align-items: center;
     }
     .blackBar{
-        height: 45vh;
         width: 80%;
         margin-top: 5%;
         padding-bottom: 1vh;

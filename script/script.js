@@ -7,6 +7,8 @@ DESCRIPTION: Script file for my webpage
 
 
 document.addEventListener('DOMContentLoaded', () =>{
+
+    dynamic_container_height_functionality();
     const contactButton = document.getElementById("stickyContainer");
     const contactButtonText = contactButton.textContent;
     const nevermindButton = document.getElementById("closeContactButton");
@@ -22,6 +24,49 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
 ///////////////////////////////////////////////////////////////////////////////
+
+
+const get_height_of_tallest_child = function(parent){
+    let maxHeight = 0;
+    for(let i = 0; i < parent.children.length; i++){
+        if(parent.children[i].scrollHeight > maxHeight){
+            maxHeight = parent.children[i].scrollHeight;
+        }
+    }
+    return maxHeight;
+}
+
+const toggle_container_height = function(event){
+    const collapsedHeight = '5.5vh';
+    const clickedButton = event.target;
+    const parentContainer = clickedButton.parentNode.parentNode.parentNode;
+    console.log(getComputedStyle(parentContainer).maxHeight);
+    if(parentContainer.style.maxHeight == collapsedHeight){
+        let numChildren = (parentContainer.children).length;
+        if(numChildren > 2){
+            numChildren = numChildren - 1;
+        }
+        console.log(numChildren);
+        const newHeight = (get_height_of_tallest_child(parentContainer) * numChildren) / 10;
+        parentContainer.style.maxHeight = newHeight + 'vh';
+        console.log(newHeight);
+        clickedButton.style.transform = 'rotate(90deg)';
+
+    }else{
+        parentContainer.style.maxHeight = collapsedHeight;
+        clickedButton.style.transform = 'rotate(180deg)';
+
+    }
+
+}
+
+const dynamic_container_height_functionality = function(){
+    const buttons = Array.from(document.getElementsByClassName('dynamic-container-button'));
+    buttons.forEach((singleButton) => {
+        singleButton.addEventListener('click', (event) => toggle_container_height(event));
+    });
+}
+
 
 const lock_the_screen_in_portrait = function(){
     /*
