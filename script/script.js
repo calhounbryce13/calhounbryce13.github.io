@@ -37,21 +37,31 @@ const get_height_of_tallest_child = function(parent){
 }
 
 const toggle_container_height = function(event){
-    const collapsedHeight = '5.5vh';
+    //const mq = window.matchMedia("(width <= 900px)");
+    const collapsedHeightMobile = '5.5vh';
+    //const collapsedHeightDesktop = '7vh';
     const clickedButton = event.target;
     const parentContainer = clickedButton.parentNode.parentNode.parentNode;
-    if(parentContainer.style.maxHeight == collapsedHeight){
+    if(parentContainer.style.maxHeight == collapsedHeightMobile /*|| parentContainer.style.maxHeight == collapsedHeightDesktop*/){
         let numChildren = (parentContainer.children).length;
         if(numChildren > 2){
             numChildren = numChildren - 1;
         }
         const newHeight = (get_height_of_tallest_child(parentContainer) * numChildren) / 10;
         parentContainer.style.maxHeight = newHeight + 'vh';
-        clickedButton.style.transform = 'rotate(90deg)';
+        clickedButton.classList.add('dynamic-container-button-expanded');
         parentContainer.style.overflowY = 'auto';
     }else{
-        parentContainer.style.maxHeight = collapsedHeight;
-        clickedButton.style.transform = 'rotate(180deg)';
+        /*
+        if(mq.matches){
+            parentContainer.style.maxHeight = collapsedHeightMobile;
+        }
+        else{
+            parentContainer.style.maxHeight = collapsedHeightDesktop;
+        }
+        */
+        parentContainer.style.maxHeight = collapsedHeightMobile;
+        clickedButton.classList.remove('dynamic-container-button-expanded');
         parentContainer.style.overflowY = 'hidden';
     }
 }

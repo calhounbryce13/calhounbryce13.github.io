@@ -84,7 +84,14 @@ html{
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(180deg);
+    transition: background-color 1s ease-in-out, transform 1s ease-in-out;
     
+    
+}
+
+.dynamic-container-button-expanded{
+    transform: rotate(90deg);
+    background-color: var(--accent-color);
 }
 
 .content-card-header{
@@ -548,6 +555,7 @@ footer{
         align-items: center;
     }
     .blackBar{
+        max-height: 5.5vh;
         width: 80%;
         margin-top: 5%;
         padding-bottom: 1vh;
