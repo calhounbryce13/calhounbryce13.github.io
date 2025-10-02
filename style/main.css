@@ -166,7 +166,6 @@ a{
 }
 
 .blackBar{
-    max-height: 5.5vh;
     width: 25.5vw;
     border-radius: 20px;
     background-color: var(--main-color);
@@ -555,7 +554,6 @@ footer{
         align-items: center;
     }
     .blackBar{
-        max-height: 5.5vh;
         width: 80%;
         margin-top: 5%;
         padding-bottom: 1vh;
