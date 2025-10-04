@@ -78,7 +78,10 @@ html{
     width: 4vh;
     border-radius: 50%;
     border: none;
-    background-color:#3c4142;
+    /*background-color:#3c4142;
+    background-color: #e11818;
+    background-color: #e9ffff;*/
+    background-color: #dd3162;
     background-image: url('/media/icons/chevron-right-icon.svg');
     background-position: center;
     background-repeat: no-repeat;

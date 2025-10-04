@@ -218,7 +218,7 @@ async function process_user_data(event, text){
         return;
     }
     try{
-        let promise = await fetch("https://stormy-falls-77234-de122eb1ad50.herokuapp.com/mailer",{
+        let promise = await fetch("https://calhounbryce13-backend.onrender.com/mailer",{
             headers:{
                 'Content-Type': 'application/json' 
             },
@@ -228,7 +228,8 @@ async function process_user_data(event, text){
         let res = await promise.json();
         bool = res.success;
     }catch(error){
-        console.log(error, "ERROR PROCESSING USER DATA");
+        console.log(error);
+        window.alert("ERROR sending that request");
     }
     clear_form_and_show_message(contactContainer, stickyContainer, bool, text);
 }
