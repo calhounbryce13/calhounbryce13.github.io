@@ -9,21 +9,26 @@ DESCRIPTION: Script file for my webpage
 document.addEventListener('DOMContentLoaded', () =>{
 
     dynamic_container_height_functionality();
-    const contactButton = document.getElementById("stickyContainer");
-    const contactButtonText = contactButton.textContent;
-    const nevermindButton = document.getElementById("closeContactButton");
-    const form = document.forms["stickyForm"];
+    contact_form_functionality();
 
-
-    contactButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
-    nevermindButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
-    
-    form.addEventListener('submit', (event) => process_user_data(event, contactButtonText));
     
 });
 
 
 ///////////////////////////////////////////////////////////////////////////////
+
+
+const contact_form_functionality = function(){
+    const nevermindButton = document.getElementById("closeContactButton");
+    const contactButton = document.getElementById("stickyContainer");
+    const contactButtonText = contactButton.textContent;
+
+    const form = document.forms["stickyForm"];
+
+    contactButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
+    nevermindButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
+    form.addEventListener('submit', (event) => process_user_data(event, contactButtonText));
+}
 
 
 const get_height_of_tallest_child = function(parent){
@@ -37,12 +42,11 @@ const get_height_of_tallest_child = function(parent){
 }
 
 const toggle_container_height = function(event){
-    //const mq = window.matchMedia("(width <= 900px)");
     const collapsedHeightMobile = '5.5vh';
-    //const collapsedHeightDesktop = '7vh';
+    const collapsedHeightDesktop = '6.5vh';
     const clickedButton = event.target;
     const parentContainer = clickedButton.parentNode.parentNode.parentNode;
-    if(parentContainer.style.maxHeight == collapsedHeightMobile /*|| parentContainer.style.maxHeight == collapsedHeightDesktop*/){
+    if(parentContainer.style.maxHeight == collapsedHeightMobile || parentContainer.style.maxHeight == collapsedHeightDesktop){
         let numChildren = (parentContainer.children).length;
         if(numChildren > 2){
             numChildren = numChildren - 1;
@@ -52,21 +56,35 @@ const toggle_container_height = function(event){
         clickedButton.classList.add('dynamic-container-button-expanded');
         parentContainer.style.overflowY = 'auto';
     }else{
-        /*
-        if(mq.matches){
+
+        if(window.matchMedia("(max-width: 900px)").matches){
             parentContainer.style.maxHeight = collapsedHeightMobile;
         }
         else{
             parentContainer.style.maxHeight = collapsedHeightDesktop;
         }
-        */
-        parentContainer.style.maxHeight = collapsedHeightMobile;
         clickedButton.classList.remove('dynamic-container-button-expanded');
         parentContainer.style.overflowY = 'hidden';
     }
 }
 
+const set_initial_height = function(){
+    const containers = Array.from(document.getElementsByClassName('blackBar'));
+    const viewPortWidth = window.matchMedia("(max-width: 900px)");
+    console.log(viewPortWidth);
+    containers.forEach((singleContainer) => {
+        if(viewPortWidth.matches){
+            singleContainer.style.maxHeight = '5.5vh';
+        }
+        else{
+            singleContainer.style.maxHeight = '6.5vh';
+        }
+    })
+}
+
 const dynamic_container_height_functionality = function(){
+    set_initial_height();
+    window.addEventListener('resize', set_initial_height);
     const buttons = Array.from(document.getElementsByClassName('dynamic-container-button'));
     buttons.forEach((singleButton) => {
         singleButton.addEventListener('click', (event) => toggle_container_height(event));

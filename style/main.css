@@ -35,6 +35,8 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 
 }
 
+
+
 .clear{
     color: rgba(0, 0, 0, 0);
 }
@@ -125,7 +127,7 @@ body{
 }
 
 header{
-    height: 20vh;
+    height: auto;
     width: 90%;
     border: 2px solid var(--border-color);
     display: flex;
@@ -136,6 +138,8 @@ header{
 
 p{
     border: 2px solid var(--border-color);
+    margin-block-start: 0%;
+    margin-block-end: 0%;
 }
 
 a{
