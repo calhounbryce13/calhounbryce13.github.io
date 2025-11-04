@@ -36,31 +36,29 @@ DESCRIPTION: HTML file for my webpage
                             <button class="dynamic-container-button"></button>
                         </div>
                     </div>
-                    <div class="content bio">
-                        <p class="contentText">Howdy, I'm a university student from Los Angeles, CA </p>
-                        <div class="image smallerImage">
-                            <img src="media/buildings-5460565_1920.jpg" class="smallerImage">
-                        </div>
+
+                    <div class="content-card">
+                        <div class="thumbnail" id="Los-Angeles"></div>
+                        <div class="thumbnail-title"> Howdy, I'm a university student from Los Angeles, CA </div>
                     </div>
-                    <div class="content bio">
-                        <div class="image smallerImage">
-                            <img src="media/osu-logo.png" class="smallerImage">
-                        </div>
-                        <p class="contentText">Currently studying Computer 
-                            Science, as an Agile developer at Oregon State University </p>
+                    <div class="content-card">
+                        <div class="thumbnail" id="OSU"></div>
+                        <div class="thumbnail-title"> Currently studying Computer Science, as an Agile developer at Oregon State University </div>
                     </div>
-                    <div class="content noImage bio start">
-                        <p class="contentText left"> Studying and developing artificial intelligence is something I am particularly
-                            passionate about. </p>
+
+
+                    <div class="content-card">
+                        <div class="thumbnail-title">  Studying and developing artificial intelligence is something I am particularly
+                            passionate about. </div>
                     </div>
-                    <div class="content noImage bio end">
-                        <p class="contentText right"> I have worked with some really fun and interesting AI algoithms like the AC3 
-                            for constraint satisfaction problems. </p>
+                    <div class="content-card">
+                        <div class="thumbnail-title">  I have worked with some really fun and interesting AI algoithms like the AC3 
+                            for constraint satisfaction problems. </div>
                     </div>
-                    <div class="content noImage bio start">
-                        <p class="contentText left">Additionally, Google's non-deterministic pagerank algoithm with the random surfer
-                            model. </p>
+                    <div class="content-card">
+                        <div class="thumbnail-title"> Additionally, Google's non-deterministic pagerank algoithm with the random surfer model. </div>
                     </div>
+
                 </div>
                 <div id="Research" class="blackBar" style="max-height: 5.5vh;">
                     <div class="content-card-header">
@@ -70,17 +68,14 @@ DESCRIPTION: HTML file for my webpage
                         <div>
                             <button class="dynamic-container-button"></button>
                         </div>
-
                     </div>
-                    <div class="content">
-                        <p class="contentText">Conducted research for Oregon State University's 
-                            ASPIRE Center on various computer-vision models.
-                        </p>
-                        <a href="media/Slide1.PNG" target="_blank">
-                            <div class="image">
-                                <img src="media/Slide1.PNG">
-                            </div>
-                        </a>
+                    <div class="content-card">
+                        <div class="thumbnail" id="Aspire"></div>
+                        <div class="thumbnail-title"> Conducted research for Oregon State University's 
+                            ASPIRE Center on various computer-vision models.</div>
+                        <div class="options">
+                            <a class="content-button" href="media/Slide1.PNG" target="_blank">View</a>
+                        </div>
                     </div>
                 </div>           
                 <div id="Skills" class="blackBar" style="max-height: 5.5vh;">
@@ -91,42 +86,18 @@ DESCRIPTION: HTML file for my webpage
                         <div>
                             <button class="dynamic-container-button"></button>
                         </div>
-
                     </div>
-                    <div class="content">
-                        <p class="contentText heavy">Back-End Web Developement</p>
-                        <div class="unorderedList">
-                            <ul>
-                                <li><p>JavaScript, Python</p></li>
-                                <li><p>MongoDB, MongoEngine, Node.js, Flask, Express-sessions</p></li>
-                            </ul>
-                        </div>
+                    <div class="content-card">
+                        <div class="thumbnail" id="Backend"></div>
+                        <div class="thumbnail-title"> Back-end Development</div>
                     </div>
-                    <div class="content">
-                        <p class="contentText heavy">Front-End Web Developement</p>
-                        <div class="unorderedList">
-                            <ul>
-                                <li><p>HTML, CSS, JavaScript</p></li>
-                                <li><p>REACT</p></li>
-                            </ul>
-                        </div>
+                    <div class="content-card">
+                        <div class="thumbnail" id="Frontend"></div>
+                        <div class="thumbnail-title"> Front-end Web Development</div>
                     </div>
-                    <div class="content">
-                        <p class="contentText heavy">Network Microservice Architectures</p>
-                        <div class="unorderedList">
-                            <ul>
-                                <li><p>Python, JavaScript</p></li>
-                                <li><p>Flask, Express</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <p class="contentText heavy">Data Structures</p>
-                        <div class="unorderedList">
-                            <ul>
-                                <li><p>C, Java, Python, C++</p></li>
-                            </ul>
-                        </div>
+                    <div class="content-card">
+                        <div class="thumbnail" id="Data-structures"></div>
+                        <div class="thumbnail-title"> Data Structures</div>
                     </div>
                 </div>
                 <div id="Projects" class="blackBar projects"  style="max-height: 5.5vh;">

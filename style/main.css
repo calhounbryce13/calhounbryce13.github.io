@@ -86,6 +86,7 @@ html{
 .content-card > * {
     width: 95%;
     margin-bottom: 2vh;
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     color: var(--main-alt);
 }
@@ -94,7 +95,7 @@ html{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: blue;
+    background-color: var(--charcoal-grey);
     height: 23vh;
 }
 
@@ -107,22 +108,31 @@ html{
 #Minimax{
     background-image: url('../media/minimax_thumbnail.png');
 }
+#Aspire{
+    height: 35vh;
+    background-image: url('../media/Slide1.PNG');
+}
+
+#OSU{
+    background-image: url('../media/osu-logo.png');
+}
+
+#Los-Angeles{
+    background-image: url('../media/buildings-5460565_1920.jpg');
+}
 
 .thumbnail-title{
     font-weight: 700;
-    border: 2px solid var(--border);
 
 }
 
 .description{
     font-weight: 400;
-    border: 2px solid var(--border);
 
 }
 
 .options{
     margin-bottom: 0vh;
-    border: 2px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,6 +147,11 @@ html{
     width: 40%;
     color: var(--main-color);
     background-color: var(--accent-color);
+}
+
+.content-button:hover{
+    background-color: var(--main-color);
+    color: var(--accent-color);
 }
 
 .container{
