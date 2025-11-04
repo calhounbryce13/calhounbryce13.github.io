@@ -74,7 +74,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-alt);
+    background-color: var(--charcoal-grey);
     width: 90%;
     height: auto;
     padding: 1%;
@@ -87,6 +87,7 @@ html{
     width: 95%;
     margin-bottom: 2vh;
     border-radius: 20px;
+    color: var(--main-alt);
 }
 
 .thumbnail{
@@ -134,8 +135,8 @@ html{
     border-radius: 20px;
     height: 4vh;
     width: 40%;
-    color: white;
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--accent-color);
 }
 
 .container{
