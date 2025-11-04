@@ -16,12 +16,10 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --cyan: rgba(0, 255, 255, 1);
     --crimson-red: rgba(220,20,60,1);
     --charcoal-grey: rgba(54,69,79,1);
-    --white: rgba(255, 255, 255, 1);
-    --black: rgba(0,0,0,1);
     
 
-    --main-alt: var(--white);
-    --main-color: var(--black);
+    --main-alt: white;
+    --main-color: black;
     --accent-color: var(--cyan);
     --accent-alt: var(--charcoal-grey);
 
@@ -34,8 +32,6 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --form-height: 45vh;
 
 }
-
-
 
 .clear{
     color: rgba(0, 0, 0, 0);
@@ -67,11 +63,89 @@ html{
 
 }
 
+
+/********************************************/
+/********************************************/
+.content-card{
+    border-radius: 20px;
+
+    border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-alt);
+    width: 90%;
+    height: auto;
+    padding: 1%;
+    margin: auto;
+    margin-bottom: 1vh;
+
+}
+
+.content-card > * {
+    width: 95%;
+    margin-bottom: 2vh;
+    border-radius: 20px;
+}
+
+.thumbnail{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: blue;
+    height: 23vh;
+}
+
+#Quiznest{
+    background-image: url('../media/quiznest-icon.png');
+}
+#IOT{
+    background-image: url('../media/IOT-thumbnail.png');
+}
+#Minimax{
+    background-image: url('../media/minimax_thumbnail.png');
+}
+
+.thumbnail-title{
+    font-weight: 700;
+    border: 2px solid var(--border);
+
+}
+
+.description{
+    font-weight: 400;
+    border: 2px solid var(--border);
+
+}
+
+.options{
+    margin-bottom: 0vh;
+    border: 2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 4vh;
+    width: 40%;
+    color: white;
+    background-color: var(--main-color);
+}
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/********************************************/
+/********************************************/
 
 
 
