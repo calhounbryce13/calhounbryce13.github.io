@@ -68,6 +68,11 @@ html{
     font-size: 9vw;
 }
 
+.submit-form:active{
+    background-color: var(--main-color);
+    color: var(--accent-color);
+}
+
 
 
 input{
