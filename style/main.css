@@ -239,6 +239,10 @@ form > *{
     background-image: url('../media/buildings-5460565_1920.jpg');
 }
 
+#Backend{
+    background-image: url('../media/generic-uml.png');
+}
+
 .thumbnail-title{
     font-weight: 700;
 
