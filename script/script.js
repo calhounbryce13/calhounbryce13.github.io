@@ -204,5 +204,7 @@ async function process_user_data(event){
         console.log(error);
         window.alert("ERROR sending that request");
     }
+    form['userName'].value = '';
+    form['userMssg'].value = '';
     toggle_modal();
 }
