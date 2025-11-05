@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     dynamic_container_height_functionality();
     contact_form_functionality();
+    dynamic_textarea_functionality();
 
     
 });
@@ -18,15 +19,33 @@ document.addEventListener('DOMContentLoaded', () =>{
 ///////////////////////////////////////////////////////////////////////////////
 
 
+const toggle_modal = function(){
+    const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
+    backdrop.classList.toggle('backdrop-show');
+
+    const modal = Array.from(document.getElementsByClassName('contact-modal'))[0];
+    modal.classList.toggle('modal-show');
+}
+
+
+const dynamic_textarea_functionality = function(){
+    const textarea = Array.from(document.getElementsByTagName('textarea'))[0];
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+    console.log(textarea.scrollHeight + 'px');
+
+}
+
 const contact_form_functionality = function(){
-    const nevermindButton = document.getElementById("closeContactButton");
+
+    const nevermindButton = document.getElementById("close-modal-button");
     const contactButton = document.getElementById("stickyContainer");
     const contactButtonText = contactButton.textContent;
 
-    const form = document.forms["stickyForm"];
+    const form = document.forms["contact-me-form"];
 
-    contactButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
-    nevermindButton.addEventListener('click', (event) => toggle_form(event, contactButtonText));
+    contactButton.addEventListener('click', () => toggle_modal());
+    nevermindButton.addEventListener('click', (event) => toggle_modal());
     form.addEventListener('submit', (event) => process_user_data(event, contactButtonText));
 }
 
@@ -122,56 +141,7 @@ const toggle_form = function(event, text){
     contactContainer.classList.toggle("show");
 }
 
-const close_form_onsubmit = function(bool){
-    /*
-    DESCRIPTION: Function closes the contact form
-    INPUT(s): click event, original 'contact me' text
-    OUTPUT(S): None
-     */
 
-    const contactContainer = document.getElementById("contactContainer");
-    contactContainer.removeChild(contactContainer.firstChild);
-    contactContainer.removeChild(contactContainer.firstChild);
-
-    const responseText = document.createElement('p');
-    responseText.style.color = "var(--signal-orange)";
-    responseText.style.fontSize = "1.5vw";
-    responseText.textContent = "Some text here please, and thank you!";
-
-    contactContainer.appendChild(responseText);
-    setTimeout(() =>{
-        contactContainer.removeChild(responseText);
-    }, 800)
-
-}
-
-const clear_form = function(){
-        /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
-     */
-    const inputs = Array.from(document.getElementsByClassName("myInputs"));
-    inputs[0].value = "";
-    inputs[1].value = "";
-}
-
-const style_text = function(statusMessage){
-        /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
-     */
-    statusMessage.style.fontSize = "150%";
-    statusMessage.style.color = "var(--accent-color)";
-    statusMessage.style.border = "none !important";
-    statusMessage.style.zIndex = "2";
-    statusMessage.style.position = "absolute";
-    statusMessage.style.top = "10%";
-    statusMessage.style.margin = "2vw";
-    statusMessage.style.overflowWrap = "break-word";
-    statusMessage.style.textAlign = "center";
-}
 
 const display_message = function(stickyContainer, statusMessage, text){
         /*
@@ -204,20 +174,7 @@ const create_text = function(bool){
     return statusMessage;
 }
 
-const clear_form_and_show_message = function(contactContainer, stickyContainer, bool, text){
-        /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
-     */
-    contactContainer.classList.toggle("show");
-    clear_form();
-    const statusMessage = create_text(bool);
-    style_text(statusMessage);
-    display_message(stickyContainer, statusMessage, text);
-}
-
-async function process_user_data(event, text){
+async function process_user_data(event){
     /*
     DESCRIPTION: 
     INPUT(s): 
@@ -227,8 +184,6 @@ async function process_user_data(event, text){
     const form = event.target;
     const userName = form['userName'].value;
     const userMessage = form['userMssg'].value;
-    const contactContainer = document.getElementById("contactContainer");
-    const stickyContainer = document.getElementById("stickyContainer")
     
     let bool = false;
     if(!userName || !userMessage){
@@ -249,5 +204,5 @@ async function process_user_data(event, text){
         console.log(error);
         window.alert("ERROR sending that request");
     }
-    clear_form_and_show_message(contactContainer, stickyContainer, bool, text);
+    toggle_modal();
 }

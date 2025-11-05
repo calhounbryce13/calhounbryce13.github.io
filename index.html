@@ -182,6 +182,22 @@ DESCRIPTION: HTML file for my webpage
             <div id="stickyContainer">
                 <p>Contact me</p>
             </div>
+
+            <!--CONDITIONAL RENDERING-->
+            <div class="backdrop"></div>
+
+            <div class="contact-modal">
+                <div class="close-modal">
+                    <button type="button" id="close-modal-button"></button>
+                </div>
+                <form name="contact-me-form">
+                    <input type="text" name="userName" placeholder="Name">
+                    <textarea name="userMssg" placeholder="Your message"></textarea>
+                    <Button class="submit-form">submit</Button>
+                </form>
+            </div>
+
+            <!----------------------------------------->
             <div id="footerContainer">
                 <footer>
                     &copy;2025 Bryce Calhoun

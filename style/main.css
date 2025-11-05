@@ -63,6 +63,119 @@ html{
 
 }
 
+.submit-form{
+    background-color: var(--accent-color);
+    font-size: 9vw;
+}
+
+
+
+input{
+    font-size: 10vw;
+}
+
+textarea{
+    font-size: 10vw;
+    height: auto;
+}
+
+@media(min-width: 900px){
+    textarea{
+        font-size: 3vw;
+    }
+    input{
+        font-size: 3vw;
+    }
+    .submit-form{
+        font-size: 3vw;
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+form > *{
+    width: 100%;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    font-family: inherit;
+
+}
+
+#close-modal-button{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    background-image: url('../media/icons/close-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 6vh;
+    width: 6vh;
+}
+
+
+.close-modal{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.contact-modal{
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 80%;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--charcoal-grey);
+    border: 2px solid var(--border-color);
+    padding: 1%;
+}
+
+.contact-modal > * {
+    font-family: inherit;
+    border-radius: 10px;
+
+    width: 90%;
+    font-size: 6vw;
+    border: 2px solid var(--border-color);
+    margin-bottom: 2vh;
+
+
+}
+
+.backdrop{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.backdrop-show{
+    opacity: 1;
+    z-index: 100;
+}
+.modal-show{
+    top: 50%;
+}
+
 
 /********************************************/
 /********************************************/
@@ -555,11 +668,6 @@ fieldset{
     font-family: inherit;
     width: 100%;
     border-radius: 20px;
-}
-
-textarea{
-    height: 8vh;
-    resize: none;
 }
 
 .formElement{
