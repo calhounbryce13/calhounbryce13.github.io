@@ -36,7 +36,6 @@ DESCRIPTION: HTML file for my webpage
                             <button class="dynamic-container-button"></button>
                         </div>
                     </div>
-
                     <div class="content-card">
                         <div class="thumbnail" id="Los-Angeles"></div>
                         <div class="thumbnail-title"> Howdy, I'm a university student from Los Angeles, CA </div>
@@ -45,8 +44,6 @@ DESCRIPTION: HTML file for my webpage
                         <div class="thumbnail" id="OSU"></div>
                         <div class="thumbnail-title"> Currently studying Computer Science, as an Agile developer at Oregon State University </div>
                     </div>
-
-
                     <div class="content-card">
                         <div class="thumbnail-title">  Studying and developing artificial intelligence is something I am particularly
                             passionate about. </div>
@@ -58,7 +55,6 @@ DESCRIPTION: HTML file for my webpage
                     <div class="content-card">
                         <div class="thumbnail-title"> Additionally, Google's non-deterministic pagerank algoithm with the random surfer model. </div>
                     </div>
-
                 </div>
                 <div id="Research" class="blackBar" style="max-height: 5.5vh;">
                     <div class="content-card-header">
@@ -74,7 +70,11 @@ DESCRIPTION: HTML file for my webpage
                         <div class="thumbnail-title"> Conducted research for Oregon State University's 
                             ASPIRE Center on various computer-vision models.</div>
                         <div class="options">
-                            <a class="content-button" href="media/Slide1.PNG" target="_blank">View</a>
+                            <a class="content-button" href="media/Slide1.PNG" target="_blank">
+                                <div class="action-icon view">
+                                </div>
+                                View
+                            </a>
                         </div>
                     </div>
                 </div>           
@@ -114,8 +114,16 @@ DESCRIPTION: HTML file for my webpage
                         <div class="thumbnail-title"> Quiznest flashcard generation tool</div>
                         <div class="description"> A frontend-only application using HTML5, CSS, and JavaScript.</div>
                         <div class="options">
-                            <a class="content-button" href="https://calhounbryce13.github.io/quiznest/index.html" target="_blank">Launch</a>
-                            <a class="content-button" href="https://github.com/calhounbryce13/quiznest" target="_blank">Github</a>
+                            <a class="content-button" href="https://calhounbryce13.github.io/quiznest/index.html" target="_blank">
+                                <div class="action-icon launch">
+                                </div>
+                                Launch
+                            </a>
+                            <a class="content-button" href="https://github.com/calhounbryce13/quiznest" target="_blank">
+                                <div class="action-icon git-repo">
+                                </div>
+                                Github
+                            </a>
                         </div>
                     </div>
                     <div class="content-card">
@@ -123,7 +131,11 @@ DESCRIPTION: HTML file for my webpage
                         <div class="thumbnail-title">'Internet of Things' Device Control System </div>
                         <div class="description"> A prototype application for a network of devices to take commands, and communicate with a central controller GUI.</div>
                         <div class="options">
-                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/IOT-management" target="_blank">Github</a>
+                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/IOT-management" target="_blank">
+                                <div class="action-icon git-repo">
+                                </div>
+                                Github
+                            </a>
                         </div>
                     </div>
                     <div class="content-card">
@@ -131,7 +143,11 @@ DESCRIPTION: HTML file for my webpage
                         <div class="thumbnail-title">Artifical Intelligence Minimax agent </div>
                         <div class="description"> A logical implimentation of the process of the adverserial search algorithm, Minimax, for tic-tac-toe.</div>
                         <div class="options">
-                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/AI/Minimax-AI" target="_blank">Github</a>
+                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/AI/Minimax-AI" target="_blank">
+                                <div class="action-icon git-repo">
+                                </div>
+                                Github
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -182,10 +198,8 @@ DESCRIPTION: HTML file for my webpage
             <div id="stickyContainer">
                 <p>Contact me</p>
             </div>
-
             <!--CONDITIONAL RENDERING-->
             <div class="backdrop"></div>
-
             <div class="contact-modal">
                 <div class="close-modal">
                     <button type="button" id="close-modal-button"></button>
@@ -196,7 +210,6 @@ DESCRIPTION: HTML file for my webpage
                     <Button class="submit-form">submit</Button>
                 </form>
             </div>
-
             <!----------------------------------------->
             <div id="footerContainer">
                 <footer>

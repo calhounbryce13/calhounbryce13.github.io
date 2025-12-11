@@ -38,20 +38,18 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 }
 
 ::-webkit-scrollbar {
-    width: 0px;  /* Width of the scrollbar */
+    width: 0px;  
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Make the track transparent */
+    background: transparent; 
 }
 
-/* Style the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.2); /* Semi-transparent thumb */
-    border-radius: 10px;  /* Optional: rounded corners */
+    border-radius: 10px; 
 }
 
-/* Optional: Hover effect for thumb */
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.5); /* Darker thumb on hover */
 }
@@ -196,7 +194,8 @@ form > *{
     width: 90%;
     height: auto;
     padding: 1%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1vh;
 
 }
@@ -262,13 +261,36 @@ form > *{
 
 .content-button{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
     height: 4vh;
     width: 40%;
     color: var(--main-color);
     background-color: var(--accent-color);
+}
+
+.action-icon{
+    height: 80%;
+    width: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.view{
+    background-image: url('../media/icons/icons8-eyes-50.png');
+}
+
+.launch{
+    background-image: url('../media/icons/icons8-launch-50.png');
+
+
+}
+
+.git-repo{
+    background-image: url('../media/icons/icons8-github-50.png');
 }
 
 .content-button:hover{
