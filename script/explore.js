@@ -1,0 +1,238 @@
+'use strict';
+
+const MAX = 20
+const SIZE = 6
+
+const WALLS = [
+    [0, 0],
+    [0, 1],
+    [0, 3],
+    [1, 4],
+    [2, 2],
+    [3, 3],
+    [4, 3],
+
+    [4, 5],
+    [4, 1],
+    [5, 1],
+]
+
+const START = [0, 5]
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    back_to_home();
+
+
+    generate_grid(SIZE);
+    tap_goal_functionality();
+    reset_maze();
+
+    Array.from(document.getElementsByClassName('toggle-switch'))[0].addEventListener('click', (event) => {
+        const parent = event.target.parentNode;
+        parent.classList.toggle('breadth-selected');
+    });
+
+});
+
+
+const back_to_home = function(){
+    Array.from(document.getElementsByClassName('back'))[0].addEventListener('click', () => {
+        window.location.assign('index.html');
+    });
+}
+
+const reset_maze = function(){
+    document.getElementById('reset').addEventListener('click', () => {
+        window.location.reload();
+    });
+}
+
+const wall_cell = function(cell){
+
+    for(const wall of WALLS){
+        if(wall[0] == cell[0] && wall[1] == cell[1]){
+            return true;
+        }
+    }
+    return false;
+}
+
+const start_cell = function(cell){
+
+    if(cell[0] == START[0] && cell[1] == START[1]){
+        return true;
+    }
+    return false;
+}
+
+const generate_grid = function(dimensions){
+    console.log()
+    if(typeof dimensions === 'number'){
+        if(dimensions > 0 && dimensions < MAX){
+            for(let i = 0; i < dimensions; i++){
+                const row = document.createElement('div');
+                row.classList.add('row');
+                for(let j = 0; j < dimensions; j++){
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    if(wall_cell([i, j])){
+                        cell.classList.add('wall');
+                    }
+                    else if(start_cell([i, j])){
+                        cell.classList.add('start');
+                    }
+                    else if(localStorage.getItem('goal')){
+                        if(JSON.parse(localStorage.getItem('goal'))[0] == i && JSON.parse(localStorage.getItem('goal'))[1] == j){
+                            cell.classList.add('goal');
+                        }
+                    }
+                    row.appendChild(cell);
+                }
+                Array.from(document.getElementsByClassName('maze'))[0].appendChild(row);
+            }
+            return;
+        }
+        console.log("error: dimension out of size range");
+        return;
+    }
+    console.log("error: input dimension must be a number");
+    return;
+
+}
+
+const tap_goal_functionality = function(){
+    const rows = Array.from(document.getElementsByClassName('row'));
+    for(let x = 0; x < rows.length; x++){
+        const cells = rows[x].children;
+        for(let y = 0; y < cells.length; y++){
+            const cell = rows[x].children[y];
+            cell.addEventListener('click', (event) => {
+                if(!(event.target.classList.contains('wall'))){
+                    if(!(event.target.classList.contains('start'))){
+                        if(!(localStorage.getItem('goal'))){
+                            event.target.classList.add('goal');
+                            localStorage.setItem('goal', JSON.stringify([x, y]));
+                        }
+                        else{
+                            if(event.target.classList.contains('goal')){
+                                event.target.classList.remove('goal');
+                                localStorage.removeItem('goal');
+                            }
+                            else{
+                                window.alert("error: goal already set");
+                            }
+                        }
+                        return;
+                    }
+                    console.log("start cell clicked on");
+                    start_search();
+                    return
+                }
+                console.log("error: wall clicked on");
+                return
+            })
+        }
+    }
+
+}
+
+const current_is_target = function(current, target){
+    for(let i = 0; i < 2; i++){
+        if(current[i] != target[i]) return false;
+    }
+    return true;
+}
+
+const mark_visited = function(current){
+    const rows = Array.from(document.getElementsByClassName('row'));
+    const row = rows[current[0]];
+    const cell = row.children[current[1]];
+    cell.classList.add('visited');
+}
+
+const valid_neighbor = function(given){
+    if(given[0] >= 0 && given[1] >= 0){
+        if(given[0] < SIZE && given[1] < SIZE){
+            const rows = Array.from(document.getElementsByClassName('row'));
+            const cell = rows[given[0]].children[given[1]];
+            if(!(cell.classList.contains('wall')) && !(cell.classList.contains('visited'))){
+                return true;
+            }
+        }
+    }
+    return false;
+
+}
+
+const get_neighbors = function(current){
+    const neighbors = [];
+    if(valid_neighbor([current[0] - 1, current[1]])){   // up
+        neighbors.push([current[0] - 1, current[1]])
+    }
+    if(valid_neighbor([current[0] + 1, current[1]])){   // down
+        neighbors.push([current[0] + 1, current[1]])
+    }
+    if(valid_neighbor([current[0], current[1] - 1])){   // left
+        neighbors.push([current[0], current[1] - 1])
+    }
+    if(valid_neighbor([current[0], current[1] + 1])){   // right
+        neighbors.push([current[0], current[1] + 1])
+    }
+    return neighbors;
+}
+
+const search = async(start, target) => {
+    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    const frontier = [];
+    let current = start
+    frontier.push(start);
+    do{
+        if(Array.from(document.getElementsByClassName('selection'))[0].classList.contains('breadth-selected')){
+            current = frontier.shift();
+        }
+        else{
+            current = frontier.pop();
+        }
+        if(current_is_target(current, target)) break;
+        mark_visited(current);
+        const neighbors = get_neighbors(current);
+        if(neighbors.length > 0){
+            for(const neighbor of neighbors){
+                frontier.push(neighbor);
+            }
+        }
+
+        await sleep(250);
+    }while(frontier.length > 0);
+    console.log(frontier);
+    return frontier;
+}
+
+const show_path = function(path){
+    for(let i = 0; i < path.length; i++){
+        let cell = path[i];
+        const rows = Array.from(document.getElementsByClassName('row'));
+        const row = rows[cell[0]];
+        const tile = row.children[cell[1]];
+        tile.classList.add('path');
+    }
+
+}
+
+const start_search = function(){
+    if(localStorage.getItem('goal')){
+        const start = START;
+        const target = [JSON.parse(localStorage.getItem('goal'))[0], JSON.parse(localStorage.getItem('goal'))[1]];
+        let path = search(start, target);
+        //show_path(Array.from(path));
+        return;
+    }
+    window.alert("error: goal needs to be set first");
+}
+
+const start_search_functionality = function(){
+    Array.from(document.getElementsByClassName('start'))[0].addEventListener('click', start_search)
+}

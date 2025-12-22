@@ -120,14 +120,11 @@ form > *{
     width: 6vh;
 }
 
-
 .close-modal{
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
-
 
 .contact-modal{
     z-index: 101;

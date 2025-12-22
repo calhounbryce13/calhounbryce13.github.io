@@ -1,0 +1,168 @@
+
+:root{
+    --cell-dimensions-desktop: 4vw;
+    --cell-dimensions-mobile: 8vw;
+    --border-color: black;
+    --signal-orange: rgba(255, 96, 0, 1);
+    --cyan: rgba(0, 255, 255, 1);
+    --crimson-red: rgba(220,20,60,1);
+    --accent-color: var(--cyan);
+    --blur-value: 10px;
+    /*--border-color: rgba(255, 230, 36, 1);*/
+}
+
+html, body{
+    min-height: 90%;
+    min-width: 90%;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+body{
+    border: none;
+    padding-top: 3vh;
+
+}
+body > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+
+}
+body p{
+    margin: 0px;
+    border: none;
+}
+
+.back-container{
+    margin-bottom: 5vh;
+    font-size: 6vw;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.back{
+    cursor: pointer;
+    border-radius: 10px;
+    backdrop-filter: blur(var(--blur-value));
+}
+
+#reset{
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 4vh;
+    padding: 0px;
+    backdrop-filter: blur(var(--blur-value));
+    font-size: 8vw;
+}
+
+@media(min-width: 900px){
+    .back-container{
+        font-size: 3vw;
+    }
+    body > div{
+        width: 20%;
+    }
+    #reset{
+        margin-bottom: 20vh;
+        font-size: 4vw;
+    }
+}
+
+.selection{
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.5%;
+    backdrop-filter: blur(var(--blur-value));
+
+}
+
+.breadth-selected{
+    justify-content: flex-end;
+}
+
+.toggle-switch{
+    border-radius: 10px;
+    height: 8vw;
+    width: 40%;
+    background-color: var(--accent-color);
+    cursor: pointer;
+
+}
+#myName{
+    border: none;
+    font-size: 10vw;
+    margin-bottom: 10vh;
+}
+header{
+    height: auto;
+    border: none;
+}
+
+@media(min-width: 900px){
+    .toggle-switch{
+        height: 4vw;
+
+    }
+    
+}
+
+.maze{
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    backdrop-filter: blur(var(--blur-value));
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+.cell{
+    cursor: pointer;
+    height: var(--cell-dimensions-mobile);
+    width: var(--cell-dimensions-mobile);
+    border: 2px solid var(--border-color);
+}
+
+@media(min-width: 900px){
+    .cell{
+        height: var(--cell-dimensions-desktop);
+        width: var(--cell-dimensions-desktop);
+    }
+}
+
+.wall{
+    cursor: auto;
+    background-color: black;
+}
+
+.start{
+    background-color: blue;
+}
+.visited{
+    background-color: blue;
+
+}
+.goal{
+    background-color: green;
+}
+.path{
+    background-color: red;
+}
