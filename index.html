@@ -16,7 +16,14 @@ DESCRIPTION: HTML file for my webpage
             <link rel="manifest" href="favicon/site.webmanifest">
         </head>
         <body>
-            <video autoplay muted loop id="background-video">
+            <video 
+            muted 
+            loop 
+            playsinline
+            preload="metadata"
+            poster="media/Background-Poster.webp" 
+            id="background-video"
+            >
                 <source src="media/Background-Clip.mp4" type="video/mp4">
             </video>
             <header>

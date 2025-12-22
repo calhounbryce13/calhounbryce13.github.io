@@ -34,6 +34,13 @@ body > div{
     height: auto;
 
 }
+
+.explore-content > div{
+    display: flex;
+    align-items: center;
+    height: auto;
+    
+}
 body p{
     margin: 0px;
     border: none;
@@ -54,16 +61,35 @@ body p{
 .back{
     cursor: pointer;
     border-radius: 10px;
-    backdrop-filter: blur(var(--blur-value));
+    background-color: black;
+    color: white;
+}
+
+.explore-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+}
+
+.explore-content *{
+    color: white;
 }
 
 #reset{
+    justify-content: center;
+
     cursor: pointer;
     border-radius: 10px;
     margin-top: 4vh;
     padding: 0px;
     backdrop-filter: blur(var(--blur-value));
     font-size: 8vw;
+    width: 40%;
 }
 
 @media(min-width: 900px){
@@ -80,7 +106,8 @@ body p{
 }
 
 .selection{
-    border: 3px solid black;
+    width: 40%;
+    border: 3px solid var(--accent-color);
     border-radius: 10px;
     margin-bottom: 3vh;
     flex-direction: row;
@@ -121,10 +148,13 @@ header{
 }
 
 .maze{
+    justify-content: center;
     flex-direction: column;
     height: auto;
     width: auto;
-    backdrop-filter: blur(var(--blur-value));
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 .row{
