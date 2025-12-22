@@ -176,17 +176,17 @@ const create_text = function(bool){
 
 async function process_user_data(event){
     /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
+    DESCRIPTION: Function defined to extract the data from the message field
+                and send it to the backend for storage
+    INPUT(s): the even object (obj)
+    OUTPUT(S): None
      */
     event.preventDefault();
     const form = event.target;
-    const userName = form['userName'].value;
     const userMessage = form['userMssg'].value;
     
     let bool = false;
-    if(!userName || !userMessage){
+    if(!userMessage){
         window.alert("Please fill out the entire form!");
         return;
     }
@@ -195,7 +195,7 @@ async function process_user_data(event){
             headers:{
                 'Content-Type': 'application/json' 
             },
-            body: JSON.stringify({name: `${userName}`, message: `${userMessage}`}),
+            body: JSON.stringify({message: `${userMessage}`}),
             method: 'POST'
             });
         let res = await promise.json();
@@ -204,7 +204,6 @@ async function process_user_data(event){
         console.log(error);
         window.alert("ERROR sending that request");
     }
-    form['userName'].value = '';
     form['userMssg'].value = '';
     toggle_modal();
 }
