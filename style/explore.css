@@ -74,19 +74,20 @@ body p{
     border-radius: 10px;
     width: 90%;
     height: auto;
+    padding-top: 3vh;
 }
 
 .explore-content *{
-    color: white;
+    color: black;
 }
 
 #reset{
     justify-content: center;
-
     cursor: pointer;
     border-radius: 10px;
     margin-top: 4vh;
     padding: 0px;
+    background-color: white;
     backdrop-filter: blur(var(--blur-value));
     font-size: 8vw;
     width: 40%;
@@ -100,8 +101,11 @@ body p{
         width: 20%;
     }
     #reset{
-        margin-bottom: 20vh;
+        margin-bottom: 5vh;
         font-size: 4vw;
+    }
+    .explore-content{
+        margin-bottom: 20vh;
     }
 }
 
@@ -122,6 +126,10 @@ body p{
 }
 
 .toggle-switch{
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     height: 8vw;
     width: 40%;
@@ -154,7 +162,6 @@ header{
     width: auto;
     background-color: white;
     border: 2px solid white;
-    border-radius: 10px;
 }
 
 .row{

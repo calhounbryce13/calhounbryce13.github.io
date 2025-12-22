@@ -62,6 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
     Array.from(document.getElementsByClassName('toggle-switch'))[0].addEventListener('click', (event) => {
         const parent = event.target.parentNode;
         parent.classList.toggle('breadth-selected');
+        if(parent.classList.contains('breadth-selected')){
+            event.target.textContent = 'Breadth';
+            return;
+        }
+        event.target.textContent = 'Depth';
+        return
     });
 
 });
