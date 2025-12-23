@@ -312,18 +312,13 @@ form > *{
     border-radius: 50%;
     border: none;
     background-color:#3c4142;
-    /*
-    background-color: #e11818;
-    background-color: #e9ffff;
-    background-color: #dd3162;*/
     background-image: url('/media/icons/chevron-right-icon.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(180deg);
     transition: background-color 1s ease-in-out, transform 1s ease-in-out;
-    
-    
+    cursor: pointer;
 }
 
 .dynamic-container-button-expanded{
@@ -422,32 +417,6 @@ a{
     animation: container_introduction 1s ease-in-out forwards;
 }
 
-
-@media(min-width: 900px){
-    .blackBar:hover{
-        width: 49.7vw;
-        height: 70vh;
-        border-radius: 20px;
-        background-color: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        margin-left: 0vw;
-        margin-right: 0vw;
-        border: 2px solid var(--border-color);
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-    .blackBar:hover .content{
-        font-size: 70%;
-        width: 90%;
-        max-width: 95%;
-        height: auto;
-    }
-    .blackBar:hover img{
-        transform: scale(1.5);
-    }
-}
 
 
 #Research{

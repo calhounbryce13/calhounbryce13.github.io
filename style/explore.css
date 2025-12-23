@@ -147,6 +147,7 @@ header{
 }
 
 .toggle-switch{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,6 +169,7 @@ header{
 }
 
 #reset{
+    cursor: pointer;
     border-radius: 10px;
     font-size: 6vw;
     background-color: white;
@@ -231,6 +233,8 @@ header{
 }
 
 .start{
+    background-image: url('../media/icons/icons8-click-30.png');
+
     background-color: blue;
 }
 .visited{
@@ -238,6 +242,7 @@ header{
 
 }
 .goal{
+    background-image: url('../media/icons/icons8-click-30.png');
     background-color: green;
 }
 .path{
