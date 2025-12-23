@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const parent = event.target.parentNode;
         parent.classList.toggle('breadth-selected');
         if(parent.classList.contains('breadth-selected')){
-            event.target.textContent = 'Breadth';
+            event.target.textContent = 'B';
             return;
         }
-        event.target.textContent = 'Depth';
+        event.target.textContent = 'D';
         return
     });
 

@@ -1,7 +1,7 @@
 
 :root{
     --cell-dimensions-desktop: 4vw;
-    --cell-dimensions-mobile: 8vw;
+    --cell-dimensions-mobile: 7vw;
     --border-color: black;
     --signal-orange: rgba(255, 96, 0, 1);
     --cyan: rgba(0, 255, 255, 1);
@@ -20,31 +20,21 @@ html, body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
 }
 body{
+    
     border: none;
     padding-top: 3vh;
 
 }
-body > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: auto;
 
-}
 
-.explore-content > div{
-    display: flex;
-    align-items: center;
-    height: auto;
-    
-}
-body p{
-    margin: 0px;
+header p{
     border: none;
 }
+
+
 
 .back-container{
     margin-bottom: 5vh;
@@ -59,87 +49,54 @@ body p{
 
 
 .back{
+    height: 5vh;
+    width: 10vh;
     cursor: pointer;
     border-radius: 10px;
     background-color: black;
     color: white;
+    background-image: url('../media/icons/back-arrow-icon.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .explore-content{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: grey;
+    border-radius: 20%;
+    border: 4px solid black;
+    margin-bottom: 5vh;
+    height: auto;
+    padding: 10%;
+    transform: translate(-100%, 0%);
+    position: relative;
+    left: 135vw;
+}
+
+.explore-unit{
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    background-color: black;
-    border-radius: 10px;
-    width: 90%;
-    height: auto;
-    padding-top: 3vh;
+    align-items: flex-start;
 }
 
-.explore-content *{
-    color: black;
-}
 
-#reset{
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 4vh;
-    padding: 0px;
-    background-color: white;
-    backdrop-filter: blur(var(--blur-value));
-    font-size: 8vw;
-    width: 40%;
-}
 
 @media(min-width: 900px){
     .back-container{
         font-size: 3vw;
     }
-    body > div{
-        width: 20%;
-    }
-    #reset{
-        margin-bottom: 5vh;
-        font-size: 4vw;
-    }
-    .explore-content{
-        margin-bottom: 20vh;
-    }
 }
 
-.selection{
-    width: 40%;
-    border: 3px solid var(--accent-color);
-    border-radius: 10px;
-    margin-bottom: 3vh;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0.5%;
-    backdrop-filter: blur(var(--blur-value));
-
-}
-
-.breadth-selected{
-    justify-content: flex-end;
-}
-
-.toggle-switch{
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    height: 8vw;
-    width: 40%;
-    background-color: var(--accent-color);
-    cursor: pointer;
-
-}
 #myName{
     border: none;
-    font-size: 10vw;
+    font-size: 19vw;
     margin-bottom: 10vh;
 }
 header{
@@ -148,10 +105,7 @@ header{
 }
 
 @media(min-width: 900px){
-    .toggle-switch{
-        height: 4vw;
 
-    }
     
 }
 
@@ -160,8 +114,65 @@ header{
     flex-direction: column;
     height: auto;
     width: auto;
+    max-width: 100%;
     background-color: white;
-    border: 2px solid white;
+    border: 2px solid black;
+    margin-bottom: 1vh;
+}
+
+.options-for-explore{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-bottom: 3vh;
+}
+
+.options-for-explore div{
+    border-radius: 5px;
+}
+
+.selection{
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+
+}
+
+.breadth-selected{
+    justify-content: flex-end;
+}
+
+.toggle-switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 4vh;
+    margin: 5%;
+    width: 40%;
+
+}
+
+.reset-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#reset{
+    font-size: 6vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
 }
 
 .row{
@@ -202,4 +213,8 @@ header{
 }
 .path{
     background-color: red;
+}
+
+#footerContainer{
+    border: none;
 }
