@@ -29,11 +29,19 @@ const toggle_modal = function(){
 
 
 const dynamic_textarea_functionality = function(){
-    const textarea = Array.from(document.getElementsByTagName('textarea'))[0];
-    textarea.style.height = 'auto';
-    textarea.style.height = textarea.scrollHeight + 'px';
-    console.log(textarea.scrollHeight + 'px');
-
+    if(document.getElementsByTagName('textarea')){
+        const textarea = Array.from(document.getElementsByTagName('textarea'));
+        textarea.forEach((field) => {
+            field.style.height = 'auto';
+            field.style.height = field.scrollHeight + 'px';
+            field.addEventListener('input', () => {
+                field.style.height = 'auto';
+                field.style.height = field.scrollHeight + 'px';
+                console.log(field.scrollHeight + 'px');
+            });
+        })
+        console.log(textarea[0].scrollHeight + 'px');
+    }
 }
 
 const contact_form_functionality = function(){

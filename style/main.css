@@ -79,6 +79,8 @@ input{
 }
 
 textarea{
+    overflow-y: scroll;
+    max-height: 60vh;
     font-size: 10vw;
     height: auto;
 }
