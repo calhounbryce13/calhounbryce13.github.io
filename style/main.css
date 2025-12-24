@@ -349,7 +349,7 @@ body{
     align-items: center;
     font-family: 'MuseoModerno';
     border: 2px solid var(--border-color);
-    background-color: var(--main-alt);
+    background-color: var(--charcoal-grey);
 }
 
 header{
@@ -624,17 +624,18 @@ li{
 }
 
 #stickyContainer{
+    cursor: pointer;
     position: fixed;
     bottom: 2%;
-    height: 4vh;
+    height: 6vh;
     width: 40%;
-    background-color: var(--accent-alt);
+    background-color: var(--accent-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 2px solid var(--border-color);
-    color: var(--accent-color);
+    color: var(--accent-alt);
     transition: height 0.9s ease-in-out
 }
 #stickyContainer.open{
@@ -858,15 +859,12 @@ footer{
         bottom: 4%;
         width: 80%;
     }
-    #stickyContainer.open{
-        height: var(--form-height) !important;
-    }
     #footerContainer{
         width: 80%;
     }
     footer{
         width: 60%;
-        margin-bottom: 20%;
+        margin-bottom: 10vh;
     }
 
 

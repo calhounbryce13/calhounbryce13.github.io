@@ -8,6 +8,8 @@
     --crimson-red: rgba(220,20,60,1);
     --accent-color: var(--cyan);
     --blur-value: 10px;
+    --charcoal-grey: rgba(54,69,79,1);
+
     /*--border-color: rgba(255, 230, 36, 1);*/
 }
 
@@ -23,18 +25,15 @@ html, body{
     overflow-x: hidden;
 }
 body{
-    
+    background-color: var(--charcoal-grey);
     border: none;
     padding-top: 3vh;
-
 }
 
 
 header p{
     border: none;
 }
-
-
 
 .back-container{
     margin-bottom: 5vh;
@@ -68,7 +67,7 @@ header p{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: grey;
+    background-color: black;
     border-radius: 80px;
     border: 4px solid black;
     margin-bottom: 5vh;
@@ -103,6 +102,7 @@ header p{
 }
 
 #myName{
+    text-decoration: overline var(--accent-color);
     border: none;
     font-size: 19vw;
     margin-bottom: 10vh;
@@ -119,7 +119,7 @@ header{
     width: auto;
     max-width: 100%;
     background-color: white;
-    border: 4px solid black;
+    border: 4px solid var(--accent-color);
     border-radius: 10px;
     margin-bottom: 1vh;
 }
@@ -138,7 +138,7 @@ header{
 }
 
 .selection{
-    background-color: black;
+    background-color: var(--accent-color);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -155,7 +155,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: black;
+    color: var(--accent-color);
     height: 4vh;
     margin: 5%;
     width: 40%;
@@ -176,7 +177,7 @@ header{
     cursor: pointer;
     border-radius: 10px;
     font-size: 6vw;
-    background-color: white;
+    background-color: var(--accent-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,6 +256,7 @@ header{
 .path{
     background-color: red;
 }
+
 
 #footerContainer{
     border: none;
