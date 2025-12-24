@@ -113,14 +113,18 @@ form > *{
 }
 
 #close-modal-button{
+    font-family: inherit;
     background-color: var(--accent-color);
     border-radius: 10px;
-    background-image: url('../media/icons/close-icon.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 6vh;
-    width: 6vh;
+    height: auto;
+    width: 25%;
+    font-size: 6vw;
+}
+
+@media(min-width: 900px){
+    #close-modal-button{
+        font-size: 2vw;
+    }
 }
 
 .close-modal{
@@ -145,6 +149,12 @@ form > *{
     border: 2px solid var(--border-color);
     padding: 1%;
     border-radius: 15px;
+}
+
+@media(min-width: 900px){
+    .contact-modal{
+        width: 30%;
+    }
 }
 
 .contact-modal > * {
@@ -332,6 +342,7 @@ form > *{
     background-color: var(--accent-color);
 }
 
+
 .content-card-header{
     display: flex;
     flex-direction: row;
@@ -379,7 +390,7 @@ a{
 }
 
 #myName{
-    color: var(--main-color);
+    color: var(--accent-color);
     font-weight: var(--weight-one);
     font-size: 12vw;
     display: flex;
@@ -387,7 +398,6 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     height: 100%;
     width: 100vw;
     border: 2px solid var(--border-color);
@@ -443,6 +453,7 @@ a{
     justify-content: space-between;
     border: 2px solid var(--border-color);
 }
+
 
 .sectionHeader{
     font-weight: var(--weight-two);
@@ -644,7 +655,7 @@ li{
     border-radius: 30px;
     border: 2px solid var(--border-color);
     color: var(--accent-alt);
-    transition: height 0.9s ease-in-out
+    transition: height 0.9s ease-in-out;
 }
 #stickyContainer.open{
     height: 40vh !important;
