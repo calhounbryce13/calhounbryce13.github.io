@@ -52,6 +52,11 @@ const START = [0, 5]
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
+
+
+    Array.from(document.getElementsByClassName('explore-content'))[0].classList.add('explore-content-shown');
+
     back_to_home();
 
 

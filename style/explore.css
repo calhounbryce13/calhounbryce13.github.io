@@ -1,7 +1,7 @@
 
 :root{
     --cell-dimensions-desktop: 2vw;
-    --cell-dimensions-mobile: 7vw;
+    --cell-dimensions-mobile: 6vw;
     --border-color: black;
     --signal-orange: rgba(255, 96, 0, 1);
     --cyan: rgba(0, 255, 255, 1);
@@ -52,7 +52,7 @@ header p{
     height: 5vh;
     width: 10vh;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 25px;
     background-color: black;
     color: white;
     background-image: url('../media/icons/back-arrow-icon.png');
@@ -76,9 +76,13 @@ header p{
     padding: 10%;
     transform: translate(-100%, 0%);
     position: relative;
-    left: 135vw;
+    left: 300vw;
+    transition: left 1s ease-in-out;
 }
 
+.explore-content-shown{
+    left: 145vw;
+}
 
 
 .explore-unit{
@@ -192,7 +196,7 @@ header{
     }
     .explore-content{
         border-radius: 100px;
-        left: 160vw;
+        left: 300vw;
         padding: 2.5%;
     }
     .explore-unit{
@@ -204,7 +208,12 @@ header{
     #reset{
         font-size: 2vw;
     }
+    .explore-content-shown{
+        left: 160vw;
+    }
 }
+
+
 
 .row{
     display: flex;
@@ -234,12 +243,10 @@ header{
 
 .start{
     background-image: url('../media/icons/icons8-click-30.png');
-
     background-color: blue;
 }
 .visited{
     background-color: blue;
-
 }
 .goal{
     background-image: url('../media/icons/icons8-click-30.png');
