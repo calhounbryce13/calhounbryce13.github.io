@@ -163,7 +163,7 @@ const tap_goal_functionality = function(){
                                 localStorage.removeItem('goal');
                             }
                             else{
-                                window.alert("error: goal already set");
+                                cell.classList.add('wall');
                             }
                         }
                         return;
