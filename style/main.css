@@ -62,6 +62,7 @@ html{
 }
 
 .submit-form{
+    font-weight: 600;
     background-color: var(--accent-color);
     font-size: 9vw;
 }
@@ -141,6 +142,7 @@ form > *{
     background-color: var(--charcoal-grey);
     border: 2px solid var(--border-color);
     padding: 1%;
+    border-radius: 15px;
 }
 
 .contact-modal > * {
@@ -282,8 +284,10 @@ form > *{
 
 .launch{
     background-image: url('../media/icons/icons8-launch-50.png');
+}
 
-
+.explore{
+    background-image: url('../media/icons/icons8-explore-50.png');
 }
 
 .git-repo{
@@ -624,6 +628,8 @@ li{
 }
 
 #stickyContainer{
+    font-size: 2vw;
+    font-weight: 900;
     cursor: pointer;
     position: fixed;
     bottom: 2%;
@@ -856,6 +862,7 @@ footer{
         font-size: 4vw;
     }
     #stickyContainer{
+        font-size: 5vw;
         bottom: 4%;
         width: 80%;
     }
