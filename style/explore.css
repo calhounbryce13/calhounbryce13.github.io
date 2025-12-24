@@ -179,12 +179,28 @@ header{
     font-size: 6vw;
     background-color: var(--accent-color);
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     width: 60%;
     height: auto;
 }
+
+
+
+.reset-icon{
+    height: 5vh;
+    width: 10%;
+    background-image: url('../media/icons/icons8-reset-50.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 @media(min-width: 900px){
+    #reset:hover{
+        background-color: black;
+        color: var(--accent-color);
+    }
     #myName{
         font-size: 10vw;
     }
