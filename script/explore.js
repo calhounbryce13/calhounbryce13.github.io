@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const show_explore = function(){
     if(document.getElementsByClassName('explore-content')){
-        Array.from(document.getElementsByClassName('explore-content'))[0].classList.add('explore-content-shown');
+        setTimeout(() => {
+            Array.from(document.getElementsByClassName('explore-content'))[0].classList.add('explore-content-shown');
+        }, 500);
     }
 }
 
