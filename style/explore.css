@@ -119,7 +119,7 @@ header{
     width: auto;
     max-width: 100%;
     background-color: white;
-    border: 4px solid var(--accent-color);
+    border: 8px solid var(--accent-color);
     border-radius: 10px;
     margin-bottom: 1vh;
 }
