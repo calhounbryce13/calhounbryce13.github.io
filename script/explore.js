@@ -1,6 +1,6 @@
 'use strict';
 
-const MAX = 20
+const MAX = 15
 const SIZE = 10
 
 const WALLS = [
@@ -51,32 +51,37 @@ const START = [0, 5]
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-
-
-    Array.from(document.getElementsByClassName('explore-content'))[0].classList.add('explore-content-shown');
-
     back_to_home();
-
-
     generate_grid(SIZE);
+    show_explore();
+    toggle_search_functionality();
     tap_goal_functionality();
     reset_maze();
-
-    Array.from(document.getElementsByClassName('toggle-switch'))[0].addEventListener('click', (event) => {
-        const parent = event.target.parentNode;
-        parent.classList.toggle('breadth-selected');
-        if(parent.classList.contains('breadth-selected')){
-            event.target.textContent = 'B';
-            return;
-        }
-        event.target.textContent = 'D';
-        return
-    });
-
 });
 
+const show_explore = function(){
+    if(document.getElementsByClassName('explore-content')){
+        Array.from(document.getElementsByClassName('explore-content'))[0].classList.add('explore-content-shown');
+    }
+}
+
+const toggle_search_method = function(event){
+    const parent = event.target.parentNode;
+    parent.classList.toggle('breadth-selected');
+    if(parent.classList.contains('breadth-selected')){
+        event.target.textContent = 'BFS';
+        return;
+    }
+    event.target.textContent = 'DFS';
+    return
+}
+
+const toggle_search_functionality = function(){
+    if(document.getElementsByClassName('toggle-switch')){
+        const toggleSwitch = Array.from(document.getElementsByClassName('toggle-switch'))[0];
+        toggleSwitch.addEventListener('click', (event) => toggle_search_method(event));
+    }
+}
 
 const back_to_home = function(){
     Array.from(document.getElementsByClassName('back'))[0].addEventListener('click', () => {
@@ -143,38 +148,46 @@ const generate_grid = function(dimensions){
 
 }
 
+const add_maze_goal = function(cell, x, y){
+    cell.classList.add('goal');
+    localStorage.setItem('goal', JSON.stringify([x, y]));
+}
+
+const remove_maze_goal = function(cell){
+    cell.classList.remove('goal');
+    localStorage.removeItem('goal');
+}
+
+const cell_functionality = function(event, x, y){
+    const cell = event.target;
+    if(!(cell.classList.contains('wall'))){
+        if(!(cell.classList.contains('start'))){
+            if(!(localStorage.getItem('goal'))){
+                add_maze_goal(cell, x, y);
+                return;
+            }
+            if(cell.classList.contains('goal')){
+                remove_maze_goal(cell);
+                return;
+            }
+            cell.classList.add('wall');
+            return;
+        }
+        console.log("start cell clicked on");
+        start_search();
+        return
+    }
+    cell.classList.remove('wall');
+    return;
+}
+
 const tap_goal_functionality = function(){
     const rows = Array.from(document.getElementsByClassName('row'));
     for(let x = 0; x < rows.length; x++){
         const cells = rows[x].children;
         for(let y = 0; y < cells.length; y++){
             const cell = rows[x].children[y];
-            cell.addEventListener('click', (event) => {
-                if(!(event.target.classList.contains('wall'))){
-                    console.log("\n ", x, y);
-                    if(!(event.target.classList.contains('start'))){
-                        if(!(localStorage.getItem('goal'))){
-                            event.target.classList.add('goal');
-                            localStorage.setItem('goal', JSON.stringify([x, y]));
-                        }
-                        else{
-                            if(event.target.classList.contains('goal')){
-                                event.target.classList.remove('goal');
-                                localStorage.removeItem('goal');
-                            }
-                            else{
-                                cell.classList.add('wall');
-                            }
-                        }
-                        return;
-                    }
-                    console.log("start cell clicked on");
-                    start_search();
-                    return
-                }
-                console.log("error: wall clicked on");
-                return
-            })
+            cell.addEventListener('click', (event) => cell_functionality(event, x, y))
         }
     }
 
