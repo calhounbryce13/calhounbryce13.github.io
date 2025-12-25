@@ -52,10 +52,9 @@ const START = [0, 5]
 
 document.addEventListener("DOMContentLoaded", () => {
     back_to_home();
-    generate_grid(SIZE);
+    maze_setup();
     show_explore();
     toggle_search_functionality();
-    tap_goal_functionality();
     reset_maze();
 });
 
@@ -91,9 +90,19 @@ const back_to_home = function(){
     });
 }
 
+const remove_maze = function(){
+    const maze = Array.from(document.getElementsByClassName('maze'))[0];
+    while((maze.children).length > 0){
+        maze.removeChild(maze.lastChild);
+    }
+}
+
 const reset_maze = function(){
     document.getElementById('reset').addEventListener('click', () => {
-        window.location.reload();
+        if(document.getElementsByClassName('maze')){
+            remove_maze();
+            maze_setup();
+        }
     });
 }
 
@@ -195,9 +204,21 @@ const tap_goal_functionality = function(){
 
 }
 
+const maze_setup = function(){
+    generate_grid(SIZE);
+    tap_goal_functionality();
+}
+
 const current_is_target = function(current, target){
     for(let i = 0; i < 2; i++){
         if(current[i] != target[i]) return false;
+    }
+    const maze = Array.from(document.getElementsByClassName('maze'))[0];
+    const cell = maze.children[current[0]].children[current[1]];
+    for(let i = 0; i < 10; i++){
+        setTimeout(() => {
+            cell.classList.toggle('goal');
+        }, i * 250);
     }
     return true;
 }
@@ -263,10 +284,8 @@ const search = async(start, target) => {
                 frontier.push(neighbor);
             }
         }
-
         await sleep(250);
     }while(frontier.length > 0);
-    console.log(frontier);
     return frontier;
 }
 

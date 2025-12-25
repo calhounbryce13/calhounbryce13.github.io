@@ -390,7 +390,7 @@ a{
 }
 
 #myName{
-    color: var(--accent-color);
+    color: var(--main-color);
     font-weight: var(--weight-one);
     font-size: 12vw;
     display: flex;

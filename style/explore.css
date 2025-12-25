@@ -189,8 +189,8 @@ header{
 
 
 .reset-icon{
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
     background-image: url('../media/icons/icons8-reset-50.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -200,6 +200,10 @@ header{
     #reset:hover{
         background-color: black;
         color: var(--accent-color);
+    }
+    .reset-icon{
+        height: 4vh;
+        width: 4vh;
     }
     #myName{
         font-size: 10vw;
