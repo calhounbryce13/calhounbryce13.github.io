@@ -67,9 +67,20 @@ html{
     font-size: 9vw;
 }
 
+@media(min-width: 900px){
+    .submit-form:hover{
+        background-color: var(--main-color);
+        color: var(--accent-color);
+    }
+    #close-modal-button:hover{
+        background-color: var(--main-color);
+        color: var(--accent-color);
+
+    }
+}
+
 .submit-form:active{
-    background-color: var(--main-color);
-    color: var(--accent-color);
+    filter: brightness(75%);
 }
 
 
@@ -119,6 +130,7 @@ form > *{
     height: auto;
     width: 25%;
     font-size: 6vw;
+    font-weight: 500;
 }
 
 @media(min-width: 900px){
