@@ -243,22 +243,18 @@ async function process_user_data(event){
 
 const show_loading = function(){
     const animation = document.getElementById('lottie-loading-animation');
-
     animation.style.display = 'flex';
     return lottie.loadAnimation({
         container: animation,
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../projectory/icons/Loading_sand_clock.json'
+        path: '../calhounbryce13.github.io/Media/Cosmos.json'
     });
-
 }
 
 const dismiss_loading = function(animationInstance){
     const animation = document.getElementById('lottie-loading-animation');
-    const animationContainer = document.getElementById('lottie-parent');
     animation.style.display = 'none';
-    animationContainer.style.display = 'none';
     animationInstance.destroy();
 }
