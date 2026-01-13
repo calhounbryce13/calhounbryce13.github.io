@@ -7,11 +7,9 @@ DESCRIPTION: Script file for my webpage
 
 
 document.addEventListener('DOMContentLoaded', () =>{
-
     dynamic_container_height_functionality();
     contact_form_functionality();
     dynamic_textarea_functionality();
-
     
 });
 
@@ -205,7 +203,7 @@ const show_loading = function(){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../calhounbryce13.github.io/media/Cosmos.json'
+        path: '../media/Cosmos.json'
     });
 }
 
