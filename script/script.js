@@ -249,7 +249,7 @@ const show_loading = function(){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../calhounbryce13.github.io/Media/Cosmos.json'
+        path: '../calhounbryce13.github.io/media/Cosmos.json'
     });
 }
 
