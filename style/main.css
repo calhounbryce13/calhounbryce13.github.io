@@ -730,6 +730,7 @@ fieldset{
     align-items: center;
     height: 20%;
     width: 20%;
+    z-index: 101;
 
 }
 
