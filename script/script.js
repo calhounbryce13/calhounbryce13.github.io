@@ -166,21 +166,6 @@ const display_message = function(stickyContainer, statusMessage, text){
 
 }
 
-const create_text = function(bool){
-        /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
-     */
-    const statusMessage = document.createElement("p");
-    if(bool){
-        statusMessage.textContent = "Your message was successfully recieved!";
-    }
-    else{
-        statusMessage.innerHTML = "Hark! an error has occured <br> Please try again";
-    }
-    return statusMessage;
-}
 
 async function process_user_data(event){
     /*
