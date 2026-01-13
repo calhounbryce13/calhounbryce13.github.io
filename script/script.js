@@ -118,18 +118,6 @@ const dynamic_container_height_functionality = function(){
     });
 }
 
-
-const lock_the_screen_in_portrait = function(){
-    /*
-    DESCRIPTION:
-    INPUT(s):
-    OUTPUT(S):
-     */
-    if(screen.orientation){
-        screen.orientation.lock('portrait');
-    }
-}
-
 const toggle_form = function(event, text){
         /*
     DESCRIPTION: 
@@ -147,23 +135,6 @@ const toggle_form = function(event, text){
     }
     stickyContainer.classList.toggle("open");
     contactContainer.classList.toggle("show");
-}
-
-
-
-const display_message = function(stickyContainer, statusMessage, text){
-        /*
-    DESCRIPTION: 
-    INPUT(s): 
-    OUTPUT(S): 
-     */
-    stickyContainer.appendChild(statusMessage);
-    setTimeout(() =>{
-        stickyContainer.removeChild(statusMessage);
-        stickyContainer.classList.toggle("open");
-        stickyContainer.textContent = text;
-    }, 3000);
-
 }
 
 
