@@ -17,7 +17,6 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --crimson-red: rgba(220,20,60,1);
     --charcoal-grey: rgba(54,69,79,1);
     
-
     --main-alt: white;
     --main-color: black;
     --accent-color: var(--cyan);
@@ -30,7 +29,6 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 
     --border-color: rgba(255,0,0,0);
     --form-height: 45vh;
-
 }
 
 .clear{
@@ -58,7 +56,6 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-
 }
 
 .submit-form{
@@ -75,16 +72,12 @@ html{
     #close-modal-button:hover{
         background-color: var(--main-color);
         color: var(--accent-color);
-
     }
-
 }
 
 .submit-form:active{
     filter: brightness(75%);
 }
-
-
 
 input{
     font-size: 10vw;
@@ -108,6 +101,7 @@ textarea{
         font-size: 3vw;
     }
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -121,7 +115,6 @@ form > *{
     margin-bottom: 2vh;
     border-radius: 10px;
     font-family: inherit;
-
 }
 
 #close-modal-button{
@@ -134,14 +127,11 @@ form > *{
     font-weight: 500;
 }
 
-
 @media(min-width: 900px){
     #close-modal-button{
         font-size: 2vw;
     }
 }
-
-
 
 .close-modal{
     display: flex;
@@ -176,13 +166,10 @@ form > *{
 .contact-modal > * {
     font-family: inherit;
     border-radius: 10px;
-
     width: 90%;
     font-size: 6vw;
     border: 2px solid var(--border-color);
     margin-bottom: 2vh;
-
-
 }
 
 .backdrop{
@@ -211,7 +198,6 @@ form > *{
 /********************************************/
 .content-card{
     border-radius: 20px;
-
     border: 2px solid var(--border);
     display: flex;
     flex-direction: column;
@@ -731,6 +717,20 @@ fieldset{
     background-color: rgba(0,0,0,0);
     border: none;
     
+}
+
+
+#lottie-loading-animation{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 20%;
+
 }
 
 #footerContainer{

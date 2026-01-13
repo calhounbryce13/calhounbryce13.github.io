@@ -191,27 +191,74 @@ async function process_user_data(event){
      */
     event.preventDefault();
     const form = event.target;
-    const userMessage = form['userMssg'].value;
-    
-    let bool = false;
-    if(!userMessage){
+    if(form['userMssg']){
+        const userMessage = form['userMssg'].value;
+        if(userMessage != ''){
+            let animationInstance = false;
+            const timer = setTimeout(() => {
+                animationInstance = show_loading();
+            }, 500);
+            try{
+                let response = await fetch("https://calhounbryce13-backend.onrender.com/mailer",{
+                    headers:{
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify({message: `${userMessage}`}),
+                    method: 'POST'
+                    });
+                switch(response.status){
+                    case 200:
+                        window.alert("success ! Thanks for the message");
+                        form['userMssg'].value = '';
+                        toggle_modal();
+                        break;
+                    case 400:
+                        window.alert("issue with that request");
+                        break;
+                    case 500:
+                        window.alert("There was an issue with the server on that request");
+                        break;
+                    default:
+                        window.alert("there was an unexpected issue with that request");
+                        console.log("error: unexpected issue with request");
+                        break;
+                }
+            }catch(error){
+                console.log(error);
+                window.alert("There was an issue sending that request, please try again");
+            }
+            finally{
+                clearTimeout(timer);
+                if(animationInstance) dismiss_loading(animationInstance);
+            }
+            return;
+        }
         window.alert("Please fill out the entire form!");
         return;
     }
-    try{
-        let promise = await fetch("https://calhounbryce13-backend.onrender.com/mailer",{
-            headers:{
-                'Content-Type': 'application/json' 
-            },
-            body: JSON.stringify({message: `${userMessage}`}),
-            method: 'POST'
-            });
-        let res = await promise.json();
-        bool = res.success;
-    }catch(error){
-        console.log(error);
-        window.alert("ERROR sending that request");
-    }
-    form['userMssg'].value = '';
-    toggle_modal();
+    console.log("error: unexpected error extracting form data");
+    return;
+}
+
+
+const show_loading = function(){
+    const animation = document.getElementById('lottie-loading-animation');
+
+    animation.style.display = 'flex';
+    return lottie.loadAnimation({
+        container: animation,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '../projectory/icons/Loading_sand_clock.json'
+    });
+
+}
+
+const dismiss_loading = function(animationInstance){
+    const animation = document.getElementById('lottie-loading-animation');
+    const animationContainer = document.getElementById('lottie-parent');
+    animation.style.display = 'none';
+    animationContainer.style.display = 'none';
+    animationInstance.destroy();
 }

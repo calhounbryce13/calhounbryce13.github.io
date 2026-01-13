@@ -314,3 +314,5 @@ const start_search = function(){
 const start_search_functionality = function(){
     Array.from(document.getElementsByClassName('start'))[0].addEventListener('click', start_search)
 }
+
+
