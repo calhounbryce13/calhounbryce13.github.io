@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 ///////////////////////////////////////////////////////////////////////////////
 
-
 const toggle_modal = function(){
     const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
     backdrop.classList.toggle('backdrop-show');
@@ -24,7 +23,6 @@ const toggle_modal = function(){
     const modal = Array.from(document.getElementsByClassName('contact-modal'))[0];
     modal.classList.toggle('modal-show');
 }
-
 
 const dynamic_textarea_functionality = function(){
     if(document.getElementsByTagName('textarea')){
@@ -54,7 +52,6 @@ const contact_form_functionality = function(){
     nevermindButton.addEventListener('click', (event) => toggle_modal());
     form.addEventListener('submit', (event) => process_user_data(event, contactButtonText));
 }
-
 
 const get_height_of_tallest_child = function(parent){
     let maxHeight = 0;
@@ -135,7 +132,6 @@ const toggle_form = function(event, text){
     contactContainer.classList.toggle("show");
 }
 
-
 async function process_user_data(event){
     /*
     DESCRIPTION: Function defined to extract the data from the message field
@@ -193,7 +189,6 @@ async function process_user_data(event){
     console.log("error: unexpected error extracting form data");
     return;
 }
-
 
 const show_loading = function(){
     const animation = document.getElementById('lottie-loading-animation');

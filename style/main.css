@@ -248,7 +248,7 @@ form > *{
 }
 
 #Los-Angeles{
-    background-image: url('../media/buildings-5460565_1920.jpg');
+    background-image: url('../media/PXL_20230818_195440381~2.jpg');
 }
 
 #Backend{
@@ -842,13 +842,13 @@ footer{
         width: 22vw;
     }
     .icons.smaller{
-        object-fit: contain;
+        /*object-fit: contain;*/
         display: flex;
         justify-content: center;
         align-items: center;
         height: 16vw;
         width: 16vw;
-        animation: orbital_animation 10s infinite linear;
+        /*animation: orbital_animation 10s infinite linear;*/
     }
     .smallerIcons{
         height: 12vw;
@@ -875,6 +875,7 @@ footer{
         height: 8vh;
         width: 8vh;
     }
+
     #contactContainer{
         bottom: 4%;
         height: var(--form-height);
@@ -905,4 +906,8 @@ footer{
     }
 
 
+}
+
+.icons > a{
+    display: flex;
 }
