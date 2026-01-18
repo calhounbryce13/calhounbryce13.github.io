@@ -175,9 +175,8 @@ async function process_user_data(event){
                 window.alert("There was an issue sending that request, please try again");
             }
             finally{
-                console.log("for testing purposes !");
-                //clearTimeout(timer);
-                //if(animationInstance) dismiss_loading(animationInstance);
+                clearTimeout(timer);
+                if(animationInstance) dismiss_loading(animationInstance);
             }
             return;
         }
@@ -190,7 +189,7 @@ async function process_user_data(event){
 
 const get_backdrop = function(animation){
     const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
-    console.log(animation.style);
+    console.log(animation.style.zIndex);
 
 }
 
