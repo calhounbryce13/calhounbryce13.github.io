@@ -161,7 +161,7 @@ async function process_user_data(event){
             let animationInstance = false;
             const timer = setTimeout(() => {
                 animationInstance = show_loading();
-            }, 1);
+            }, 200);
             try{
                 let response = await fetch("https://calhounbryce13-backend.onrender.com/mailer",{
                     headers:{
