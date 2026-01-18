@@ -188,8 +188,9 @@ async function process_user_data(event){
 }
 
 const get_backdrop = function(animation){
-    console.log(window.getComputedStyle(animation).zIndex);
-
+    newIndex = window.getComputedStyle(animation).zIndex
+    const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
+    backdrop.style.zIndex = newIndex
 }
 
 const show_loading = function(){
