@@ -188,7 +188,6 @@ async function process_user_data(event){
 }
 
 const get_backdrop = function(animation){
-    const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
     console.log(animation.style.zIndex);
 
 }
@@ -196,6 +195,7 @@ const get_backdrop = function(animation){
 const show_loading = function(){
     console.log("showing loading icon");
     const animation = document.getElementById('lottie-loading-animation');
+    console.log(animation.style.zIndex);
     get_backdrop(animation);
     animation.style.display = 'flex';
     return lottie.loadAnimation({
