@@ -753,6 +753,42 @@ footer{
 
 }
 
+
+.ooze {
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+
+    animation-name: ooze_animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration, 10s);
+    animation-delay: var(--delay, 0s);
+
+    left: var(--x, 40%);
+    width: var(--size, 60px);
+    height: var(--size, 60px);
+
+    z-index: -10;
+}
+
+@keyframes ooze_animation {
+    0% {
+        transform: translateY(120vh);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
 @keyframes orbital_animation{
     0%{
         transform: rotate(0deg) translateX(var(--init)) rotate(0deg);

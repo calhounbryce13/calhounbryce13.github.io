@@ -1,0 +1,62 @@
+
+
+
+:root{
+
+}
+
+
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    overflow-x: hidden;
+}
+
+html{
+    border: 2px solid red;
+
+}
+
+
+body{
+    border: 2px solid blue;
+
+}
+
+
+
+.ooze {
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+
+    animation-name: ooze_animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration, 10s);
+    animation-delay: var(--delay, 0s);
+
+    left: var(--x, 40%);
+    width: var(--size, 60px);
+    height: var(--size, 60px);
+
+    z-index: -10;
+}
+
+@keyframes ooze_animation {
+    0% {
+        transform: translateY(120vh);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
