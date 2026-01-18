@@ -188,14 +188,13 @@ async function process_user_data(event){
 }
 
 const get_backdrop = function(animation){
-    console.log(animation.style.zIndex);
+    console.log(window.getComputedStyle(animation).zIndex);
 
 }
 
 const show_loading = function(){
     console.log("showing loading icon");
     const animation = document.getElementById('lottie-loading-animation');
-    console.log(animation.getBoundingClientRect().zIndex);
     get_backdrop(animation);
     animation.style.display = 'flex';
     return lottie.loadAnimation({
