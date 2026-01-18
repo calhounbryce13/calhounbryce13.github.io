@@ -191,6 +191,7 @@ async function process_user_data(event){
 }
 
 const show_loading = function(){
+    console.log("showing loading icon");
     const animation = document.getElementById('lottie-loading-animation');
     animation.style.display = 'flex';
     return lottie.loadAnimation({
@@ -198,7 +199,7 @@ const show_loading = function(){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../media/Cosmos.json'
+        path: '/media/Cosmos.json'
     });
 }
 
