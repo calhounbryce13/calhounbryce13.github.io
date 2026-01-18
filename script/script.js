@@ -175,8 +175,8 @@ async function process_user_data(event){
                 window.alert("There was an issue sending that request, please try again");
             }
             finally{
-                clearTimeout(timer);
-                if(animationInstance) dismiss_loading(animationInstance);
+                //clearTimeout(timer);
+                //if(animationInstance) dismiss_loading(animationInstance);
             }
             return;
         }
