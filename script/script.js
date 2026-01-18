@@ -175,8 +175,8 @@ async function process_user_data(event){
                 window.alert("There was an issue sending that request, please try again");
             }
             finally{
-                //clearTimeout(timer);
-                //if(animationInstance) dismiss_loading(animationInstance);
+                clearTimeout(timer);
+                if(animationInstance) dismiss_loading(animationInstance);
             }
             return;
         }
@@ -187,16 +187,16 @@ async function process_user_data(event){
     return;
 }
 
-const get_backdrop = function(animation){
+const acquire_backdrop = function(animation){
     const newIndex = window.getComputedStyle(animation).zIndex
     const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
-    backdrop.style.zIndex = newIndex
+    backdrop.style.zIndex = (newIndex - 1)
 }
 
 const show_loading = function(){
     console.log("showing loading icon");
     const animation = document.getElementById('lottie-loading-animation');
-    get_backdrop(animation);
+    acquire_backdrop(animation);
     animation.style.display = 'flex';
     return lottie.loadAnimation({
         container: animation,
