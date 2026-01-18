@@ -33,10 +33,8 @@ const dynamic_textarea_functionality = function(){
             field.addEventListener('input', () => {
                 field.style.height = 'auto';
                 field.style.height = field.scrollHeight + 'px';
-                console.log(field.scrollHeight + 'px');
             });
         })
-        console.log(textarea[0].scrollHeight + 'px');
     }
 }
 
@@ -93,7 +91,6 @@ const toggle_container_height = function(event){
 const set_initial_height = function(){
     const containers = Array.from(document.getElementsByClassName('blackBar'));
     const viewPortWidth = window.matchMedia("(max-width: 900px)");
-    console.log(viewPortWidth);
     containers.forEach((singleContainer) => {
         if(viewPortWidth.matches){
             singleContainer.style.maxHeight = '5.5vh';
