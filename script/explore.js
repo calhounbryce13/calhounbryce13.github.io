@@ -101,7 +101,10 @@ const reset_maze = function(){
     document.getElementById('reset').addEventListener('click', () => {
         if(document.getElementsByClassName('maze')){
             remove_maze();
-            remove_maze_goal();
+            const x = JSON.parse(localStorage.getItem('goal'))[0];
+            const y = JSON.parse(localStorage.getItem('goal'))[1];
+            const cell = Array.from(document.getElementsByClassName('row'))[x].children[y];
+            remove_maze_goal(cell);
             maze_setup();
         }
     });
