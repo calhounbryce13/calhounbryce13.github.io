@@ -287,26 +287,14 @@ const search = async(start, target) => {
         }
         await sleep(250);
     }while(frontier.length > 0);
-    return frontier;
 }
 
-const show_path = function(path){
-    for(let i = 0; i < path.length; i++){
-        let cell = path[i];
-        const rows = Array.from(document.getElementsByClassName('row'));
-        const row = rows[cell[0]];
-        const tile = row.children[cell[1]];
-        tile.classList.add('path');
-    }
-
-}
 
 const start_search = function(){
     if(localStorage.getItem('goal')){
         const start = START;
         const target = [JSON.parse(localStorage.getItem('goal'))[0], JSON.parse(localStorage.getItem('goal'))[1]];
-        let path = search(start, target);
-        //show_path(Array.from(path));
+        search(start, target);
         return;
     }
     window.alert("error: goal needs to be set first");
