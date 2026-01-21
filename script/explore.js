@@ -101,6 +101,7 @@ const reset_maze = function(){
     document.getElementById('reset').addEventListener('click', () => {
         if(document.getElementsByClassName('maze')){
             remove_maze();
+            remove_maze_goal();
             maze_setup();
         }
     });
