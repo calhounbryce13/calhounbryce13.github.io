@@ -46,9 +46,9 @@ const collect_user_data = async() => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: {
+            body: JSON.stringify({
                 "application": "Portfolio page"
-            }
+            })
         })
     }catch(error){
         console.log(error);
