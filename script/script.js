@@ -7,6 +7,8 @@ DESCRIPTION: Script file for my webpage
 
 
 document.addEventListener('DOMContentLoaded', () =>{
+
+    collect_user_data();
     dynamic_container_height_functionality();
     contact_form_functionality();
     dynamic_textarea_functionality();
@@ -31,6 +33,26 @@ const primordial_ooze = function(){
         ooze.style.setProperty('--x', `${x}%`);
         ooze.style.setProperty('--size', `${size}px`);
     });
+}
+
+const collect_user_data = async() => {
+    /* 
+    Description: This is a function a plan to only have up temporarily just to monitor any traffic I may get.
+                will send the app name to my web service so I know when it is accessed.
+    */
+    try{
+        const response = await fetch('https://calhounbryce13-backend.onrender.com/get-user-data', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: {
+                "application": "Portfolio page"
+            }
+        })
+    }catch(error){
+        console.log(error);
+    }
 }
 
 const toggle_modal = function(){
@@ -207,7 +229,7 @@ async function process_user_data(event){
 const acquire_backdrop = function(animation){
     const newIndex = window.getComputedStyle(animation).zIndex
     const backdrop = Array.from(document.getElementsByClassName('backdrop'))[0];
-    backdrop.style.zIndex = (newIndex - 1)
+    backdrop.style.zIndex = newIndex
 }
 
 const show_loading = function(){
