@@ -17,16 +17,6 @@ DESCRIPTION: HTML file for my webpage
             <link rel="manifest" href="favicon/site.webmanifest">
         </head>
         <body>
-            <video 
-            muted 
-            loop 
-            playsinline
-            preload="metadata"
-            poster="media/Background-Poster.webp" 
-            id="background-video"
-            >
-                <source src="media/Background-Clip.mp4" type="video/mp4">
-            </video>
             <header>
                 <div id="myName">
                     <p>
@@ -34,6 +24,8 @@ DESCRIPTION: HTML file for my webpage
                     </p>
                 </div>
             </header>
+            <div id="menu-button">
+            </div>
             <div id="parent">
                 <div id="biography" class="blackBar">
                     <div class="content-card-header">
@@ -196,6 +188,14 @@ DESCRIPTION: HTML file for my webpage
             <div class="ooze"></div>
             <div class="ooze"></div>
             <!--CONDITIONAL RENDERING-->
+            <div id="nav-menu">
+                <div class="nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link">
+                    <a href="explore.html">Explore</a>
+                </div>
+            </div>
             <div id="lottie-loading-animation"></div>
             <div class="backdrop"></div>
             <div class="contact-modal">

@@ -51,12 +51,20 @@ const START = [0, 5]
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    back_to_home();
+
+    nav_toggle_functionality();
     maze_setup();
     show_explore();
     toggle_search_functionality();
     reset_maze();
 });
+
+
+const nav_toggle_functionality = function(){
+    document.getElementById('menu-button').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('show-nav');
+    });
+}
 
 const show_explore = function(){
     if(document.getElementsByClassName('explore-content')){
@@ -84,11 +92,6 @@ const toggle_search_functionality = function(){
     }
 }
 
-const back_to_home = function(){
-    Array.from(document.getElementsByClassName('back'))[0].addEventListener('click', () => {
-        window.location.assign('index.html');
-    });
-}
 
 const remove_maze = function(){
     const maze = Array.from(document.getElementsByClassName('maze'))[0];

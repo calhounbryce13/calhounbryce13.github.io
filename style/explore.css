@@ -2,15 +2,13 @@
 :root{
     --cell-dimensions-desktop: 2vw;
     --cell-dimensions-mobile: 6vw;
-    --border-color: black;
+    --border-color: rgba(255, 0, 0, 0);
     --signal-orange: rgba(255, 96, 0, 1);
     --cyan: rgba(0, 255, 255, 1);
     --crimson-red: rgba(220,20,60,1);
     --accent-color: var(--cyan);
     --blur-value: 10px;
     --charcoal-grey: rgba(54,69,79,1);
-
-    /*--border-color: rgba(255, 230, 36, 1);*/
 }
 
 html, body{
@@ -102,7 +100,6 @@ header p{
 }
 
 #myName{
-    text-decoration: overline var(--accent-color);
     border: none;
     font-size: 19vw;
     margin-bottom: 10vh;
@@ -247,7 +244,7 @@ header{
     cursor: pointer;
     height: var(--cell-dimensions-mobile);
     width: var(--cell-dimensions-mobile);
-    border: 2px solid var(--border-color);
+    border: 2px solid black;
 }
 
 @media(min-width: 900px){
