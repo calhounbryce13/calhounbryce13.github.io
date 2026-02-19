@@ -29,6 +29,9 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
 
     --border-color: rgba(255,0,0,0);
     --form-height: 45vh;
+
+
+    --header-font-size: 25vw;
 }
 
 .clear{
@@ -394,37 +397,64 @@ a:visited{
     color: var(--accent-color);
 }
 
-#myName{
-    color: var(--main-color);
-    font-weight: var(--weight-one);
-    font-size: 12vw;
+
+#header-parent{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     height: auto;
-    width: 100vw;
+    width: 100%;
+
     border: 2px solid var(--border-color);
-    margin-top: 5vh;
+
 }
+
+
+.header-text{
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: var(--header-font-size);
+}
+
+
+
 
 #menu-button{
     height: 16vw;
     width: 16vw;
     border: 2px solid var(--border-color);
-    position: absolute;
-    top: 4%;
-    right: 5%;
-    z-index: 10;
     background-image: url('../media/icons/menu_70dp_00FFFF_FILL0_wght400_GRAD0_opsz48.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+@media(min-width: 900px){
+    #header-parent{
+        flex-direction: row;
+    }
+    .header-text{
+        font-size: 10vw;
+    }
+    #menu-button{
+        height: 7vw;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        margin-right: 5vw;
+    }
+    #menu-button:hover{
+    cursor: pointer;
+    }
 }
 
 #menu-button:active{
-    filter: brightness(75%);
+    background-color: var(--accent-color);
 }
 
 #nav-menu{
@@ -439,23 +469,52 @@ a:visited{
     align-items: center;
     height: 95vh;
     width: auto;
-    transition: left 2s ease-in-out;
+    transition: left 1s ease-in-out;
+}
+
+#close-menu{
+    cursor: pointer;
+    background-color: var(--accent-alt);
+    border-radius: 20px;
+    color: var(--main-alt);
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#close-menu:active{
+    color: var(--accent-alt);
 }
 
 .show-nav{
     left: -40% !important;
 }
 
+
 .nav-link{
     border: 2px solid var(--border-color);
-
     margin-left: 60vw;
     margin-right: 10vw;
     color: var(--accent-color);
     font-size: 10vw;
-
 }
 
+@media(min-width: 900px){
+    .show-nav{
+        left: -60% !important;
+    }
+    .nav-link{
+        font-size: 3vw;
+        margin-left: 70vw;
+    }
+    .nav-link > a:hover{
+        color: var(--main-color);
+        background-color: var(--accent-color);
+        border-radius: 20px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+}
 
 
 .blackBar{
