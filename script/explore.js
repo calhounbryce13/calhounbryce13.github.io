@@ -64,6 +64,9 @@ const nav_toggle_functionality = function(){
     document.getElementById('menu-button').addEventListener('click', () => {
         document.getElementById('nav-menu').classList.toggle('show-nav');
     });
+    document.getElementById('close-menu').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('show-nav');
+    });
 }
 
 const show_explore = function(){

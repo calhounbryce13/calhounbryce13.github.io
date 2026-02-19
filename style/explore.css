@@ -274,6 +274,12 @@ header{
     background-color: red;
 }
 
+#menu-button{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
 
 #footerContainer{
     border: none;
