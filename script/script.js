@@ -9,7 +9,6 @@ DESCRIPTION: Script file for my webpage
 document.addEventListener('DOMContentLoaded', () =>{
 
     collect_user_data();
-    nav_toggle_functionality();
     dynamic_container_height_functionality();
     contact_form_functionality();
     dynamic_textarea_functionality();
@@ -20,17 +19,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 ///////////////////////////////////////////////////////////////////////////////
 
-
-
-const nav_toggle_functionality = function(){
-    document.getElementById('menu-button').addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.toggle('show-nav');
-    });
-
-    document.getElementById('close-menu').addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.toggle('show-nav');
-    });
-}
 
 
 const primordial_ooze = function(){

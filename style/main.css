@@ -333,16 +333,14 @@ form > *{
     border-radius: 50%;
     border: none;
     background-color:#3c4142;
-    background-image: url('/media/icons/chevron-right-icon.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     transform: rotate(180deg);
     transition: background-color 1s ease-in-out, transform 1s ease-in-out;
     cursor: pointer;
+    fill: var(--cyan);
 }
 
 .dynamic-container-button-expanded{
+    fill: var(--main-color);
     transform: rotate(90deg);
     background-color: var(--accent-color);
 }
@@ -370,7 +368,8 @@ body{
     align-items: center;
     font-family: 'MuseoModerno';
     border: 2px solid var(--border-color);
-    background-color: var(--charcoal-grey);
+    background-color: var(--main-alt);
+    background-image: linear-gradient(to top, black, white);
 }
 
 header{
@@ -391,10 +390,6 @@ p{
 
 a{
     text-decoration: none;
-}
-
-a:visited{
-    color: var(--accent-color);
 }
 
 
@@ -1041,10 +1036,10 @@ footer{
         width: 60%;
         margin-bottom: 10vh;
     }
-
-
 }
 
 .icons > a{
     display: flex;
 }
+
+

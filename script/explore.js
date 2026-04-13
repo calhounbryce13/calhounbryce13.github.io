@@ -52,22 +52,29 @@ const START = [0, 5]
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    nav_toggle_functionality();
+
+    primordial_ooze();
     maze_setup();
     show_explore();
     toggle_search_functionality();
     reset_maze();
 });
 
+const primordial_ooze = function(){
+    const oozes = document.querySelectorAll('.ooze');
+    oozes.forEach((ooze, i) => {
+        const duration = 60 + Math.random() * 60;  
+        const delay = -Math.random() * duration;
+        const x = Math.random() * 95;
+        const size = 30 + Math.random() * 80;
 
-const nav_toggle_functionality = function(){
-    document.getElementById('menu-button').addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.toggle('show-nav');
-    });
-    document.getElementById('close-menu').addEventListener('click', () => {
-        document.getElementById('nav-menu').classList.toggle('show-nav');
+        ooze.style.setProperty('--duration', `${duration}s`);
+        ooze.style.setProperty('--delay', `${delay}s`);
+        ooze.style.setProperty('--x', `${x}%`);
+        ooze.style.setProperty('--size', `${size}px`);
     });
 }
+
 
 const show_explore = function(){
     if(document.getElementsByClassName('explore-content')){

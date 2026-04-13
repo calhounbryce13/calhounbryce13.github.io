@@ -280,7 +280,34 @@ header{
     right: 2%;
 }
 
-
 #footerContainer{
     border: none;
+}
+
+.explore-unit h2{
+    max-width: 70%;
+    font-size: 6vw;
+    color: var(--main-alt);
+}
+
+ol, ul{
+    max-width: 60% !important;
+}
+
+li{
+    font-size: 4vw;
+}
+
+@media(min-width: 1100px){
+    ol, ul{
+        max-width: 90% !important;
+    }
+    .explore-unit h2{
+        max-width: 90%;
+        font-size: 2vw;
+    }
+    li{
+        max-width: none;
+        font-size: 1vw;
+    }
 }
