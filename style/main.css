@@ -27,7 +27,7 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --weight-two: 400;
     --weight-three: 100;
 
-    --border-color: rgba(255,0,0,0);
+    --border-color: rgba(255,0,0,1);
     --form-height: 45vh;
 
 
@@ -157,7 +157,11 @@ form > *{
     background-color: var(--charcoal-grey);
     border: 2px solid var(--border-color);
     padding: 1%;
-    border-radius: 15px;
+    border-radius: 30px;
+}
+
+.contact-modal button{
+    cursor: pointer !important;
 }
 
 @media(min-width: 900px){
@@ -285,6 +289,7 @@ form > *{
     width: 40%;
     color: var(--main-color);
     background-color: var(--accent-color);
+    padding: 2%;
 }
 
 .action-icon{
@@ -1040,6 +1045,10 @@ footer{
 
 .icons > a{
     display: flex;
+}
+
+svg path{
+    flex-shrink: 0 !important;
 }
 
 
