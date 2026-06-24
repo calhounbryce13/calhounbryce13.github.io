@@ -27,7 +27,7 @@ DESCRIPTION: Stylesheet for desktop view of the webpage
     --weight-two: 400;
     --weight-three: 100;
 
-    --border-color: rgba(255,0,0,1);
+    --border-color: rgba(255,0,0,0);
     --form-height: 45vh;
 
 
