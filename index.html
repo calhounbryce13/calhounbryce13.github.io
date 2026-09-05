@@ -1,219 +1,56 @@
-<!--
-AUTHOR: Bryce Calhoun
-DESCRIPTION: HTML file for my webpage
--->
-
 <!DOCTYPE html>
-    <html lang="en">
+    <html>
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="style.css">
+            <script src="script.js"></script>
             <title>Bryce Calhoun</title>
-            <link id="stylesheet" rel="stylesheet" href="style/main.css">
-            <script src="script/script.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-            <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-            <link rel="manifest" href="favicon/site.webmanifest">
         </head>
         <body>
+
+            
+            <div id="temp">
+                <p>Under Development, check back later ;)</p>
+                <div id="blink"></div>  
+            </div>
+
+
             <header>
-                <div id="header-parent">
-                    <div class="header-text">
-                        Bryce
-                    </div>
-                    <div class="header-text">
-                        Calhoun
-                    </div>
-                </div>
-                
+                [TITLE]
             </header>
-            <div id="parent">
-                <div id="biography" class="blackBar">
-                    <div class="content-card-header">
-                        <div class="sectionHeader">
-                            <p>About Me</p>
-                        </div>
-                        <div>
-                            <svg class="dynamic-container-button" viewBox="0 -960 960 960">
-                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></path>
-                            </svg>
-                        </div>
+            <div id="section-parent">
+
+
+
+                <div class="section-container">
+                    <div class="section-title-parent">
+                        <div class="section-title">About Me</div>
                     </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Los-Angeles"></div>
-                        <div class="thumbnail-title"> Howdy, I'm an independent full-stack software engineering student from Los Angeles, CA</div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="OSU"></div>
-                        <div class="thumbnail-title"> Also currently finishing up my B.S. degree in Computer Science at Oregon State University </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail-title">  Researching and developing artificial intelligence is something I am particularly
-                            passionate about. </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail-title">  I've gotten to study and implement some really fun and interesting AI algoithms like the AC3 
-                            for constraint satisfaction problems (CSPs). </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail-title"> Additionally, Google's non-deterministic pagerank algoithm with the random surfer model. </div>
-                    </div>
+                    <div class="section-image"></div>
                 </div>
-                <div id="Research" class="blackBar" style="max-height: 5.5vh;">
-                    <div class="content-card-header">
-                        <div class="sectionHeader">
-                            <p>Research</p>
-                        </div>
-                        <div>
-                            <svg class="dynamic-container-button" viewBox="0 -960 960 960">
-                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></path>
-                            </svg>
-                        </div>
+
+
+                
+                <div class="section-container">
+                    <div class="section-title-parent">
+                        <div class="section-title">Skills Highlights</div>
                     </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Aspire"></div>
-                        <div class="thumbnail-title"> In 2022 I conducted research for Oregon State University's 
-                            ASPIRE Center on various computer-vision models.</div>
-                        <div class="options">
-                            <a class="content-button" href="media/Slide1.PNG" target="_blank">
-                                <div class="action-icon view">
-                                </div>
-                                View
-                            </a>
-                        </div>
+                    <div class="section-image"></div>
+                </div>                
+                <div class="section-container">
+                    <div class="section-title-parent">
+                        <div class="section-title">Work Experience</div>
                     </div>
-                </div>           
-                <div id="Skills" class="blackBar" style="max-height: 5.5vh;">
-                    <div class="content-card-header">
-                        <div class="sectionHeader">
-                            <p>My Skills</p>
-                        </div>
-                        <div>
-                            <svg class="dynamic-container-button" viewBox="0 -960 960 960">
-                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Backend"></div>
-                        <div class="thumbnail-title"> Back-end Development</div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Frontend"></div>
-                        <div class="thumbnail-title"> Front-end Web Development</div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Data-structures"></div>
-                        <div class="thumbnail-title"> Data Structures & Algorithms</div>
-                        <div class="options">
-                            <a class="content-button" href="explore.html">
-                                <div class="action-icon explore">
-                                </div>
-                            Explore
-                            </a>
-                        </div>
-                    </div>
+                    <div class="section-image"></div>
                 </div>
-                <div id="Projects" class="blackBar projects"  style="max-height: 5.5vh;">
-                    <div class="content-card-header">
-                        <div class="sectionHeader">
-                            <p>Projects</p>
-                        </div>
-                        <div>
-                            <svg class="dynamic-container-button" viewBox="0 -960 960 960">
-                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></path>
-                            </svg>
-                        </div>
+                <div class="section-container">
+                    <div class="section-title-parent">
+                        <div class="section-title">Personal Projects</div>
                     </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Quiznest"></div>
-                        <div class="thumbnail-title"> Quiznest flashcard generation tool</div>
-                        <div class="description"> A frontend-only application using <strong>HTML5</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</div>
-                        <div class="options">
-                            <a class="content-button" href="https://calhounbryce13.github.io/quiznest/index.html" target="_blank">
-                                <div class="action-icon launch">
-                                </div>
-                                Launch
-                            </a>
-                            <a class="content-button" href="https://github.com/calhounbryce13/quiznest" target="_blank">
-                                <div class="action-icon git-repo">
-                                </div>
-                                Github
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="IOT"></div>
-                        <div class="thumbnail-title">'Internet of Things' Device Control System </div>
-                        <div class="description"> A <strong>prototype</strong> application for a <strong>network</strong> of devices to take commands, and communicate with a central controller GUI.</div>
-                        <div class="options">
-                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/IOT-management" target="_blank">
-                                <div class="action-icon git-repo">
-                                </div>
-                                Github
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="thumbnail" id="Minimax"></div>
-                        <div class="thumbnail-title">Artifical Intelligence Minimax agent </div>
-                        <div class="description"> A logical implimentation of the process of the <strong>adverserial search</strong> algorithm, <strong>Minimax</strong>, for tic-tac-toe.</div>
-                        <div class="options">
-                            <a class="content-button" href="https://github.com/calhounbryce13/projects/tree/main/AI/Minimax-AI" target="_blank">
-                                <div class="action-icon git-repo">
-                                </div>
-                                Github
-                            </a>
-                        </div>
-                    </div>
+                    <div class="section-image"></div>
                 </div>
             </div>
-            <div id="myLinks">
-                <div id="Linkedin" class="icons">
-                    <a href="https://www.linkedin.com/in/bryce-calhoun-4126b6219" target="_blank">
-                        <img src="media/icons/contact-icons/icons8-linkedin-150.png" id="LinkedinIcon">
-                    </a>
-                </div>
-                <div class="icons smaller" id="insta">
-                    <a href="https://www.instagram.com/bryce.calhoun/" target="_blank">
-                        <img src="media/icons/contact-icons/icons8-instagram-100.png" class="smallerIcons">
-                    </a>
-                </div>
-                <div class="icons smaller" id="git">
-                    <a href="https://github.com/calhounbryce13" target="_blank">
-                        <img src="media/icons/contact-icons/icons8-github-100.png" class="smallerIcons">
-                    </a>
-                </div>
-            </div>
-            <div id="stickyContainer">
-                <p>Contact me</p>
-            </div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <div class="ooze"></div>
-            <!--CONDITIONAL RENDERING-->
-            <div id="lottie-loading-animation"></div>
-            <div class="backdrop"></div>
-            <div class="contact-modal">
-                <div class="close-modal">
-                    <button type="button" id="close-modal-button">close</button>
-                </div>
-                <form name="contact-me-form">
-                    <textarea name="userMssg" placeholder="Your message"></textarea>
-                    <Button class="submit-form">submit</Button>
-                </form>
-            </div>
-            <!----------------------------------------->
-            <div id="footerContainer">
-                <footer>
-                    &copy;2025 Bryce Calhoun
-                </footer>
-            </div>
+            <footer>
+                &copy;2026 Bryce Calhoun
+            </footer>
         </body>
     </html>
