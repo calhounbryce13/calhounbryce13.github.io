@@ -143,7 +143,7 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     height: 90vh;
-    width: 90vw;
+    width: 93vw;
     border: 6px solid var(--foreground-red);
     background-color: var(--background-black);
     border-radius: 15px;
