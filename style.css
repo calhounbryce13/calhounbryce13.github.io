@@ -178,7 +178,7 @@ footer{
 
 @media(max-width: 1100px){
     #temp{
-        height: 95vh;
+        height: 98vh;
         font-size: 3vw;
     }
     #temp p{
